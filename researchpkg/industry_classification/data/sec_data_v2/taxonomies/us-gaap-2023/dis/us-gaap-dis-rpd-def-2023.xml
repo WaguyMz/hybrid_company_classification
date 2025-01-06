@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+(c) 2010-2023 Financial Accounting Foundation; (c) 2007-2010 XBRL US, Inc.  All Rights Reserved.
+Notice: Authorized Uses are Set Forth at https://xbrl.fasb.org/terms/TaxonomiesTermsConditions.html
+  -->
+<link:linkbase xmlns:link='http://www.xbrl.org/2003/linkbase' xmlns:xbrldt='http://xbrl.org/2005/xbrldt'
+               xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+               xsi:schemaLocation='http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'>
+    <link:roleRef
+            roleURI='http://fasb.org/us-gaap/role/disclosure/RelatedPartyDisclosuresScheduleOfRelatedPartyTransactionsByRelatedPartyTable'
+            xlink:href='../elts/us-roles-2023.xsd#RelatedPartyDisclosuresScheduleOfRelatedPartyTransactionsByRelatedPartyTable'
+            xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/all'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#all' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/dimension-domain'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/dimension-default'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/domain-member'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member' xlink:type='simple'/>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/RelatedPartyDisclosuresScheduleOfRelatedPartyTransactionsByRelatedPartyTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_ScheduleOfRelatedPartyTransactionsByRelatedPartyTable'
+                  xlink:label='loc_ScheduleOfRelatedPartyTransactionsByRelatedPartyTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionLineItems'
+                  xlink:label='loc_RelatedPartyTransactionLineItems' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xbrldt:closed='true' xbrldt:contextElement='segment'
+                            xlink:arcrole='http://xbrl.org/int/dim/arcrole/all'
+                            xlink:from='loc_RelatedPartyTransactionLineItems'
+                            xlink:to='loc_ScheduleOfRelatedPartyTransactionsByRelatedPartyTable' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/RelatedPartyDisclosuresScheduleOfRelatedPartyTransactionsByRelatedPartyTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_ScheduleOfRelatedPartyTransactionsByRelatedPartyTable'
+                  xlink:label='loc_ScheduleOfRelatedPartyTransactionsByRelatedPartyTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionsByRelatedPartyAxis'
+                  xlink:label='loc_RelatedPartyTransactionsByRelatedPartyAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionAxis'
+                  xlink:label='loc_RelatedPartyTransactionAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedAndNonrelatedPartyStatusAxis'
+                  xlink:label='loc_RelatedAndNonrelatedPartyStatusAxis' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                            xlink:from='loc_ScheduleOfRelatedPartyTransactionsByRelatedPartyTable'
+                            xlink:to='loc_RelatedPartyTransactionsByRelatedPartyAxis' xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                            xlink:from='loc_ScheduleOfRelatedPartyTransactionsByRelatedPartyTable'
+                            xlink:to='loc_RelatedPartyTransactionAxis' xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                            xlink:from='loc_ScheduleOfRelatedPartyTransactionsByRelatedPartyTable'
+                            xlink:to='loc_RelatedAndNonrelatedPartyStatusAxis' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/RelatedPartyDisclosuresScheduleOfRelatedPartyTransactionsByRelatedPartyTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionsByRelatedPartyAxis'
+                  xlink:label='loc_RelatedPartyTransactionsByRelatedPartyAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyDomain' xlink:label='loc_RelatedPartyDomain'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionAxis'
+                  xlink:label='loc_RelatedPartyTransactionAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionDomain'
+                  xlink:label='loc_RelatedPartyTransactionDomain' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedAndNonrelatedPartyStatusAxis'
+                  xlink:label='loc_RelatedAndNonrelatedPartyStatusAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedAndNonrelatedPartyStatusDomain'
+                  xlink:label='loc_RelatedAndNonrelatedPartyStatusDomain' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-domain'
+                            xlink:from='loc_RelatedPartyTransactionsByRelatedPartyAxis'
+                            xlink:to='loc_RelatedPartyDomain' xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-domain'
+                            xlink:from='loc_RelatedPartyTransactionAxis' xlink:to='loc_RelatedPartyTransactionDomain'
+                            xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-domain'
+                            xlink:from='loc_RelatedAndNonrelatedPartyStatusAxis'
+                            xlink:to='loc_RelatedAndNonrelatedPartyStatusDomain' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/RelatedPartyDisclosuresScheduleOfRelatedPartyTransactionsByRelatedPartyTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionsByRelatedPartyAxis'
+                  xlink:label='loc_RelatedPartyTransactionsByRelatedPartyAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyDomain' xlink:label='loc_RelatedPartyDomain'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionAxis'
+                  xlink:label='loc_RelatedPartyTransactionAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionDomain'
+                  xlink:label='loc_RelatedPartyTransactionDomain' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedAndNonrelatedPartyStatusAxis'
+                  xlink:label='loc_RelatedAndNonrelatedPartyStatusAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedAndNonrelatedPartyStatusDomain'
+                  xlink:label='loc_RelatedAndNonrelatedPartyStatusDomain' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-default'
+                            xlink:from='loc_RelatedPartyTransactionsByRelatedPartyAxis'
+                            xlink:to='loc_RelatedPartyDomain' xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-default'
+                            xlink:from='loc_RelatedPartyTransactionAxis' xlink:to='loc_RelatedPartyTransactionDomain'
+                            xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-default'
+                            xlink:from='loc_RelatedAndNonrelatedPartyStatusAxis'
+                            xlink:to='loc_RelatedAndNonrelatedPartyStatusDomain' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/RelatedPartyDisclosuresScheduleOfRelatedPartyTransactionsByRelatedPartyTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionLineItems'
+                  xlink:label='loc_RelatedPartyTransactionLineItems' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionDescriptionOfTransaction'
+                  xlink:label='loc_RelatedPartyTransactionDescriptionOfTransaction' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionAmountsOfTransaction'
+                  xlink:label='loc_RelatedPartyTransactionAmountsOfTransaction' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionPurchasesFromRelatedParty'
+                  xlink:label='loc_RelatedPartyTransactionPurchasesFromRelatedParty' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionRate'
+                  xlink:label='loc_RelatedPartyTransactionRate' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionDate'
+                  xlink:label='loc_RelatedPartyTransactionDate' xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionEffectsOfAnyChangeInMethodOfEstablishingTerms'
+                xlink:label='loc_RelatedPartyTransactionEffectsOfAnyChangeInMethodOfEstablishingTerms'
+                xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionTermsAndMannerOfSettlement'
+                  xlink:label='loc_RelatedPartyTransactionTermsAndMannerOfSettlement' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyDepositLiabilities'
+                  xlink:label='loc_RelatedPartyDepositLiabilities' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTaxExpenseAbstract'
+                  xlink:label='loc_RelatedPartyTaxExpenseAbstract' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTaxExpenseMethodology'
+                  xlink:label='loc_RelatedPartyTaxExpenseMethodology' xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTaxExpenseEffectOfChangeInAllocationMethodology'
+                xlink:label='loc_RelatedPartyTaxExpenseEffectOfChangeInAllocationMethodology' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTaxExpenseDueToAffiliatesCurrent'
+                  xlink:label='loc_RelatedPartyTaxExpenseDueToAffiliatesCurrent' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTaxExpenseDueToAffiliatesDeferred'
+                  xlink:label='loc_RelatedPartyTaxExpenseDueToAffiliatesDeferred' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTaxExpenseDueFromAffiliatesCurrent'
+                  xlink:label='loc_RelatedPartyTaxExpenseDueFromAffiliatesCurrent' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTaxExpenseDueFromAffiliatesDeferred'
+                  xlink:label='loc_RelatedPartyTaxExpenseDueFromAffiliatesDeferred' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NatureOfCommonOwnershipOrManagementControlRelationships'
+                  xlink:label='loc_NatureOfCommonOwnershipOrManagementControlRelationships' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionArmsLengthBasisOfTransactions'
+                  xlink:label='loc_RelatedPartyTransactionArmsLengthBasisOfTransactions' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EquityMethodInvestmentOwnershipPercentage'
+                  xlink:label='loc_EquityMethodInvestmentOwnershipPercentage' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTransactionLineItems'
+                            xlink:to='loc_RelatedPartyTransactionDescriptionOfTransaction' xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTransactionLineItems'
+                            xlink:to='loc_RelatedPartyTransactionAmountsOfTransaction' xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTransactionLineItems'
+                            xlink:to='loc_RelatedPartyTransactionPurchasesFromRelatedParty' xlink:type='arc'/>
+        <link:definitionArc order='4.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTransactionLineItems' xlink:to='loc_RelatedPartyTransactionRate'
+                            xlink:type='arc'/>
+        <link:definitionArc order='5.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTransactionLineItems' xlink:to='loc_RelatedPartyTransactionDate'
+                            xlink:type='arc'/>
+        <link:definitionArc order='6.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTransactionLineItems'
+                            xlink:to='loc_RelatedPartyTransactionEffectsOfAnyChangeInMethodOfEstablishingTerms'
+                            xlink:type='arc'/>
+        <link:definitionArc order='7.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTransactionLineItems'
+                            xlink:to='loc_RelatedPartyTransactionTermsAndMannerOfSettlement' xlink:type='arc'/>
+        <link:definitionArc order='8.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTransactionLineItems'
+                            xlink:to='loc_RelatedPartyDepositLiabilities' xlink:type='arc'/>
+        <link:definitionArc order='9.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTransactionLineItems'
+                            xlink:to='loc_RelatedPartyTaxExpenseAbstract' xlink:type='arc'/>
+        <link:definitionArc order='10.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTaxExpenseAbstract'
+                            xlink:to='loc_RelatedPartyTaxExpenseMethodology' xlink:type='arc'/>
+        <link:definitionArc order='11.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTaxExpenseAbstract'
+                            xlink:to='loc_RelatedPartyTaxExpenseEffectOfChangeInAllocationMethodology'
+                            xlink:type='arc'/>
+        <link:definitionArc order='12.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTaxExpenseAbstract'
+                            xlink:to='loc_RelatedPartyTaxExpenseDueToAffiliatesCurrent' xlink:type='arc'/>
+        <link:definitionArc order='13.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTaxExpenseAbstract'
+                            xlink:to='loc_RelatedPartyTaxExpenseDueToAffiliatesDeferred' xlink:type='arc'/>
+        <link:definitionArc order='14.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTaxExpenseAbstract'
+                            xlink:to='loc_RelatedPartyTaxExpenseDueFromAffiliatesCurrent' xlink:type='arc'/>
+        <link:definitionArc order='15.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTaxExpenseAbstract'
+                            xlink:to='loc_RelatedPartyTaxExpenseDueFromAffiliatesDeferred' xlink:type='arc'/>
+        <link:definitionArc order='16.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTransactionLineItems'
+                            xlink:to='loc_NatureOfCommonOwnershipOrManagementControlRelationships' xlink:type='arc'/>
+        <link:definitionArc order='17.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTransactionLineItems'
+                            xlink:to='loc_RelatedPartyTransactionArmsLengthBasisOfTransactions' xlink:type='arc'/>
+        <link:definitionArc order='18.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTransactionLineItems'
+                            xlink:to='loc_EquityMethodInvestmentOwnershipPercentage' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/RelatedPartyDisclosuresScheduleOfRelatedPartyTransactionsByRelatedPartyTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyDomain' xlink:label='loc_RelatedPartyDomain'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_AffiliatedEntityMember'
+                  xlink:label='loc_AffiliatedEntityMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_MajorityOwnedSubsidiaryUnconsolidatedMember'
+                  xlink:label='loc_MajorityOwnedSubsidiaryUnconsolidatedMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SubsidiaryOfCommonParentMember'
+                  xlink:label='loc_SubsidiaryOfCommonParentMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_MajorityShareholderMember'
+                  xlink:label='loc_MajorityShareholderMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_PrincipalOwnerMember'
+                  xlink:label='loc_PrincipalOwnerMember' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_ManagementMember'
+                  xlink:label='loc_ManagementMember' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_BoardOfDirectorsChairmanMember'
+                  xlink:label='loc_BoardOfDirectorsChairmanMember' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_DirectorMember'
+                  xlink:label='loc_DirectorMember' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_ExecutiveOfficerMember'
+                  xlink:label='loc_ExecutiveOfficerMember' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_ChiefExecutiveOfficerMember'
+                  xlink:label='loc_ChiefExecutiveOfficerMember' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_ChiefFinancialOfficerMember'
+                  xlink:label='loc_ChiefFinancialOfficerMember' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_ChiefOperatingOfficerMember'
+                  xlink:label='loc_ChiefOperatingOfficerMember' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_ControllerMember'
+                  xlink:label='loc_ControllerMember' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_ExecutiveVicePresidentMember'
+                  xlink:label='loc_ExecutiveVicePresidentMember' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_VicePresidentMember'
+                  xlink:label='loc_VicePresidentMember' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_PresidentMember'
+                  xlink:label='loc_PresidentMember' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_OfficerMember'
+                  xlink:label='loc_OfficerMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_ImmediateFamilyMemberOfManagementOrPrincipalOwnerMember'
+                  xlink:label='loc_ImmediateFamilyMemberOfManagementOrPrincipalOwnerMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_TrustForBenefitOfEmployeesMember'
+                  xlink:label='loc_TrustForBenefitOfEmployeesMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_CorporateJointVentureMember'
+                  xlink:label='loc_CorporateJointVentureMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_CoVenturerMember' xlink:label='loc_CoVenturerMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EquityMethodInvesteeMember'
+                  xlink:label='loc_EquityMethodInvesteeMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_BeneficialOwnerMember'
+                  xlink:label='loc_BeneficialOwnerMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GeneralPartnerMember'
+                  xlink:label='loc_GeneralPartnerMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_LimitedPartnerMember'
+                  xlink:label='loc_LimitedPartnerMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_UndividedInterestMember'
+                  xlink:label='loc_UndividedInterestMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_InvestorMember' xlink:label='loc_InvestorMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_InvesteeMember' xlink:label='loc_InvesteeMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_LimitedLiabilityCompanyMember'
+                  xlink:label='loc_LimitedLiabilityCompanyMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OtherAffiliatesMember'
+                  xlink:label='loc_OtherAffiliatesMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyTransactionDomain'
+                  xlink:label='loc_RelatedPartyTransactionDomain' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_AssetManagementArrangementMember'
+                  xlink:label='loc_AssetManagementArrangementMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedAndNonrelatedPartyStatusDomain'
+                  xlink:label='loc_RelatedAndNonrelatedPartyStatusDomain' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_RelatedPartyMember' xlink:label='loc_RelatedPartyMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NonrelatedPartyMember'
+                  xlink:label='loc_NonrelatedPartyMember' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain' xlink:to='loc_AffiliatedEntityMember' xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_AffiliatedEntityMember'
+                            xlink:to='loc_MajorityOwnedSubsidiaryUnconsolidatedMember' xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_AffiliatedEntityMember' xlink:to='loc_SubsidiaryOfCommonParentMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='4.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_AffiliatedEntityMember' xlink:to='loc_MajorityShareholderMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='5.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_AffiliatedEntityMember' xlink:to='loc_PrincipalOwnerMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='6.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain' xlink:to='loc_ManagementMember' xlink:type='arc'/>
+        <link:definitionArc order='7.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_ManagementMember' xlink:to='loc_BoardOfDirectorsChairmanMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='8.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_ManagementMember' xlink:to='loc_DirectorMember' xlink:type='arc'/>
+        <link:definitionArc order='9.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_ManagementMember' xlink:to='loc_ExecutiveOfficerMember' xlink:type='arc'/>
+        <link:definitionArc order='10.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_ManagementMember' xlink:to='loc_ChiefExecutiveOfficerMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='11.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_ManagementMember' xlink:to='loc_ChiefFinancialOfficerMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='12.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_ManagementMember' xlink:to='loc_ChiefOperatingOfficerMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='13.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_ManagementMember' xlink:to='loc_ControllerMember' xlink:type='arc'/>
+        <link:definitionArc order='14.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_ManagementMember' xlink:to='loc_ExecutiveVicePresidentMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='15.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_ManagementMember' xlink:to='loc_VicePresidentMember' xlink:type='arc'/>
+        <link:definitionArc order='16.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_ManagementMember' xlink:to='loc_PresidentMember' xlink:type='arc'/>
+        <link:definitionArc order='17.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_ManagementMember' xlink:to='loc_OfficerMember' xlink:type='arc'/>
+        <link:definitionArc order='18.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain'
+                            xlink:to='loc_ImmediateFamilyMemberOfManagementOrPrincipalOwnerMember' xlink:type='arc'/>
+        <link:definitionArc order='19.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain' xlink:to='loc_TrustForBenefitOfEmployeesMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='20.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain' xlink:to='loc_CorporateJointVentureMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='21.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain' xlink:to='loc_CoVenturerMember' xlink:type='arc'/>
+        <link:definitionArc order='22.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain' xlink:to='loc_EquityMethodInvesteeMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='23.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain' xlink:to='loc_BeneficialOwnerMember' xlink:type='arc'/>
+        <link:definitionArc order='24.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain' xlink:to='loc_GeneralPartnerMember' xlink:type='arc'/>
+        <link:definitionArc order='25.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain' xlink:to='loc_LimitedPartnerMember' xlink:type='arc'/>
+        <link:definitionArc order='26.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain' xlink:to='loc_UndividedInterestMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='27.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain' xlink:to='loc_InvestorMember' xlink:type='arc'/>
+        <link:definitionArc order='28.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain' xlink:to='loc_InvesteeMember' xlink:type='arc'/>
+        <link:definitionArc order='29.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain' xlink:to='loc_LimitedLiabilityCompanyMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='30.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyDomain' xlink:to='loc_OtherAffiliatesMember' xlink:type='arc'/>
+        <link:definitionArc order='31.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedPartyTransactionDomain'
+                            xlink:to='loc_AssetManagementArrangementMember' xlink:type='arc'/>
+        <link:definitionArc order='32.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedAndNonrelatedPartyStatusDomain' xlink:to='loc_RelatedPartyMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='33.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RelatedAndNonrelatedPartyStatusDomain' xlink:to='loc_NonrelatedPartyMember'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+</link:linkbase>

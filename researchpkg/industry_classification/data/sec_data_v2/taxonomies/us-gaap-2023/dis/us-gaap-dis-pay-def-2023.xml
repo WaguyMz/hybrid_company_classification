@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+(c) 2010-2023 Financial Accounting Foundation; (c) 2007-2010 XBRL US, Inc.  All Rights Reserved.
+Notice: Authorized Uses are Set Forth at https://xbrl.fasb.org/terms/TaxonomiesTermsConditions.html
+  -->
+<link:linkbase xmlns:link='http://www.xbrl.org/2003/linkbase' xmlns:xbrldt='http://xbrl.org/2005/xbrldt'
+               xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+               xsi:schemaLocation='http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'>
+    <link:roleRef roleURI='http://fasb.org/us-gaap/role/disclosure/PayablesAndAccrualsSupplierFinanceProgramTable'
+                  xlink:href='../elts/us-roles-2023.xsd#PayablesAndAccrualsSupplierFinanceProgramTable'
+                  xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/all'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#all' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/dimension-domain'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/dimension-default'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/domain-member'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member' xlink:type='simple'/>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/PayablesAndAccrualsSupplierFinanceProgramTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramTable'
+                  xlink:label='loc_SupplierFinanceProgramTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramLineItems'
+                  xlink:label='loc_SupplierFinanceProgramLineItems' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xbrldt:closed='true' xbrldt:contextElement='segment'
+                            xlink:arcrole='http://xbrl.org/int/dim/arcrole/all'
+                            xlink:from='loc_SupplierFinanceProgramLineItems' xlink:to='loc_SupplierFinanceProgramTable'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/PayablesAndAccrualsSupplierFinanceProgramTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramTable'
+                  xlink:label='loc_SupplierFinanceProgramTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramAxis'
+                  xlink:label='loc_SupplierFinanceProgramAxis' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_RangeAxis'
+                  xlink:label='loc_RangeAxis' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                            xlink:from='loc_SupplierFinanceProgramTable' xlink:to='loc_SupplierFinanceProgramAxis'
+                            xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                            xlink:from='loc_SupplierFinanceProgramTable' xlink:to='loc_RangeAxis' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/PayablesAndAccrualsSupplierFinanceProgramTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramAxis'
+                  xlink:label='loc_SupplierFinanceProgramAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramDomain'
+                  xlink:label='loc_SupplierFinanceProgramDomain' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_RangeAxis'
+                  xlink:label='loc_RangeAxis' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_RangeMember'
+                  xlink:label='loc_RangeMember' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-domain'
+                            xlink:from='loc_SupplierFinanceProgramAxis' xlink:to='loc_SupplierFinanceProgramDomain'
+                            xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-domain'
+                            xlink:from='loc_RangeAxis' xlink:to='loc_RangeMember' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/PayablesAndAccrualsSupplierFinanceProgramTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramAxis'
+                  xlink:label='loc_SupplierFinanceProgramAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramDomain'
+                  xlink:label='loc_SupplierFinanceProgramDomain' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_RangeAxis'
+                  xlink:label='loc_RangeAxis' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_RangeMember'
+                  xlink:label='loc_RangeMember' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-default'
+                            xlink:from='loc_SupplierFinanceProgramAxis' xlink:to='loc_SupplierFinanceProgramDomain'
+                            xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-default'
+                            xlink:from='loc_RangeAxis' xlink:to='loc_RangeMember' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/PayablesAndAccrualsSupplierFinanceProgramTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramLineItems'
+                  xlink:label='loc_SupplierFinanceProgramLineItems' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramObligationRollForward'
+                  xlink:label='loc_SupplierFinanceProgramObligationRollForward' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramObligation'
+                  xlink:label='loc_SupplierFinanceProgramObligation' xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramObligationStatementOfFinancialPositionExtensibleEnumeration'
+                xlink:label='loc_SupplierFinanceProgramObligationStatementOfFinancialPositionExtensibleEnumeration'
+                xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramObligationIncrease'
+                  xlink:label='loc_SupplierFinanceProgramObligationIncrease' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramObligationDecreaseSettlement'
+                  xlink:label='loc_SupplierFinanceProgramObligationDecreaseSettlement' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramObligationPeriodIncreaseDecrease'
+                  xlink:label='loc_SupplierFinanceProgramObligationPeriodIncreaseDecrease' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramObligationCurrent'
+                  xlink:label='loc_SupplierFinanceProgramObligationCurrent' xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramObligationCurrentStatementOfFinancialPositionExtensibleEnumeration'
+                xlink:label='loc_SupplierFinanceProgramObligationCurrentStatementOfFinancialPositionExtensibleEnumeration'
+                xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramObligationNoncurrent'
+                  xlink:label='loc_SupplierFinanceProgramObligationNoncurrent' xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramObligationNoncurrentStatementOfFinancialPositionExtensibleEnumeration'
+                xlink:label='loc_SupplierFinanceProgramObligationNoncurrentStatementOfFinancialPositionExtensibleEnumeration'
+                xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SupplierFinanceProgramPaymentTimingPeriod'
+                  xlink:label='loc_SupplierFinanceProgramPaymentTimingPeriod' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SupplierFinanceProgramLineItems'
+                            xlink:to='loc_SupplierFinanceProgramObligationRollForward' xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SupplierFinanceProgramObligationRollForward'
+                            xlink:to='loc_SupplierFinanceProgramObligation' xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SupplierFinanceProgramObligation'
+                            xlink:to='loc_SupplierFinanceProgramObligationStatementOfFinancialPositionExtensibleEnumeration'
+                            xlink:type='arc'/>
+        <link:definitionArc order='4.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SupplierFinanceProgramObligationRollForward'
+                            xlink:to='loc_SupplierFinanceProgramObligationIncrease' xlink:type='arc'/>
+        <link:definitionArc order='5.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SupplierFinanceProgramObligationRollForward'
+                            xlink:to='loc_SupplierFinanceProgramObligationDecreaseSettlement' xlink:type='arc'/>
+        <link:definitionArc order='6.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SupplierFinanceProgramObligationRollForward'
+                            xlink:to='loc_SupplierFinanceProgramObligationPeriodIncreaseDecrease' xlink:type='arc'/>
+        <link:definitionArc order='7.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SupplierFinanceProgramLineItems'
+                            xlink:to='loc_SupplierFinanceProgramObligationCurrent' xlink:type='arc'/>
+        <link:definitionArc order='8.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SupplierFinanceProgramObligationCurrent'
+                            xlink:to='loc_SupplierFinanceProgramObligationCurrentStatementOfFinancialPositionExtensibleEnumeration'
+                            xlink:type='arc'/>
+        <link:definitionArc order='9.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SupplierFinanceProgramLineItems'
+                            xlink:to='loc_SupplierFinanceProgramObligationNoncurrent' xlink:type='arc'/>
+        <link:definitionArc order='10.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SupplierFinanceProgramObligationNoncurrent'
+                            xlink:to='loc_SupplierFinanceProgramObligationNoncurrentStatementOfFinancialPositionExtensibleEnumeration'
+                            xlink:type='arc'/>
+        <link:definitionArc order='11.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SupplierFinanceProgramLineItems'
+                            xlink:to='loc_SupplierFinanceProgramPaymentTimingPeriod' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/PayablesAndAccrualsSupplierFinanceProgramTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_RangeMember'
+                  xlink:label='loc_RangeMember' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_MaximumMember'
+                  xlink:label='loc_MaximumMember' xlink:type='locator'/>
+        <link:loc xlink:href='https://xbrl.fasb.org/srt/2023/elts/srt-2023.xsd#srt_MinimumMember'
+                  xlink:label='loc_MinimumMember' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RangeMember' xlink:to='loc_MaximumMember' xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_RangeMember' xlink:to='loc_MinimumMember' xlink:type='arc'/>
+    </link:definitionLink>
+</link:linkbase>

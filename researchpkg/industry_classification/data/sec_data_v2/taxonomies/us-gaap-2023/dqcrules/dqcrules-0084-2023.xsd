@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+2010-2023 Financial Accounting Foundation; (c) 2007-2010 XBRL US, Inc.; (c) 2020-2023 XBRL US, Inc. All Rights Reserved.
+Notice: Authorized Uses are Set Forth at https://xbrl.fasb.org/terms/TaxonomiesTermsConditions.html
+-->
+<xs:schema targetNamespace='http://fasb.org/dqcrules-0084/2023' elementFormDefault='qualified'
+           xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:dqcrules-0084='http://fasb.org/dqcrules-0084/2023'
+           xmlns:dqcrules='http://fasb.org/dqcrules/2023' xmlns:link='http://www.xbrl.org/2003/linkbase'
+           xmlns:ref='http://www.xbrl.org/2006/ref' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+           xmlns:xbrli='http://www.xbrl.org/2003/instance' xmlns:xlink='http://www.w3.org/1999/xlink'
+           xmlns:xbrldt='http://xbrl.org/2005/xbrldt' xmlns='http://www.xbrl.org/2003/linkbase'
+           xsi:schemaLocation='http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd http://fasb.org/dqcrules/2023 dqcrules-2023.xsd'>
+    <xs:import namespace='http://www.xbrl.org/2003/instance'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2003/linkbase'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2006/ref' schemaLocation='http://www.xbrl.org/2006/ref-2006-02-27.xsd'/>
+    <xs:import namespace='http://xbrl.org/2005/xbrldt' schemaLocation='http://www.xbrl.org/2005/xbrldt-2005.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules/2023' schemaLocation='dqcrules-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/us-roles/2023' schemaLocation='../elts/us-roles-2023.xsd'/>
+    <xs:annotation>
+        <xs:appinfo>
+            <link:roleType roleURI='http://fasb.org/us-gaap/role/dqc/0084' id='dqc_0084'>
+                <link:definition>DQC.US.0084</link:definition>
+                <link:usedOn>link:definitionLink</link:usedOn>
+                <link:usedOn>link:referenceLink</link:usedOn>
+                <link:usedOn>link:labelLink</link:usedOn>
+            </link:roleType>
+            <link:linkbase id='lnk'>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/0084' xlink:type='simple'
+                              xlink:href='#dqc_0084'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/dqcNote' xlink:href='dqcrules-2023.xsd#dqcn'
+                              xlink:type='simple'/>
+                <link:arcroleRef arcroleURI='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                 xlink:href='dqcrules-2023.xsd#rule-concept' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleExclusions'
+                              xlink:href='dqcrules-2023.xsd#dqcre' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleID' xlink:href='dqcrules-2023.xsd#dqcrid'
+                              xlink:type='simple'/>
+                <link:labelLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0084'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0084_Dqc_0084'
+                              xlink:label='loc_dqcrules_Dqc_0084'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0084' xlink:to='lbl_dqcrules_Dqc_0084'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0084' xml:lang='en-US'>DQC.US.0084 [Abstract]
+                    </link:label>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0084_Dqc_0084_DurationalAggregation'
+                              xlink:label='loc_dqcrules_Dqc_0084_DurationalAggregation'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0084_DurationalAggregation'
+                                   xlink:to='lbl_dqcrules_Dqc_0084_DurationalAggregation'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0084_DurationalAggregation' xml:lang='en-US'>
+                        DQC.US.0084.Durational Aggregation [Abstract]
+                    </link:label>
+                </link:labelLink>
+                <link:definitionLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0084'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0084_Dqc_0084'
+                              xlink:label='loc_dqcrules_Dqc_0084'/>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0084_Dqc_0084_DurationalAggregation'
+                              xlink:label='loc_Dqc_0084_DurationalAggregation'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_dqcrules_Dqc_0084' xlink:to='loc_Dqc_0084_DurationalAggregation'
+                                        order='1.0'/>
+                </link:definitionLink>
+                <link:referenceLink xlink:role='http://fasb.org/us-gaap/role/dqc/0084' xlink:type='extended'>
+                    <link:loc xlink:href='#dqcrules-0084_Dqc_0084' xlink:label='loc_Dqc_0084' xlink:type='locator'/>
+                    <link:loc xlink:href='#dqcrules-0084_Dqc_0084_DurationalAggregation'
+                              xlink:label='loc_Dqc_0084_DurationalAggregation' xlink:type='locator'/>
+                    <link:reference xlink:label='dqc_0084' xlink:role='http://fasb.org/us-gaap/role/dqc/dqcNote'
+                                    xlink:type='resource'>
+                        <ref:Publisher>XBRL US</ref:Publisher>
+                        <dqcrules:ruleId>DQC.0084</dqcrules:ruleId>
+                        <dqcrules:ruleName>Durational Aggregation</dqcrules:ruleName>
+                        <dqcrules:ruleDocumentation>This rule identifies where the values of a durational element for a
+                            series of periods of time do not aggregate to the value representing the aggregated period
+                            in the instance. The rule matches sub periods based on the start date and end date into a
+                            contiguous period of time. The rule then matches the calculated contiguous period to
+                            equivalent periods reported in the instance. For example the rule will check that the values
+                            for Q1 + Q2 for any durational element is equal to the value for that element for the first
+                            half of the year. The rule works for all base taxonomy elements and time periods reported in
+                            the instance.
+                        </dqcrules:ruleDocumentation>
+                        <ref:URI>https://xbrl.us/data-rule/dqc_0084/</ref:URI>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0084_DurationalAggregation' xlink:to='dqc_0084'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0084' xlink:to='dqc_0084' xlink:type='arc'/>
+                </link:referenceLink>
+            </link:linkbase>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name='Dqc_0084' id='dqcrules-0084_Dqc_0084' type='xbrli:stringItemType' substitutionGroup='xbrli:item'
+                abstract='true' nillable='true' xbrli:periodType='duration'/>
+    <xs:element name='Dqc_0084_DurationalAggregation' id='dqcrules-0084_Dqc_0084_DurationalAggregation'
+                type='xbrli:stringItemType' substitutionGroup='xbrli:item' abstract='true' nillable='true'
+                xbrli:periodType='duration'/>
+</xs:schema>

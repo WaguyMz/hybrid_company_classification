@@ -1,0 +1,733 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+(c) 2010-2023 Financial Accounting Foundation; (c) 2007-2010 XBRL US, Inc.  All Rights Reserved.
+Notice: Authorized Uses are Set Forth at https://xbrl.fasb.org/terms/TaxonomiesTermsConditions.html
+  -->
+<link:linkbase xmlns:link='http://www.xbrl.org/2003/linkbase' xmlns:xbrldt='http://xbrl.org/2005/xbrldt'
+               xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+               xsi:schemaLocation='http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'>
+    <link:roleRef
+            roleURI='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenOptionContractsWrittenTable'
+            xlink:href='../elts/us-roles-2023.xsd#OpenOptionContractsWrittenOpenOptionContractsWrittenTable'
+            xlink:type='simple'/>
+    <link:roleRef roleURI='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenFuturesContractTable'
+                  xlink:href='../elts/us-roles-2023.xsd#OpenOptionContractsWrittenOpenFuturesContractTable'
+                  xlink:type='simple'/>
+    <link:roleRef
+            roleURI='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenForwardForeignCurrencyContractTable'
+            xlink:href='../elts/us-roles-2023.xsd#OpenOptionContractsWrittenOpenForwardForeignCurrencyContractTable'
+            xlink:type='simple'/>
+    <link:roleRef roleURI='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenSwapContractTable'
+                  xlink:href='../elts/us-roles-2023.xsd#OpenOptionContractsWrittenOpenSwapContractTable'
+                  xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/all'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#all' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/dimension-domain'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/dimension-default'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/domain-member'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member' xlink:type='simple'/>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenOptionContractsWrittenTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenOptionContractsWrittenTable'
+                  xlink:label='loc_OpenOptionContractsWrittenTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenOptionContractsWrittenLineItems'
+                  xlink:label='loc_OpenOptionContractsWrittenLineItems' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xbrldt:closed='true' xbrldt:contextElement='segment'
+                            xlink:arcrole='http://xbrl.org/int/dim/arcrole/all'
+                            xlink:from='loc_OpenOptionContractsWrittenLineItems'
+                            xlink:to='loc_OpenOptionContractsWrittenTable' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenOptionContractsWrittenTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenOptionContractsWrittenTable'
+                  xlink:label='loc_OpenOptionContractsWrittenTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenOptionContractIdentifierAxis'
+                  xlink:label='loc_OpenOptionContractIdentifierAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeInstrumentRiskAxis'
+                  xlink:label='loc_DerivativeInstrumentRiskAxis' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                            xlink:from='loc_OpenOptionContractsWrittenTable'
+                            xlink:to='loc_OpenOptionContractIdentifierAxis' xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                            xlink:from='loc_OpenOptionContractsWrittenTable' xlink:to='loc_DerivativeInstrumentRiskAxis'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenOptionContractsWrittenTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeInstrumentRiskAxis'
+                  xlink:label='loc_DerivativeInstrumentRiskAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeContractTypeDomain'
+                  xlink:label='loc_DerivativeContractTypeDomain' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-domain'
+                            xlink:from='loc_DerivativeInstrumentRiskAxis' xlink:to='loc_DerivativeContractTypeDomain'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenOptionContractsWrittenTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeInstrumentRiskAxis'
+                  xlink:label='loc_DerivativeInstrumentRiskAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeContractTypeDomain'
+                  xlink:label='loc_DerivativeContractTypeDomain' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-default'
+                            xlink:from='loc_DerivativeInstrumentRiskAxis' xlink:to='loc_DerivativeContractTypeDomain'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenOptionContractsWrittenTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenOptionContractsWrittenLineItems'
+                  xlink:label='loc_OpenOptionContractsWrittenLineItems' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenOptionContractWrittenAbstract'
+                  xlink:label='loc_OpenOptionContractWrittenAbstract' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilities'
+                  xlink:label='loc_DerivativeLiabilities' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilityCounterpartyNameExtensibleList'
+                  xlink:label='loc_DerivativeLiabilityCounterpartyNameExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilityTypeExtensibleList'
+                  xlink:label='loc_DerivativeLiabilityTypeExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeNumberOfInstrumentsHeld'
+                  xlink:label='loc_DerivativeNumberOfInstrumentsHeld' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilityNotionalAmount'
+                  xlink:label='loc_DerivativeLiabilityNotionalAmount' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativePriceRiskOptionStrikePrice'
+                  xlink:label='loc_DerivativePriceRiskOptionStrikePrice' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeMaturityDates'
+                  xlink:label='loc_DerivativeMaturityDates' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenOptionContractsWrittenPremiums'
+                  xlink:label='loc_OpenOptionContractsWrittenPremiums' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativePositionExtensibleEnumeration'
+                  xlink:label='loc_DerivativePositionExtensibleEnumeration' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeUnderlyingInvestmentShares'
+                  xlink:label='loc_DerivativeUnderlyingInvestmentShares' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeUnderlyingInvestmentPrincipal'
+                  xlink:label='loc_DerivativeUnderlyingInvestmentPrincipal' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeUnderlyingInvestmentFairValue'
+                  xlink:label='loc_DerivativeUnderlyingInvestmentFairValue' xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeUnderlyingInvestmentPercentageToNetAssetsOfBasketOrIndex'
+                xlink:label='loc_DerivativeUnderlyingInvestmentPercentageToNetAssetsOfBasketOrIndex'
+                xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeUnderlyingInvestmentBasketOrIndexExtensibleEnumeration'
+                xlink:label='loc_DerivativeUnderlyingInvestmentBasketOrIndexExtensibleEnumeration'
+                xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeUnderlyingInvestmentNameExtensibleEnumeration'
+                  xlink:label='loc_DerivativeUnderlyingInvestmentNameExtensibleEnumeration' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeRestrictionStatus'
+                  xlink:label='loc_DerivativeRestrictionStatus' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeSignificantUnobservableInput'
+                  xlink:label='loc_DerivativeSignificantUnobservableInput' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeNetAssetsPercentage'
+                  xlink:label='loc_DerivativeNetAssetsPercentage' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenOptionContractPurchasedAbstract'
+                  xlink:label='loc_OpenOptionContractPurchasedAbstract' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssets' xlink:label='loc_DerivativeAssets'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssetCounterpartyNameExtensibleList'
+                  xlink:label='loc_DerivativeAssetCounterpartyNameExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssetTypeExtensibleList'
+                  xlink:label='loc_DerivativeAssetTypeExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssetNotionalAmount'
+                  xlink:label='loc_DerivativeAssetNotionalAmount' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativePremiumPaid'
+                  xlink:label='loc_DerivativePremiumPaid' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractsWrittenLineItems'
+                            xlink:to='loc_OpenOptionContractWrittenAbstract' xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract' xlink:to='loc_DerivativeLiabilities'
+                            xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeLiabilities'
+                            xlink:to='loc_DerivativeLiabilityCounterpartyNameExtensibleList' xlink:type='arc'/>
+        <link:definitionArc order='4.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeLiabilities' xlink:to='loc_DerivativeLiabilityTypeExtensibleList'
+                            xlink:type='arc'/>
+        <link:definitionArc order='5.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract'
+                            xlink:to='loc_DerivativeNumberOfInstrumentsHeld' xlink:type='arc'/>
+        <link:definitionArc order='6.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract'
+                            xlink:to='loc_DerivativeLiabilityNotionalAmount' xlink:type='arc'/>
+        <link:definitionArc order='7.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract'
+                            xlink:to='loc_DerivativePriceRiskOptionStrikePrice' xlink:type='arc'/>
+        <link:definitionArc order='8.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract' xlink:to='loc_DerivativeMaturityDates'
+                            xlink:type='arc'/>
+        <link:definitionArc order='9.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract'
+                            xlink:to='loc_OpenOptionContractsWrittenPremiums' xlink:type='arc'/>
+        <link:definitionArc order='10.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract'
+                            xlink:to='loc_DerivativePositionExtensibleEnumeration' xlink:type='arc'/>
+        <link:definitionArc order='11.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract'
+                            xlink:to='loc_DerivativeUnderlyingInvestmentShares' xlink:type='arc'/>
+        <link:definitionArc order='12.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract'
+                            xlink:to='loc_DerivativeUnderlyingInvestmentPrincipal' xlink:type='arc'/>
+        <link:definitionArc order='13.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract'
+                            xlink:to='loc_DerivativeUnderlyingInvestmentFairValue' xlink:type='arc'/>
+        <link:definitionArc order='14.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract'
+                            xlink:to='loc_DerivativeUnderlyingInvestmentPercentageToNetAssetsOfBasketOrIndex'
+                            xlink:type='arc'/>
+        <link:definitionArc order='15.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeUnderlyingInvestmentPercentageToNetAssetsOfBasketOrIndex'
+                            xlink:to='loc_DerivativeUnderlyingInvestmentBasketOrIndexExtensibleEnumeration'
+                            xlink:type='arc'/>
+        <link:definitionArc order='16.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract'
+                            xlink:to='loc_DerivativeUnderlyingInvestmentNameExtensibleEnumeration' xlink:type='arc'/>
+        <link:definitionArc order='17.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract'
+                            xlink:to='loc_DerivativeRestrictionStatus' xlink:type='arc'/>
+        <link:definitionArc order='18.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract'
+                            xlink:to='loc_DerivativeSignificantUnobservableInput' xlink:type='arc'/>
+        <link:definitionArc order='19.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractWrittenAbstract'
+                            xlink:to='loc_DerivativeNetAssetsPercentage' xlink:type='arc'/>
+        <link:definitionArc order='20.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractsWrittenLineItems'
+                            xlink:to='loc_OpenOptionContractPurchasedAbstract' xlink:type='arc'/>
+        <link:definitionArc order='21.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractPurchasedAbstract' xlink:to='loc_DerivativeAssets'
+                            xlink:type='arc'/>
+        <link:definitionArc order='22.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeAssets'
+                            xlink:to='loc_DerivativeAssetCounterpartyNameExtensibleList' xlink:type='arc'/>
+        <link:definitionArc order='23.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeAssets' xlink:to='loc_DerivativeAssetTypeExtensibleList'
+                            xlink:type='arc'/>
+        <link:definitionArc order='24.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractPurchasedAbstract'
+                            xlink:to='loc_DerivativeAssetNotionalAmount' xlink:type='arc'/>
+        <link:definitionArc order='25.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenOptionContractPurchasedAbstract' xlink:to='loc_DerivativePremiumPaid'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenOptionContractsWrittenTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeContractTypeDomain'
+                  xlink:label='loc_DerivativeContractTypeDomain' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_ForeignExchangeForwardMember'
+                  xlink:label='loc_ForeignExchangeForwardMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FutureMember' xlink:label='loc_FutureMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OptionMember' xlink:label='loc_OptionMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SwapMember' xlink:label='loc_SwapMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_InterestRateSwapMember'
+                  xlink:label='loc_InterestRateSwapMember' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_ForeignExchangeForwardMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_FutureMember' xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_OptionMember' xlink:type='arc'/>
+        <link:definitionArc order='4.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_SwapMember' xlink:type='arc'/>
+        <link:definitionArc order='5.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SwapMember' xlink:to='loc_InterestRateSwapMember' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenFuturesContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenFuturesContractTable'
+                  xlink:label='loc_OpenFuturesContractTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenFuturesContractLineItems'
+                  xlink:label='loc_OpenFuturesContractLineItems' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xbrldt:closed='true' xbrldt:contextElement='segment'
+                            xlink:arcrole='http://xbrl.org/int/dim/arcrole/all'
+                            xlink:from='loc_OpenFuturesContractLineItems' xlink:to='loc_OpenFuturesContractTable'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenFuturesContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenFuturesContractTable'
+                  xlink:label='loc_OpenFuturesContractTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenFuturesContractIdentifierAxis'
+                  xlink:label='loc_OpenFuturesContractIdentifierAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeInstrumentRiskAxis'
+                  xlink:label='loc_DerivativeInstrumentRiskAxis' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                            xlink:from='loc_OpenFuturesContractTable' xlink:to='loc_OpenFuturesContractIdentifierAxis'
+                            xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                            xlink:from='loc_OpenFuturesContractTable' xlink:to='loc_DerivativeInstrumentRiskAxis'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenFuturesContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeInstrumentRiskAxis'
+                  xlink:label='loc_DerivativeInstrumentRiskAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeContractTypeDomain'
+                  xlink:label='loc_DerivativeContractTypeDomain' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-domain'
+                            xlink:from='loc_DerivativeInstrumentRiskAxis' xlink:to='loc_DerivativeContractTypeDomain'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenFuturesContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeInstrumentRiskAxis'
+                  xlink:label='loc_DerivativeInstrumentRiskAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeContractTypeDomain'
+                  xlink:label='loc_DerivativeContractTypeDomain' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-default'
+                            xlink:from='loc_DerivativeInstrumentRiskAxis' xlink:to='loc_DerivativeContractTypeDomain'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenFuturesContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenFuturesContractLineItems'
+                  xlink:label='loc_OpenFuturesContractLineItems' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssets' xlink:label='loc_DerivativeAssets'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssetCounterpartyNameExtensibleList'
+                  xlink:label='loc_DerivativeAssetCounterpartyNameExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssetTypeExtensibleList'
+                  xlink:label='loc_DerivativeAssetTypeExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilities'
+                  xlink:label='loc_DerivativeLiabilities' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilityCounterpartyNameExtensibleList'
+                  xlink:label='loc_DerivativeLiabilityCounterpartyNameExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilityTypeExtensibleList'
+                  xlink:label='loc_DerivativeLiabilityTypeExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeNumberOfInstrumentsHeld'
+                  xlink:label='loc_DerivativeNumberOfInstrumentsHeld' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeMaturityDates'
+                  xlink:label='loc_DerivativeMaturityDates' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssetNotionalAmount'
+                  xlink:label='loc_DerivativeAssetNotionalAmount' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilityNotionalAmount'
+                  xlink:label='loc_DerivativeLiabilityNotionalAmount' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_UnrealizedGainLossOnDerivatives'
+                  xlink:label='loc_UnrealizedGainLossOnDerivatives' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeRestrictionStatus'
+                  xlink:label='loc_DerivativeRestrictionStatus' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeSignificantUnobservableInput'
+                  xlink:label='loc_DerivativeSignificantUnobservableInput' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeNetAssetsPercentage'
+                  xlink:label='loc_DerivativeNetAssetsPercentage' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenFuturesContractLineItems' xlink:to='loc_DerivativeAssets'
+                            xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeAssets'
+                            xlink:to='loc_DerivativeAssetCounterpartyNameExtensibleList' xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeAssets' xlink:to='loc_DerivativeAssetTypeExtensibleList'
+                            xlink:type='arc'/>
+        <link:definitionArc order='4.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenFuturesContractLineItems' xlink:to='loc_DerivativeLiabilities'
+                            xlink:type='arc'/>
+        <link:definitionArc order='5.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeLiabilities'
+                            xlink:to='loc_DerivativeLiabilityCounterpartyNameExtensibleList' xlink:type='arc'/>
+        <link:definitionArc order='6.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeLiabilities' xlink:to='loc_DerivativeLiabilityTypeExtensibleList'
+                            xlink:type='arc'/>
+        <link:definitionArc order='7.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenFuturesContractLineItems'
+                            xlink:to='loc_DerivativeNumberOfInstrumentsHeld' xlink:type='arc'/>
+        <link:definitionArc order='8.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenFuturesContractLineItems' xlink:to='loc_DerivativeMaturityDates'
+                            xlink:type='arc'/>
+        <link:definitionArc order='9.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenFuturesContractLineItems' xlink:to='loc_DerivativeAssetNotionalAmount'
+                            xlink:type='arc'/>
+        <link:definitionArc order='10.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenFuturesContractLineItems'
+                            xlink:to='loc_DerivativeLiabilityNotionalAmount' xlink:type='arc'/>
+        <link:definitionArc order='11.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenFuturesContractLineItems' xlink:to='loc_UnrealizedGainLossOnDerivatives'
+                            xlink:type='arc'/>
+        <link:definitionArc order='12.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenFuturesContractLineItems' xlink:to='loc_DerivativeRestrictionStatus'
+                            xlink:type='arc'/>
+        <link:definitionArc order='13.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenFuturesContractLineItems'
+                            xlink:to='loc_DerivativeSignificantUnobservableInput' xlink:type='arc'/>
+        <link:definitionArc order='14.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenFuturesContractLineItems' xlink:to='loc_DerivativeNetAssetsPercentage'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenFuturesContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeContractTypeDomain'
+                  xlink:label='loc_DerivativeContractTypeDomain' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_ForeignExchangeForwardMember'
+                  xlink:label='loc_ForeignExchangeForwardMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FutureMember' xlink:label='loc_FutureMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OptionMember' xlink:label='loc_OptionMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SwapMember' xlink:label='loc_SwapMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_InterestRateSwapMember'
+                  xlink:label='loc_InterestRateSwapMember' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_ForeignExchangeForwardMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_FutureMember' xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_OptionMember' xlink:type='arc'/>
+        <link:definitionArc order='4.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_SwapMember' xlink:type='arc'/>
+        <link:definitionArc order='5.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SwapMember' xlink:to='loc_InterestRateSwapMember' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenForwardForeignCurrencyContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenForwardForeignCurrencyContractTable'
+                  xlink:label='loc_OpenForwardForeignCurrencyContractTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenForwardForeignCurrencyContractLineItems'
+                  xlink:label='loc_OpenForwardForeignCurrencyContractLineItems' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xbrldt:closed='true' xbrldt:contextElement='segment'
+                            xlink:arcrole='http://xbrl.org/int/dim/arcrole/all'
+                            xlink:from='loc_OpenForwardForeignCurrencyContractLineItems'
+                            xlink:to='loc_OpenForwardForeignCurrencyContractTable' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenForwardForeignCurrencyContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenForwardForeignCurrencyContractTable'
+                  xlink:label='loc_OpenForwardForeignCurrencyContractTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenForwardForeignCurrencyContractIdentifierAxis'
+                  xlink:label='loc_OpenForwardForeignCurrencyContractIdentifierAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeInstrumentRiskAxis'
+                  xlink:label='loc_DerivativeInstrumentRiskAxis' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                            xlink:from='loc_OpenForwardForeignCurrencyContractTable'
+                            xlink:to='loc_OpenForwardForeignCurrencyContractIdentifierAxis' xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                            xlink:from='loc_OpenForwardForeignCurrencyContractTable'
+                            xlink:to='loc_DerivativeInstrumentRiskAxis' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenForwardForeignCurrencyContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeInstrumentRiskAxis'
+                  xlink:label='loc_DerivativeInstrumentRiskAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeContractTypeDomain'
+                  xlink:label='loc_DerivativeContractTypeDomain' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-domain'
+                            xlink:from='loc_DerivativeInstrumentRiskAxis' xlink:to='loc_DerivativeContractTypeDomain'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenForwardForeignCurrencyContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeInstrumentRiskAxis'
+                  xlink:label='loc_DerivativeInstrumentRiskAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeContractTypeDomain'
+                  xlink:label='loc_DerivativeContractTypeDomain' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-default'
+                            xlink:from='loc_DerivativeInstrumentRiskAxis' xlink:to='loc_DerivativeContractTypeDomain'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenForwardForeignCurrencyContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenForwardForeignCurrencyContractLineItems'
+                  xlink:label='loc_OpenForwardForeignCurrencyContractLineItems' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssets' xlink:label='loc_DerivativeAssets'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssetCounterpartyNameExtensibleList'
+                  xlink:label='loc_DerivativeAssetCounterpartyNameExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssetTypeExtensibleList'
+                  xlink:label='loc_DerivativeAssetTypeExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilities'
+                  xlink:label='loc_DerivativeLiabilities' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilityCounterpartyNameExtensibleList'
+                  xlink:label='loc_DerivativeLiabilityCounterpartyNameExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilityTypeExtensibleList'
+                  xlink:label='loc_DerivativeLiabilityTypeExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilityNotionalAmount'
+                  xlink:label='loc_DerivativeLiabilityNotionalAmount' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssetNotionalAmount'
+                  xlink:label='loc_DerivativeAssetNotionalAmount' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeMaturityDates'
+                  xlink:label='loc_DerivativeMaturityDates' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeRestrictionStatus'
+                  xlink:label='loc_DerivativeRestrictionStatus' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeSignificantUnobservableInput'
+                  xlink:label='loc_DerivativeSignificantUnobservableInput' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeNetAssetsPercentage'
+                  xlink:label='loc_DerivativeNetAssetsPercentage' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenForwardForeignCurrencyContractLineItems' xlink:to='loc_DerivativeAssets'
+                            xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeAssets'
+                            xlink:to='loc_DerivativeAssetCounterpartyNameExtensibleList' xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeAssets' xlink:to='loc_DerivativeAssetTypeExtensibleList'
+                            xlink:type='arc'/>
+        <link:definitionArc order='4.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenForwardForeignCurrencyContractLineItems'
+                            xlink:to='loc_DerivativeLiabilities' xlink:type='arc'/>
+        <link:definitionArc order='5.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeLiabilities'
+                            xlink:to='loc_DerivativeLiabilityCounterpartyNameExtensibleList' xlink:type='arc'/>
+        <link:definitionArc order='6.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeLiabilities' xlink:to='loc_DerivativeLiabilityTypeExtensibleList'
+                            xlink:type='arc'/>
+        <link:definitionArc order='7.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenForwardForeignCurrencyContractLineItems'
+                            xlink:to='loc_DerivativeLiabilityNotionalAmount' xlink:type='arc'/>
+        <link:definitionArc order='8.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenForwardForeignCurrencyContractLineItems'
+                            xlink:to='loc_DerivativeAssetNotionalAmount' xlink:type='arc'/>
+        <link:definitionArc order='9.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenForwardForeignCurrencyContractLineItems'
+                            xlink:to='loc_DerivativeMaturityDates' xlink:type='arc'/>
+        <link:definitionArc order='10.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenForwardForeignCurrencyContractLineItems'
+                            xlink:to='loc_DerivativeRestrictionStatus' xlink:type='arc'/>
+        <link:definitionArc order='11.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenForwardForeignCurrencyContractLineItems'
+                            xlink:to='loc_DerivativeSignificantUnobservableInput' xlink:type='arc'/>
+        <link:definitionArc order='12.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenForwardForeignCurrencyContractLineItems'
+                            xlink:to='loc_DerivativeNetAssetsPercentage' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenForwardForeignCurrencyContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeContractTypeDomain'
+                  xlink:label='loc_DerivativeContractTypeDomain' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_ForeignExchangeForwardMember'
+                  xlink:label='loc_ForeignExchangeForwardMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FutureMember' xlink:label='loc_FutureMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OptionMember' xlink:label='loc_OptionMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SwapMember' xlink:label='loc_SwapMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_InterestRateSwapMember'
+                  xlink:label='loc_InterestRateSwapMember' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_ForeignExchangeForwardMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_FutureMember' xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_OptionMember' xlink:type='arc'/>
+        <link:definitionArc order='4.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_SwapMember' xlink:type='arc'/>
+        <link:definitionArc order='5.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SwapMember' xlink:to='loc_InterestRateSwapMember' xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenSwapContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenSwapContractTable'
+                  xlink:label='loc_OpenSwapContractTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenSwapContractLineItems'
+                  xlink:label='loc_OpenSwapContractLineItems' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xbrldt:closed='true' xbrldt:contextElement='segment'
+                            xlink:arcrole='http://xbrl.org/int/dim/arcrole/all'
+                            xlink:from='loc_OpenSwapContractLineItems' xlink:to='loc_OpenSwapContractTable'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenSwapContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenSwapContractTable'
+                  xlink:label='loc_OpenSwapContractTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenSwapContractIdentifierAxis'
+                  xlink:label='loc_OpenSwapContractIdentifierAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeInstrumentRiskAxis'
+                  xlink:label='loc_DerivativeInstrumentRiskAxis' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                            xlink:from='loc_OpenSwapContractTable' xlink:to='loc_OpenSwapContractIdentifierAxis'
+                            xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                            xlink:from='loc_OpenSwapContractTable' xlink:to='loc_DerivativeInstrumentRiskAxis'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenSwapContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeInstrumentRiskAxis'
+                  xlink:label='loc_DerivativeInstrumentRiskAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeContractTypeDomain'
+                  xlink:label='loc_DerivativeContractTypeDomain' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-domain'
+                            xlink:from='loc_DerivativeInstrumentRiskAxis' xlink:to='loc_DerivativeContractTypeDomain'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenSwapContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeInstrumentRiskAxis'
+                  xlink:label='loc_DerivativeInstrumentRiskAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeContractTypeDomain'
+                  xlink:label='loc_DerivativeContractTypeDomain' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-default'
+                            xlink:from='loc_DerivativeInstrumentRiskAxis' xlink:to='loc_DerivativeContractTypeDomain'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenSwapContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenSwapContractLineItems'
+                  xlink:label='loc_OpenSwapContractLineItems' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssets' xlink:label='loc_DerivativeAssets'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssetCounterpartyNameExtensibleList'
+                  xlink:label='loc_DerivativeAssetCounterpartyNameExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssetTypeExtensibleList'
+                  xlink:label='loc_DerivativeAssetTypeExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilities'
+                  xlink:label='loc_DerivativeLiabilities' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilityCounterpartyNameExtensibleList'
+                  xlink:label='loc_DerivativeLiabilityCounterpartyNameExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilityTypeExtensibleList'
+                  xlink:label='loc_DerivativeLiabilityTypeExtensibleList' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeMaturityDates'
+                  xlink:label='loc_DerivativeMaturityDates' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeAssetNotionalAmount'
+                  xlink:label='loc_DerivativeAssetNotionalAmount' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeLiabilityNotionalAmount'
+                  xlink:label='loc_DerivativeLiabilityNotionalAmount' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativePremiumPaid'
+                  xlink:label='loc_DerivativePremiumPaid' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OpenOptionContractsWrittenPremiums'
+                  xlink:label='loc_OpenOptionContractsWrittenPremiums' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_UnrealizedGainLossOnDerivatives'
+                  xlink:label='loc_UnrealizedGainLossOnDerivatives' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeUnderlyingInvestmentShares'
+                  xlink:label='loc_DerivativeUnderlyingInvestmentShares' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeUnderlyingInvestmentPrincipal'
+                  xlink:label='loc_DerivativeUnderlyingInvestmentPrincipal' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeUnderlyingInvestmentFairValue'
+                  xlink:label='loc_DerivativeUnderlyingInvestmentFairValue' xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeUnderlyingInvestmentPercentageToNetAssetsOfBasketOrIndex'
+                xlink:label='loc_DerivativeUnderlyingInvestmentPercentageToNetAssetsOfBasketOrIndex'
+                xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeUnderlyingInvestmentBasketOrIndexExtensibleEnumeration'
+                xlink:label='loc_DerivativeUnderlyingInvestmentBasketOrIndexExtensibleEnumeration'
+                xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeRestrictionStatus'
+                  xlink:label='loc_DerivativeRestrictionStatus' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeSignificantUnobservableInput'
+                  xlink:label='loc_DerivativeSignificantUnobservableInput' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeNetAssetsPercentage'
+                  xlink:label='loc_DerivativeNetAssetsPercentage' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems' xlink:to='loc_DerivativeAssets'
+                            xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeAssets'
+                            xlink:to='loc_DerivativeAssetCounterpartyNameExtensibleList' xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeAssets' xlink:to='loc_DerivativeAssetTypeExtensibleList'
+                            xlink:type='arc'/>
+        <link:definitionArc order='4.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems' xlink:to='loc_DerivativeLiabilities'
+                            xlink:type='arc'/>
+        <link:definitionArc order='5.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeLiabilities'
+                            xlink:to='loc_DerivativeLiabilityCounterpartyNameExtensibleList' xlink:type='arc'/>
+        <link:definitionArc order='6.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeLiabilities' xlink:to='loc_DerivativeLiabilityTypeExtensibleList'
+                            xlink:type='arc'/>
+        <link:definitionArc order='7.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems' xlink:to='loc_DerivativeMaturityDates'
+                            xlink:type='arc'/>
+        <link:definitionArc order='8.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems' xlink:to='loc_DerivativeAssetNotionalAmount'
+                            xlink:type='arc'/>
+        <link:definitionArc order='9.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems' xlink:to='loc_DerivativeLiabilityNotionalAmount'
+                            xlink:type='arc'/>
+        <link:definitionArc order='10.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems' xlink:to='loc_DerivativePremiumPaid'
+                            xlink:type='arc'/>
+        <link:definitionArc order='11.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems' xlink:to='loc_OpenOptionContractsWrittenPremiums'
+                            xlink:type='arc'/>
+        <link:definitionArc order='12.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems' xlink:to='loc_UnrealizedGainLossOnDerivatives'
+                            xlink:type='arc'/>
+        <link:definitionArc order='13.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems'
+                            xlink:to='loc_DerivativeUnderlyingInvestmentShares' xlink:type='arc'/>
+        <link:definitionArc order='14.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems'
+                            xlink:to='loc_DerivativeUnderlyingInvestmentPrincipal' xlink:type='arc'/>
+        <link:definitionArc order='15.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems'
+                            xlink:to='loc_DerivativeUnderlyingInvestmentFairValue' xlink:type='arc'/>
+        <link:definitionArc order='16.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems'
+                            xlink:to='loc_DerivativeUnderlyingInvestmentPercentageToNetAssetsOfBasketOrIndex'
+                            xlink:type='arc'/>
+        <link:definitionArc order='17.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeUnderlyingInvestmentPercentageToNetAssetsOfBasketOrIndex'
+                            xlink:to='loc_DerivativeUnderlyingInvestmentBasketOrIndexExtensibleEnumeration'
+                            xlink:type='arc'/>
+        <link:definitionArc order='18.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems' xlink:to='loc_DerivativeRestrictionStatus'
+                            xlink:type='arc'/>
+        <link:definitionArc order='19.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems'
+                            xlink:to='loc_DerivativeSignificantUnobservableInput' xlink:type='arc'/>
+        <link:definitionArc order='20.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_OpenSwapContractLineItems' xlink:to='loc_DerivativeNetAssetsPercentage'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink
+            xlink:role='http://fasb.org/us-gaap/role/disclosure/OpenOptionContractsWrittenOpenSwapContractTable'
+            xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DerivativeContractTypeDomain'
+                  xlink:label='loc_DerivativeContractTypeDomain' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_ForeignExchangeForwardMember'
+                  xlink:label='loc_ForeignExchangeForwardMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FutureMember' xlink:label='loc_FutureMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_OptionMember' xlink:label='loc_OptionMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_SwapMember' xlink:label='loc_SwapMember'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_InterestRateSwapMember'
+                  xlink:label='loc_InterestRateSwapMember' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_ForeignExchangeForwardMember'
+                            xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_FutureMember' xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_OptionMember' xlink:type='arc'/>
+        <link:definitionArc order='4.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_DerivativeContractTypeDomain' xlink:to='loc_SwapMember' xlink:type='arc'/>
+        <link:definitionArc order='5.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_SwapMember' xlink:to='loc_InterestRateSwapMember' xlink:type='arc'/>
+    </link:definitionLink>
+</link:linkbase>

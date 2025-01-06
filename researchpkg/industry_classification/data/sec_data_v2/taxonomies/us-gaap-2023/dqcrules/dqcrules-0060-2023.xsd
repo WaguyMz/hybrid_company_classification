@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+2010-2023 Financial Accounting Foundation; (c) 2007-2010 XBRL US, Inc.; (c) 2020-2023 XBRL US, Inc. All Rights Reserved.
+Notice: Authorized Uses are Set Forth at https://xbrl.fasb.org/terms/TaxonomiesTermsConditions.html
+-->
+<xs:schema targetNamespace='http://fasb.org/dqcrules-0060/2023' elementFormDefault='qualified'
+           xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:dqcrules-0060='http://fasb.org/dqcrules-0060/2023'
+           xmlns:dqcrules='http://fasb.org/dqcrules/2023' xmlns:us-gaap='http://fasb.org/us-gaap/2022'
+           xmlns:link='http://www.xbrl.org/2003/linkbase' xmlns:ref='http://www.xbrl.org/2006/ref'
+           xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xbrli='http://www.xbrl.org/2003/instance'
+           xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xbrldt='http://xbrl.org/2005/xbrldt'
+           xmlns='http://www.xbrl.org/2003/linkbase'
+           xsi:schemaLocation='http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd http://fasb.org/dqcrules/2023 dqcrules-2023.xsd'>
+    <xs:import namespace='http://www.xbrl.org/2003/instance'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2003/linkbase'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2006/ref' schemaLocation='http://www.xbrl.org/2006/ref-2006-02-27.xsd'/>
+    <xs:import namespace='http://xbrl.org/2005/xbrldt' schemaLocation='http://www.xbrl.org/2005/xbrldt-2005.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules/2023' schemaLocation='dqcrules-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/us-gaap/2023' schemaLocation='../elts/us-gaap-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/us-roles/2023' schemaLocation='../elts/us-roles-2023.xsd'/>
+    <xs:annotation>
+        <xs:appinfo>
+            <link:roleType roleURI='http://fasb.org/us-gaap/role/dqc/0060' id='dqc_0060'>
+                <link:definition>DQC.US.0060</link:definition>
+                <link:usedOn>link:definitionLink</link:usedOn>
+                <link:usedOn>link:referenceLink</link:usedOn>
+                <link:usedOn>link:labelLink</link:usedOn>
+            </link:roleType>
+            <link:linkbase id='lnk'>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/0060' xlink:type='simple'
+                              xlink:href='#dqc_0060'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/dqcNote' xlink:href='dqcrules-2023.xsd#dqcn'
+                              xlink:type='simple'/>
+                <link:arcroleRef arcroleURI='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                 xlink:href='dqcrules-2023.xsd#rule-concept' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleExclusions'
+                              xlink:href='dqcrules-2023.xsd#dqcre' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleID' xlink:href='dqcrules-2023.xsd#dqcrid'
+                              xlink:type='simple'/>
+                <link:labelLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0060'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0060_Dqc_0060'
+                              xlink:label='loc_dqcrules_Dqc_0060'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0060' xlink:to='lbl_dqcrules_Dqc_0060'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0060' xml:lang='en-US'>DQC.US.0060 [Abstract]
+                    </link:label>
+                    <link:loc xlink:type='locator'
+                              xlink:href='#dqcrules-0060_Dqc_0060_ElementDependenceForSpecificElements'
+                              xlink:label='loc_dqcrules_Dqc_0060_ElementDependenceForSpecificElements'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0060_ElementDependenceForSpecificElements'
+                                   xlink:to='lbl_dqcrules_Dqc_0060_ElementDependenceForSpecificElements'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0060_ElementDependenceForSpecificElements'
+                                xml:lang='en-US'>DQC.US.0060.Element Dependence for Specific Elements [Abstract]
+                    </link:label>
+                </link:labelLink>
+                <link:definitionLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0060'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0060_Dqc_0060'
+                              xlink:label='loc_dqcrules_Dqc_0060'/>
+                    <link:loc xlink:type='locator'
+                              xlink:href='#dqcrules-0060_Dqc_0060_ElementDependenceForSpecificElements'
+                              xlink:label='loc_Dqc_0060_ElementDependenceForSpecificElements'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                            xlink:label='loc_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                            xlink:label='loc_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'
+                            xlink:label='loc_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_CashProvidedByUsedInFinancingActivitiesDiscontinuedOperations'
+                            xlink:label='loc_CashProvidedByUsedInFinancingActivitiesDiscontinuedOperations'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInFinancingActivities'
+                              xlink:label='loc_NetCashProvidedByUsedInFinancingActivities' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_CashProvidedByUsedInInvestingActivitiesDiscontinuedOperations'
+                            xlink:label='loc_CashProvidedByUsedInInvestingActivitiesDiscontinuedOperations'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities'
+                              xlink:label='loc_NetCashProvidedByUsedInInvestingActivities' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_CashProvidedByUsedInOperatingActivitiesDiscontinuedOperations'
+                            xlink:label='loc_CashProvidedByUsedInOperatingActivitiesDiscontinuedOperations'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities'
+                              xlink:label='loc_NetCashProvidedByUsedInOperatingActivities' xlink:type='locator'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_dqcrules_Dqc_0060'
+                                        xlink:to='loc_Dqc_0060_ElementDependenceForSpecificElements' order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0060_ElementDependenceForSpecificElements'
+                                        xlink:to='loc_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                                        order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0060_ElementDependenceForSpecificElements'
+                                        xlink:to='loc_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                                        order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0060_ElementDependenceForSpecificElements'
+                                        xlink:to='loc_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'
+                                        order='3.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                                        xlink:to='loc_CashProvidedByUsedInFinancingActivitiesDiscontinuedOperations'
+                                        order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                                        xlink:to='loc_NetCashProvidedByUsedInFinancingActivities' order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                                        xlink:to='loc_CashProvidedByUsedInInvestingActivitiesDiscontinuedOperations'
+                                        order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                                        xlink:to='loc_NetCashProvidedByUsedInInvestingActivities' order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'
+                                        xlink:to='loc_CashProvidedByUsedInOperatingActivitiesDiscontinuedOperations'
+                                        order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'
+                                        xlink:to='loc_NetCashProvidedByUsedInOperatingActivities' order='2.0'/>
+                </link:definitionLink>
+                <link:referenceLink xlink:role='http://fasb.org/us-gaap/role/dqc/0060' xlink:type='extended'>
+                    <link:loc xlink:href='#dqcrules-0060_Dqc_0060' xlink:label='loc_Dqc_0060' xlink:type='locator'/>
+                    <link:loc xlink:href='#dqcrules-0060_Dqc_0060_ElementDependenceForSpecificElements'
+                              xlink:label='loc_Dqc_0060_ElementDependenceForSpecificElements' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                            xlink:label='loc_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                            xlink:label='loc_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'
+                            xlink:label='loc_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_CashProvidedByUsedInFinancingActivitiesDiscontinuedOperations'
+                            xlink:label='loc_CashProvidedByUsedInFinancingActivitiesDiscontinuedOperations'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInFinancingActivities'
+                              xlink:label='loc_NetCashProvidedByUsedInFinancingActivities' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_CashProvidedByUsedInInvestingActivitiesDiscontinuedOperations'
+                            xlink:label='loc_CashProvidedByUsedInInvestingActivitiesDiscontinuedOperations'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities'
+                              xlink:label='loc_NetCashProvidedByUsedInInvestingActivities' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_CashProvidedByUsedInOperatingActivitiesDiscontinuedOperations'
+                            xlink:label='loc_CashProvidedByUsedInOperatingActivitiesDiscontinuedOperations'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities'
+                              xlink:label='loc_NetCashProvidedByUsedInOperatingActivities' xlink:type='locator'/>
+                    <link:reference xlink:label='dqc_0060' xlink:role='http://fasb.org/us-gaap/role/dqc/dqcNote'
+                                    xlink:type='resource'>
+                        <ref:Publisher>XBRL US</ref:Publisher>
+                        <dqcrules:ruleId>DQC.0060</dqcrules:ruleId>
+                        <dqcrules:ruleName>Element Dependence for Specific Elements</dqcrules:ruleName>
+                        <dqcrules:ruleDocumentation>If a given element is used in a filing, then a corresponding
+                            element(s) should also be present in the instance. This rule identifies those instances
+                            where one element value is reported and no corresponding value is reported in the same
+                            period in the default dimension. If a fact value is reported for a given element, then a
+                            fact value is expected to be reported for a given matching element. The existence of one
+                            element requires that a value is reported for another element(s). This rule checks that the
+                            pairs of elements in the list below both appear in the filing.
+                        </dqcrules:ruleDocumentation>
+                        <ref:URI>https://xbrl.us/data-rule/dqc_0060/</ref:URI>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0060_ElementDependenceForSpecificElements'
+                                       xlink:to='dqc_0060' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0060' xlink:to='dqc_0060' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                                       xlink:to='dqc_0060' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                                       xlink:to='dqc_0060' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'
+                                       xlink:to='dqc_0060' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_CashProvidedByUsedInFinancingActivitiesDiscontinuedOperations'
+                                       xlink:to='dqc_0060' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInFinancingActivities' xlink:to='dqc_0060'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_CashProvidedByUsedInInvestingActivitiesDiscontinuedOperations'
+                                       xlink:to='dqc_0060' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInInvestingActivities' xlink:to='dqc_0060'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_CashProvidedByUsedInOperatingActivitiesDiscontinuedOperations'
+                                       xlink:to='dqc_0060' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInOperatingActivities' xlink:to='dqc_0060'
+                                       xlink:type='arc'/>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0060_7495'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0060.7495</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0060_7496'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0060.7496</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0060_7497'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0060.7497</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                                       xlink:to='DQC_US_0060_7495' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                                       xlink:to='DQC_US_0060_7496' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'
+                                       xlink:to='DQC_US_0060_7497' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_CashProvidedByUsedInFinancingActivitiesDiscontinuedOperations'
+                                       xlink:to='DQC_US_0060_7495' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInFinancingActivities'
+                                       xlink:to='DQC_US_0060_7495' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_CashProvidedByUsedInInvestingActivitiesDiscontinuedOperations'
+                                       xlink:to='DQC_US_0060_7496' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInInvestingActivities'
+                                       xlink:to='DQC_US_0060_7496' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_CashProvidedByUsedInOperatingActivitiesDiscontinuedOperations'
+                                       xlink:to='DQC_US_0060_7497' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInOperatingActivities'
+                                       xlink:to='DQC_US_0060_7497' xlink:type='arc'/>
+                </link:referenceLink>
+            </link:linkbase>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name='Dqc_0060' id='dqcrules-0060_Dqc_0060' type='xbrli:stringItemType' substitutionGroup='xbrli:item'
+                abstract='true' nillable='true' xbrli:periodType='duration'/>
+    <xs:element name='Dqc_0060_ElementDependenceForSpecificElements'
+                id='dqcrules-0060_Dqc_0060_ElementDependenceForSpecificElements' type='xbrli:stringItemType'
+                substitutionGroup='xbrli:item' abstract='true' nillable='true' xbrli:periodType='duration'/>
+</xs:schema>

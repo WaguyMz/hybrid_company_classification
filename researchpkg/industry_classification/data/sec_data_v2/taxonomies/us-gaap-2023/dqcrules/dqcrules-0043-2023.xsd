@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+2010-2023 Financial Accounting Foundation; (c) 2007-2010 XBRL US, Inc.; (c) 2020-2023 XBRL US, Inc. All Rights Reserved.
+Notice: Authorized Uses are Set Forth at https://xbrl.fasb.org/terms/TaxonomiesTermsConditions.html
+-->
+<xs:schema targetNamespace='http://fasb.org/dqcrules-0043/2023' elementFormDefault='qualified'
+           xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:dqcrules-0043='http://fasb.org/dqcrules-0043/2023'
+           xmlns:dqcrules='http://fasb.org/dqcrules/2023' xmlns:us-gaap='http://fasb.org/us-gaap/2022'
+           xmlns:link='http://www.xbrl.org/2003/linkbase' xmlns:ref='http://www.xbrl.org/2006/ref'
+           xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xbrli='http://www.xbrl.org/2003/instance'
+           xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xbrldt='http://xbrl.org/2005/xbrldt'
+           xmlns='http://www.xbrl.org/2003/linkbase'
+           xsi:schemaLocation='http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd http://fasb.org/dqcrules/2023 dqcrules-2023.xsd'>
+    <xs:import namespace='http://www.xbrl.org/2003/instance'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2003/linkbase'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2006/ref' schemaLocation='http://www.xbrl.org/2006/ref-2006-02-27.xsd'/>
+    <xs:import namespace='http://xbrl.org/2005/xbrldt' schemaLocation='http://www.xbrl.org/2005/xbrldt-2005.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules/2023' schemaLocation='dqcrules-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/us-gaap/2023' schemaLocation='../elts/us-gaap-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/us-roles/2023' schemaLocation='../elts/us-roles-2023.xsd'/>
+    <xs:annotation>
+        <xs:appinfo>
+            <link:roleType roleURI='http://fasb.org/us-gaap/role/dqc/0043' id='dqc_0043'>
+                <link:definition>DQC.US.0043</link:definition>
+                <link:usedOn>link:definitionLink</link:usedOn>
+                <link:usedOn>link:referenceLink</link:usedOn>
+                <link:usedOn>link:labelLink</link:usedOn>
+            </link:roleType>
+            <link:linkbase id='lnk'>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/0043' xlink:type='simple'
+                              xlink:href='#dqc_0043'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/dqcNote' xlink:href='dqcrules-2023.xsd#dqcn'
+                              xlink:type='simple'/>
+                <link:arcroleRef arcroleURI='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                 xlink:href='dqcrules-2023.xsd#rule-concept' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleExclusions'
+                              xlink:href='dqcrules-2023.xsd#dqcre' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleID' xlink:href='dqcrules-2023.xsd#dqcrid'
+                              xlink:type='simple'/>
+                <link:labelLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0043'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0043_Dqc_0043'
+                              xlink:label='loc_dqcrules_Dqc_0043'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0043' xlink:to='lbl_dqcrules_Dqc_0043'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0043' xml:lang='en-US'>DQC.US.0043 [Abstract]
+                    </link:label>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0043_Dqc_0043_IncorrectCalculationWeights'
+                              xlink:label='loc_dqcrules_Dqc_0043_IncorrectCalculationWeights'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0043_IncorrectCalculationWeights'
+                                   xlink:to='lbl_dqcrules_Dqc_0043_IncorrectCalculationWeights'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0043_IncorrectCalculationWeights' xml:lang='en-US'>
+                        DQC.US.0043.Incorrect Calculation Weights in Operating Cash Flows [Abstract]
+                    </link:label>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0043_Dqc_0043_ElementsExcludedFromRule'
+                              xlink:label='loc_dqcrules_Dqc_0043_ElementsExcludedFromRule'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0043_ElementsExcludedFromRule'
+                                   xlink:to='lbl_dqcrules_Dqc_0043_ElementsExcludedFromRule'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0043_ElementsExcludedFromRule' xml:lang='en-US'>
+                        DQC.US.0043.Elements Excluded from Rule [Abstract]
+                    </link:label>
+                </link:labelLink>
+                <link:definitionLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0043'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0043_Dqc_0043'
+                              xlink:label='loc_dqcrules_Dqc_0043'/>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0043_Dqc_0043_IncorrectCalculationWeights'
+                              xlink:label='loc_Dqc_0043_IncorrectCalculationWeights'/>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0043_Dqc_0043_ElementsExcludedFromRule'
+                              xlink:label='loc_Dqc_0043_ElementsExcludedFromRule'/>
+                    <link:loc xlink:type='locator'
+                              xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'
+                              xlink:label='loc_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'/>
+                    <link:loc xlink:type='locator'
+                              xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities'
+                              xlink:label='loc_NetCashProvidedByUsedInOperatingActivities'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_ComprehensiveIncomeNetOfTax'
+                              xlink:label='loc_ComprehensiveIncomeNetOfTax' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DiscontinuedOperationIncomeLossFromDiscontinuedOperationBeforeIncomeTax'
+                            xlink:label='loc_DiscontinuedOperationIncomeLossFromDiscontinuedOperationBeforeIncomeTax'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossAttributableToNoncontrollingInterest'
+                            xlink:label='loc_IncomeLossAttributableToNoncontrollingInterest' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossAttributableToParent'
+                              xlink:label='loc_IncomeLossAttributableToParent' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperations'
+                              xlink:label='loc_IncomeLossFromContinuingOperations' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperationsAttributableToNoncontrollingEntity'
+                            xlink:label='loc_IncomeLossFromContinuingOperationsAttributableToNoncontrollingEntity'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic'
+                            xlink:label='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest'
+                            xlink:label='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments'
+                            xlink:label='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeInterestExpenseInterestIncomeIncomeTaxesExtraordinaryItemsNoncontrollingInterestsNet'
+                            xlink:label='loc_IncomeLossFromContinuingOperationsBeforeInterestExpenseInterestIncomeIncomeTaxesExtraordinaryItemsNoncontrollingInterestsNet'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperationsIncludingPortionAttributableToNoncontrollingInterest'
+                            xlink:label='loc_IncomeLossFromContinuingOperationsIncludingPortionAttributableToNoncontrollingInterest'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromDiscontinuedOperationsNetOfTax'
+                              xlink:label='loc_IncomeLossFromDiscontinuedOperationsNetOfTax' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromDiscontinuedOperationsNetOfTaxAttributableToNoncontrollingInterest'
+                            xlink:label='loc_IncomeLossFromDiscontinuedOperationsNetOfTaxAttributableToNoncontrollingInterest'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromDiscontinuedOperationsNetOfTaxAttributableToReportingEntity'
+                            xlink:label='loc_IncomeLossFromDiscontinuedOperationsNetOfTaxAttributableToReportingEntity'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromSubsidiariesNetOfTax'
+                              xlink:label='loc_IncomeLossFromSubsidiariesNetOfTax' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossIncludingPortionAttributableToNoncontrollingInterest'
+                            xlink:label='loc_IncomeLossIncludingPortionAttributableToNoncontrollingInterest'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLoss'
+                              xlink:label='loc_NetIncomeLoss' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLossAllocatedToGeneralPartners'
+                              xlink:label='loc_NetIncomeLossAllocatedToGeneralPartners' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLossAllocatedToLimitedPartners'
+                              xlink:label='loc_NetIncomeLossAllocatedToLimitedPartners' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLossAttributableToNoncontrollingInterest'
+                            xlink:label='loc_NetIncomeLossAttributableToNoncontrollingInterest' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLossAttributableToParentNetOfFederalHomeLoanBankAssessments'
+                            xlink:label='loc_NetIncomeLossAttributableToParentNetOfFederalHomeLoanBankAssessments'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLossAvailableToCommonStockholdersBasic'
+                            xlink:label='loc_NetIncomeLossAvailableToCommonStockholdersBasic' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_ProfitLoss' xlink:label='loc_ProfitLoss'
+                              xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLossIncludingPortionAttributableToNonredeemableNoncontrollingInterest'
+                            xlink:label='loc_NetIncomeLossIncludingPortionAttributableToNonredeemableNoncontrollingInterest'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_InvestmentCompanyNetAssetsFromOperationsIncreaseDecrease'
+                            xlink:label='loc_InvestmentCompanyNetAssetsFromOperationsIncreaseDecrease'
+                            xlink:type='locator'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_dqcrules_Dqc_0043'
+                                        xlink:to='loc_Dqc_0043_IncorrectCalculationWeights' order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_dqcrules_Dqc_0043'
+                                        xlink:to='loc_Dqc_0043_ElementsExcludedFromRule' order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_IncorrectCalculationWeights'
+                                        xlink:to='loc_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'
+                                        order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_IncorrectCalculationWeights'
+                                        xlink:to='loc_NetCashProvidedByUsedInOperatingActivities' order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_ComprehensiveIncomeNetOfTax' order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_DiscontinuedOperationIncomeLossFromDiscontinuedOperationBeforeIncomeTax'
+                                        order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_IncomeLossAttributableToNoncontrollingInterest' order='3.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_IncomeLossAttributableToParent' order='4.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_IncomeLossFromContinuingOperations' order='5.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_IncomeLossFromContinuingOperationsAttributableToNoncontrollingEntity'
+                                        order='6.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic'
+                                        order='7.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest'
+                                        order='8.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments'
+                                        order='9.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_IncomeLossFromContinuingOperationsBeforeInterestExpenseInterestIncomeIncomeTaxesExtraordinaryItemsNoncontrollingInterestsNet'
+                                        order='10.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_IncomeLossFromContinuingOperationsIncludingPortionAttributableToNoncontrollingInterest'
+                                        order='11.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_IncomeLossFromDiscontinuedOperationsNetOfTax' order='12.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_IncomeLossFromDiscontinuedOperationsNetOfTaxAttributableToNoncontrollingInterest'
+                                        order='13.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_IncomeLossFromDiscontinuedOperationsNetOfTaxAttributableToReportingEntity'
+                                        order='14.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_IncomeLossFromSubsidiariesNetOfTax' order='15.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_IncomeLossIncludingPortionAttributableToNoncontrollingInterest'
+                                        order='16.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_InvestmentCompanyNetAssetsFromOperationsIncreaseDecrease'
+                                        order='17.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule' xlink:to='loc_NetIncomeLoss'
+                                        order='18.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_NetIncomeLossAllocatedToGeneralPartners' order='19.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_NetIncomeLossAllocatedToLimitedPartners' order='20.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_NetIncomeLossAttributableToNoncontrollingInterest' order='21.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_NetIncomeLossAttributableToParentNetOfFederalHomeLoanBankAssessments'
+                                        order='22.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_NetIncomeLossAvailableToCommonStockholdersBasic' order='23.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule'
+                                        xlink:to='loc_NetIncomeLossIncludingPortionAttributableToNonredeemableNoncontrollingInterest'
+                                        order='24.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0043_ElementsExcludedFromRule' xlink:to='loc_ProfitLoss'
+                                        order='25.0'/>
+                </link:definitionLink>
+                <link:referenceLink xlink:role='http://fasb.org/us-gaap/role/dqc/0043' xlink:type='extended'>
+                    <link:loc xlink:href='#dqcrules-0043_Dqc_0043' xlink:label='loc_Dqc_0043' xlink:type='locator'/>
+                    <link:loc xlink:href='#dqcrules-0043_Dqc_0043_IncorrectCalculationWeights'
+                              xlink:label='loc_Dqc_0043_IncorrectCalculationWeights' xlink:type='locator'/>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0043_Dqc_0043_ElementsExcludedFromRule'
+                              xlink:label='loc_Dqc_0043_ElementsExcludedFromRule'/>
+                    <link:loc xlink:type='locator'
+                              xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'
+                              xlink:label='loc_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'/>
+                    <link:loc xlink:type='locator'
+                              xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities'
+                              xlink:label='loc_NetCashProvidedByUsedInOperatingActivities'/>
+                    <link:reference xlink:label='dqc_0043' xlink:role='http://fasb.org/us-gaap/role/dqc/dqcNote'
+                                    xlink:type='resource'>
+                        <ref:Publisher>XBRL US</ref:Publisher>
+                        <dqcrules:ruleId>DQC.0043</dqcrules:ruleId>
+                        <dqcrules:ruleName>Incorrect Calculation Weights in Operating Cash Flows</dqcrules:ruleName>
+                        <dqcrules:ruleDocumentation>The rule identifies the balance type of the elements in the
+                            calculation linkbase that are descendants of the operating cash flow elements in the US GAAP
+                            taxonomy, specifically the elements NetCashProvidedByUsedInOperatingActivities or
+                            NetCashProvidedByUsedInOperatingActivitiesContinuingOperations and determines whether their
+                            effective calculation weights are accurate. The effective calculation weight is the
+                            calculation weight of the descendant element relative to operating cash flow element
+                            irrespective of the level the descendant element exists at in the calculation hierarchy.
+                        </dqcrules:ruleDocumentation>
+                        <ref:URI>https://xbrl.us/data-rule/dqc_0043/</ref:URI>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0043_IncorrectCalculationWeights' xlink:to='dqc_0043'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0043' xlink:to='dqc_0043' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0043_ElementsExcludedFromRule' xlink:to='dqc_0043'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'
+                                       xlink:to='dqc_0043' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInOperatingActivities' xlink:to='dqc_0043'
+                                       xlink:type='arc'/>
+                    <link:reference xlink:type='resource' xlink:label='DQC_0043_6833'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0043.6833</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_0043_7488'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0043.7488</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInOperatingActivitiesContinuingOperations'
+                                       xlink:to='DQC_0043_6833' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInOperatingActivities'
+                                       xlink:to='DQC_0043_7488' xlink:type='arc'/>
+                </link:referenceLink>
+            </link:linkbase>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name='Dqc_0043' id='dqcrules-0043_Dqc_0043' type='xbrli:stringItemType' substitutionGroup='xbrli:item'
+                abstract='true' nillable='true' xbrli:periodType='duration'/>
+    <xs:element name='Dqc_0043_IncorrectCalculationWeights' id='dqcrules-0043_Dqc_0043_IncorrectCalculationWeights'
+                type='xbrli:stringItemType' substitutionGroup='xbrli:item' abstract='true' nillable='true'
+                xbrli:periodType='duration'/>
+    <xs:element name='Dqc_0043_ElementsExcludedFromRule' id='dqcrules-0043_Dqc_0043_ElementsExcludedFromRule'
+                type='xbrli:stringItemType' substitutionGroup='xbrli:item' abstract='true' nillable='true'
+                xbrli:periodType='duration'/>
+</xs:schema>

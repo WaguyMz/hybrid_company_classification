@@ -1,0 +1,15 @@
+sic, sicrange,industry_title,industry_title_abbr
+01, 01-09,Agriculture- Forestry- And Fishing, Agri.
+10, 10-14,Mining, Mining
+15, 15-17,Construction,Construction
+20, 20-39,Manufacturing, Manufacturing
+40, 40-49,Transportation & Public Utilities, Transport.
+50, 50-51,Wholesale Trade, Wh. Trade
+52, 52-59,Retail Trade, Rt. Trade
+60, 60-67,Finance, Finance
+70, 70-89,Services, Services
+90, 91-99,Public Administration, Admin.
+
+
+
+

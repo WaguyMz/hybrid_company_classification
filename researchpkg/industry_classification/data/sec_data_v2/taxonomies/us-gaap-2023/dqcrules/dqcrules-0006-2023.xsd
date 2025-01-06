@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+2010-2023 Financial Accounting Foundation; (c) 2007-2010 XBRL US, Inc.; (c) 2020-2023 XBRL US, Inc. All Rights Reserved.
+Notice: Authorized Uses are Set Forth at https://xbrl.fasb.org/terms/TaxonomiesTermsConditions.html
+-->
+<xs:schema targetNamespace='http://fasb.org/dqcrules-0006/2023' elementFormDefault='qualified'
+           xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:dqcrules-0006='http://fasb.org/dqcrules-0006/2023'
+           xmlns:dqcrules='http://fasb.org/dqcrules/2023' xmlns:dei='http://xbrl.sec.gov/dei/2023'
+           xmlns:link='http://www.xbrl.org/2003/linkbase' xmlns:ref='http://www.xbrl.org/2006/ref'
+           xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xbrli='http://www.xbrl.org/2003/instance'
+           xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xbrldt='http://xbrl.org/2005/xbrldt'
+           xmlns='http://www.xbrl.org/2003/linkbase'
+           xsi:schemaLocation='http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd http://fasb.org/dqcrules/2023 dqcrules-2023.xsd'>
+    <xs:import namespace='http://www.xbrl.org/2003/instance'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2003/linkbase'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2006/ref' schemaLocation='http://www.xbrl.org/2006/ref-2006-02-27.xsd'/>
+    <xs:import namespace='http://xbrl.org/2005/xbrldt' schemaLocation='http://www.xbrl.org/2005/xbrldt-2005.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules/2023' schemaLocation='dqcrules-2023.xsd'/>
+    <xs:import namespace='http://xbrl.sec.gov/dei/2023' schemaLocation='https://xbrl.sec.gov/dei/2023/dei-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/us-roles/2023' schemaLocation='../elts/us-roles-2023.xsd'/>
+    <xs:annotation>
+        <xs:appinfo>
+            <link:roleType roleURI='http://fasb.org/us-gaap/role/dqc/0006' id='dqc_0006'>
+                <link:definition>DQC.US.0006</link:definition>
+                <link:usedOn>link:definitionLink</link:usedOn>
+                <link:usedOn>link:referenceLink</link:usedOn>
+                <link:usedOn>link:labelLink</link:usedOn>
+            </link:roleType>
+            <link:linkbase id='lnk'>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/0006' xlink:type='simple'
+                              xlink:href='#dqc_0006'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/dqcNote' xlink:href='dqcrules-2023.xsd#dqcn'
+                              xlink:type='simple'/>
+                <link:arcroleRef arcroleURI='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                 xlink:href='dqcrules-2023.xsd#rule-concept' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleExclusions'
+                              xlink:href='dqcrules-2023.xsd#dqcre' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleID' xlink:href='dqcrules-2023.xsd#dqcrid'
+                              xlink:type='simple'/>
+                <link:labelLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0006'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0006_Dqc_0006'
+                              xlink:label='loc_dqcrules_Dqc_0006'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0006' xlink:to='lbl_dqcrules_Dqc_0006'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0006' xml:lang='en-US'>DQC.US.0006 [Abstract]
+                    </link:label>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0006_Dqc_0006_DeiAndBlockTagDateContexts'
+                              xlink:label='loc_dqcrules_Dqc_0006_DeiAndBlockTagDateContexts'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0006_DeiAndBlockTagDateContexts'
+                                   xlink:to='lbl_dqcrules_Dqc_0006_DeiAndBlockTagDateContexts'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0006_DeiAndBlockTagDateContexts' xml:lang='en-US'>
+                        DQC.US.0006.DEI and Block Tag Date Contexts [Abstract]
+                    </link:label>
+                </link:labelLink>
+                <link:definitionLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0006'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0006_Dqc_0006'
+                              xlink:label='loc_dqcrules_Dqc_0006'/>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0006_Dqc_0006_DeiAndBlockTagDateContexts'
+                              xlink:label='loc_Dqc_0006_DeiAndBlockTagDateContexts'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AmendmentDescription'
+                              xlink:label='loc_AmendmentDescription' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AmendmentFlag'
+                              xlink:label='loc_AmendmentFlag' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_CurrentFiscalYearEndDate'
+                              xlink:label='loc_CurrentFiscalYearEndDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentFiscalPeriodFocus'
+                              xlink:label='loc_DocumentFiscalPeriodFocus' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentFiscalYearFocus'
+                              xlink:label='loc_DocumentFiscalYearFocus' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentPeriodEndDate'
+                              xlink:label='loc_DocumentPeriodEndDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentType'
+                              xlink:label='loc_DocumentType' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityCentralIndexKey'
+                              xlink:label='loc_EntityCentralIndexKey' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityFilerCategory'
+                              xlink:label='loc_EntityFilerCategory' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityRegistrantName'
+                              xlink:label='loc_EntityRegistrantName' xlink:type='locator'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_dqcrules_Dqc_0006'
+                                        xlink:to='loc_Dqc_0006_DeiAndBlockTagDateContexts' order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0006_DeiAndBlockTagDateContexts'
+                                        xlink:to='loc_AmendmentDescription' order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0006_DeiAndBlockTagDateContexts'
+                                        xlink:to='loc_AmendmentFlag' order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0006_DeiAndBlockTagDateContexts'
+                                        xlink:to='loc_CurrentFiscalYearEndDate' order='3.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0006_DeiAndBlockTagDateContexts'
+                                        xlink:to='loc_DocumentFiscalPeriodFocus' order='4.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0006_DeiAndBlockTagDateContexts'
+                                        xlink:to='loc_DocumentFiscalYearFocus' order='5.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0006_DeiAndBlockTagDateContexts'
+                                        xlink:to='loc_DocumentPeriodEndDate' order='6.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0006_DeiAndBlockTagDateContexts' xlink:to='loc_DocumentType'
+                                        order='7.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0006_DeiAndBlockTagDateContexts'
+                                        xlink:to='loc_EntityCentralIndexKey' order='8.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0006_DeiAndBlockTagDateContexts'
+                                        xlink:to='loc_EntityFilerCategory' order='9.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0006_DeiAndBlockTagDateContexts'
+                                        xlink:to='loc_EntityRegistrantName' order='10.0'/>
+                </link:definitionLink>
+                <link:referenceLink xlink:role='http://fasb.org/us-gaap/role/dqc/0006' xlink:type='extended'>
+                    <link:loc xlink:href='#dqcrules-0006_Dqc_0006' xlink:label='loc_Dqc_0006' xlink:type='locator'/>
+                    <link:loc xlink:href='#dqcrules-0006_Dqc_0006_DeiAndBlockTagDateContexts'
+                              xlink:label='loc_Dqc_0006_DeiAndBlockTagDateContexts' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AmendmentDescription'
+                              xlink:label='loc_AmendmentDescription' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AmendmentFlag'
+                              xlink:label='loc_AmendmentFlag' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_CurrentFiscalYearEndDate'
+                              xlink:label='loc_CurrentFiscalYearEndDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentFiscalPeriodFocus'
+                              xlink:label='loc_DocumentFiscalPeriodFocus' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentFiscalYearFocus'
+                              xlink:label='loc_DocumentFiscalYearFocus' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentPeriodEndDate'
+                              xlink:label='loc_DocumentPeriodEndDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentType'
+                              xlink:label='loc_DocumentType' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityCentralIndexKey'
+                              xlink:label='loc_EntityCentralIndexKey' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityFilerCategory'
+                              xlink:label='loc_EntityFilerCategory' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityRegistrantName'
+                              xlink:label='loc_EntityRegistrantName' xlink:type='locator'/>
+                    <link:reference xlink:label='dqc_0006' xlink:role='http://fasb.org/us-gaap/role/dqc/dqcNote'
+                                    xlink:type='resource'>
+                        <ref:Publisher>XBRL US</ref:Publisher>
+                        <dqcrules:ruleId>DQC.0006</dqcrules:ruleId>
+                        <dqcrules:ruleName>DEI and Block Tag Date Contexts</dqcrules:ruleName>
+                        <dqcrules:ruleDocumentation>This rule tests that the dates used for certain Document and Entity
+                            Information, accounting policy, text block and table text block elements are consistent with
+                            the fiscal period focus of the filing (e.g., Q1, Q2, Q3 or FY).
+                        </dqcrules:ruleDocumentation>
+                        <ref:URI>https://xbrl.us/data-rule/dqc_0006/</ref:URI>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0006_DeiAndBlockTagDateContexts' xlink:to='dqc_0006'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0006' xlink:to='dqc_0006' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AmendmentDescription' xlink:to='dqc_0006' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AmendmentFlag' xlink:to='dqc_0006' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_CurrentFiscalYearEndDate' xlink:to='dqc_0006' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentFiscalPeriodFocus' xlink:to='dqc_0006' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentFiscalYearFocus' xlink:to='dqc_0006' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentPeriodEndDate' xlink:to='dqc_0006' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentType' xlink:to='dqc_0006' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityCentralIndexKey' xlink:to='dqc_0006' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityFilerCategory' xlink:to='dqc_0006' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityRegistrantName' xlink:to='dqc_0006' xlink:type='arc'/>
+                    <link:reference xlink:type='resource' xlink:label='DQC_0006_14'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0006.14</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentFiscalPeriodFocus' xlink:to='DQC_0006_14'
+                                       xlink:type='arc'/>
+                </link:referenceLink>
+            </link:linkbase>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name='Dqc_0006' id='dqcrules-0006_Dqc_0006' type='xbrli:stringItemType' substitutionGroup='xbrli:item'
+                abstract='true' nillable='true' xbrli:periodType='duration'/>
+    <xs:element name='Dqc_0006_DeiAndBlockTagDateContexts' id='dqcrules-0006_Dqc_0006_DeiAndBlockTagDateContexts'
+                type='xbrli:stringItemType' substitutionGroup='xbrli:item' abstract='true' nillable='true'
+                xbrli:periodType='duration'/>
+</xs:schema>

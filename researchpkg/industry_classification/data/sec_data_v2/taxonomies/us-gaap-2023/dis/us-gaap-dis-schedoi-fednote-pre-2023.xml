@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+(c) 2010-2023 Financial Accounting Foundation; (c) 2007-2010 XBRL US, Inc.  All Rights Reserved.
+Notice: Authorized Uses are Set Forth at https://xbrl.fasb.org/terms/TaxonomiesTermsConditions.html
+  -->
+<link:linkbase xmlns:link='http://www.xbrl.org/2003/linkbase' xmlns:xlink='http://www.w3.org/1999/xlink'
+               xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+               xsi:schemaLocation='http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'>
+    <link:roleRef roleURI='http://fasb.org/us-gaap/role/disclosure/InvestmentsFederalTaxNote'
+                  xlink:href='../elts/us-roles-2023.xsd#schedoi-fednote' xlink:type='simple'/>
+    <link:presentationLink xlink:role='http://fasb.org/us-gaap/role/disclosure/InvestmentsFederalTaxNote'
+                           xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_ScheduleOfInvestmentsAbstract'
+                  xlink:label='loc_ScheduleOfInvestmentsAbstract' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FederalIncomeTaxNoteTextBlock'
+                  xlink:label='loc_FederalIncomeTaxNoteTextBlock' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FederalIncomeTaxNoteTable'
+                  xlink:label='loc_FederalIncomeTaxNoteTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_InvestmentTypeAxis' xlink:label='loc_InvestmentTypeAxis'
+                  xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_InvestmentTypeCategorizationMember'
+                  xlink:label='loc_InvestmentTypeCategorizationMember' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_InvestmentsOwnedFederalIncomeTaxNoteLineItems'
+                  xlink:label='loc_InvestmentsOwnedFederalIncomeTaxNoteLineItems' xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_TaxBasisOfInvestmentsUnrealizedAppreciationDepreciationNetAbstract'
+                xlink:label='loc_TaxBasisOfInvestmentsUnrealizedAppreciationDepreciationNetAbstract'
+                xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_TaxBasisOfInvestmentsGrossUnrealizedAppreciation'
+                  xlink:label='loc_TaxBasisOfInvestmentsGrossUnrealizedAppreciation' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_TaxBasisOfInvestmentsGrossUnrealizedDepreciation'
+                  xlink:label='loc_TaxBasisOfInvestmentsGrossUnrealizedDepreciation' xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_TaxBasisOfInvestmentsUnrealizedAppreciationDepreciationNet'
+                xlink:label='loc_TaxBasisOfInvestmentsUnrealizedAppreciationDepreciationNet' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_TaxBasisOfInvestmentsCostForIncomeTaxPurposes'
+                  xlink:label='loc_TaxBasisOfInvestmentsCostForIncomeTaxPurposes' xlink:type='locator'/>
+        <link:presentationArc order='10' xlink:arcrole='http://www.xbrl.org/2003/arcrole/parent-child'
+                              xlink:from='loc_ScheduleOfInvestmentsAbstract'
+                              xlink:to='loc_FederalIncomeTaxNoteTextBlock' xlink:type='arc'/>
+        <link:presentationArc order='10' xlink:arcrole='http://www.xbrl.org/2003/arcrole/parent-child'
+                              xlink:from='loc_FederalIncomeTaxNoteTextBlock' xlink:to='loc_FederalIncomeTaxNoteTable'
+                              xlink:type='arc'/>
+        <link:presentationArc order='10' xlink:arcrole='http://www.xbrl.org/2003/arcrole/parent-child'
+                              xlink:from='loc_FederalIncomeTaxNoteTable' xlink:to='loc_InvestmentTypeAxis'
+                              xlink:type='arc'/>
+        <link:presentationArc order='10' xlink:arcrole='http://www.xbrl.org/2003/arcrole/parent-child'
+                              xlink:from='loc_InvestmentTypeAxis' xlink:to='loc_InvestmentTypeCategorizationMember'
+                              xlink:type='arc'/>
+        <link:presentationArc order='20' xlink:arcrole='http://www.xbrl.org/2003/arcrole/parent-child'
+                              xlink:from='loc_FederalIncomeTaxNoteTable'
+                              xlink:to='loc_InvestmentsOwnedFederalIncomeTaxNoteLineItems' xlink:type='arc'/>
+        <link:presentationArc order='10' xlink:arcrole='http://www.xbrl.org/2003/arcrole/parent-child'
+                              xlink:from='loc_InvestmentsOwnedFederalIncomeTaxNoteLineItems'
+                              xlink:to='loc_TaxBasisOfInvestmentsUnrealizedAppreciationDepreciationNetAbstract'
+                              xlink:type='arc'/>
+        <link:presentationArc order='10' xlink:arcrole='http://www.xbrl.org/2003/arcrole/parent-child'
+                              xlink:from='loc_TaxBasisOfInvestmentsUnrealizedAppreciationDepreciationNetAbstract'
+                              xlink:to='loc_TaxBasisOfInvestmentsGrossUnrealizedAppreciation' xlink:type='arc'/>
+        <link:presentationArc order='20' xlink:arcrole='http://www.xbrl.org/2003/arcrole/parent-child'
+                              xlink:from='loc_TaxBasisOfInvestmentsUnrealizedAppreciationDepreciationNetAbstract'
+                              xlink:to='loc_TaxBasisOfInvestmentsGrossUnrealizedDepreciation' xlink:type='arc'/>
+        <link:presentationArc order='30' preferredLabel='http://www.xbrl.org/2003/role/totalLabel'
+                              xlink:arcrole='http://www.xbrl.org/2003/arcrole/parent-child'
+                              xlink:from='loc_TaxBasisOfInvestmentsUnrealizedAppreciationDepreciationNetAbstract'
+                              xlink:to='loc_TaxBasisOfInvestmentsUnrealizedAppreciationDepreciationNet'
+                              xlink:type='arc'/>
+        <link:presentationArc order='20' xlink:arcrole='http://www.xbrl.org/2003/arcrole/parent-child'
+                              xlink:from='loc_InvestmentsOwnedFederalIncomeTaxNoteLineItems'
+                              xlink:to='loc_TaxBasisOfInvestmentsCostForIncomeTaxPurposes' xlink:type='arc'/>
+    </link:presentationLink>
+</link:linkbase>

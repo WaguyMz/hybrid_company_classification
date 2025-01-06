@@ -1,0 +1,137 @@
+account_title|account_num|depth|balance
+Assets|1|0|Dr
+Cash And Financial Assets|1.1|1|Dr
+Cash And Cash Equivalents|1.1.1|2|Dr
+Financial Assets (Investments)|1.1.2|2|Dr
+Restricted Cash And Financial Assets|1.1.3|2|Dr
+Additional Financial Assets And Investments|1.1.4|2|Dr
+Receivables And Contracts|1.2|1|Dr
+Accounts, Notes And Loans Receivable|1.2.1|2|Dr
+Contracts|1.2.2|2|Dr
+Nontrade And Other Receivables|1.2.3|2|Dr
+Inventory|1.3|1|Dr
+Merchandise|1.3.1|2|Dr
+Raw Material, Parts And Supplies|1.3.2|2|Dr
+Work In Process|1.3.3|2|Dr
+Finished Goods|1.3.4|2|Dr
+Other Inventory|1.3.5|2|Dr
+Accruals And Additional Assets|1.4|1|Dr
+Prepaid Expense|1.4.1|2|Dr
+Accrued Income|1.4.2|2|Dr
+Additional Assets|1.4.3|2|Dr
+Property, Plant And Equipment|1.5|1|Dr
+Land And Land Improvements|1.5.1|2|Dr
+Buildings, Structures And Improvements|1.5.2|2|Dr
+Machinery And Equipment|1.5.3|2|Dr
+Furniture And Fixtures|1.5.4|2|Dr
+Additional Property, Plant And Equipment|1.5.5|2|Dr
+Construction In Progress|1.5.6|2|Dr
+Intangible Assets (Excluding Goodwill)|1.6|1|Dr
+Intellectual Property|1.6.1|2|Dr
+Computer Software|1.6.2|2|Dr
+Trade And Distribution Assets|1.6.3|2|Dr
+Contracts And Rights|1.6.4|2|Dr
+Right To Use Assets (Classified By Type)|1.6.5|2|Dr
+Other Intangible Assets|1.6.6|2|Dr
+Acquisition In Progress|1.6.7|2|Dr
+Goodwill|1.7|1|Dr
+Liabilities|2|0|(Cr)
+Payables|2.1|1|(Cr)
+Trade Payables|2.1.1|2|(Cr)
+Dividends Payable|2.1.2|2|(Cr)
+Interest Payable|2.1.3|2|(Cr)
+Other Payables|2.1.4|2|(Cr)
+Accruals And Other Liabilities|2.2|1|(Cr)
+Accrued Expenses|2.2.1|2|(Cr)
+Deferred Income And Refund Liabilities|2.2.2|2|(Cr)
+Accrued Taxes (Other Than Payroll)|2.2.3|2|(Cr)
+Other Liabilities|2.2.4|2|(Cr)
+Financial Labilities|2.3|1|(Cr)
+Notes Payable|2.3.1|2|(Cr)
+Loans Payable|2.3.2|2|(Cr)
+Bonds (Debentures)|2.3.3|2|(Cr)
+Other Debts And Borrowings|2.3.4|2|(Cr)
+Lease Obligations|2.3.5|2|(Cr)
+Derivative Financial Liabilities|2.3.6|2|(Cr)
+Provisions (Contingencies)|2.4|1|(Cr)
+Customer Related Provisions|2.4.1|2|(Cr)
+Litigation And Regulatory|2.4.2|2|(Cr)
+Additional Provisions|2.4.3|2|(Cr)
+Equity|3|0|(Cr)
+Owners Equity (Attributable To Owners Of Parent)|3.1|1|(Cr)
+Equity At Par (Issued Capital)|3.1.1|2|(Cr)
+Additional Paid-In Capital|3.1.2|2|(Cr)
+Retained Earnings|3.2|1|(Cr)
+Appropriated|3.2.1|2|(Cr)
+Unappropriated|3.2.2|2|(Cr)
+Deficit|3.2.3|2|Dr
+In Suspense|3.2.4|2|Zero
+Accumulated OCI|3.3|1|Dr or (Cr)
+Exchange Differences On Translation|3.3.1|2|Dr or (Cr)
+Remeasurements Cash Flow Hedges|3.3.2|2|Dr or (Cr)
+Remeasurements Available-For-Sale Financial Assets|3.3.3|2|Dr or (Cr)
+Remeasurement Of Defined Benefit Plans|3.3.4|2|Dr or (Cr)
+Other Equity Items|3.4|1|Dr or (Cr)
+ESOP Related Items|3.4.1|2|Dr or (Cr)
+Subscribed Stock Receivables|3.4.2|2|Dr
+Treasury Stock|3.4.3|2|Dr
+Miscellaneous Equity|3.4.4|2|(Cr)
+Non-controlling (Minority) Interest|3.5|1|(Cr)
+Revenue|4|0|(Cr)
+Recognized Point Of Time|4.1|1|(Cr)
+Goods|4.1.1|2|(Cr)
+Services|4.1.2|2|(Cr)
+Recognized Over Time|4.2|1|(Cr)
+Products|4.2.1|2|(Cr)
+Services|4.2.2|2|(Cr)
+Adjustments|4.3|1|Dr
+Variable Consideration|4.3.1|2|Dr
+Consideration Paid (Payable) To Customers|4.3.2|2|Dr
+Other Adjustments|4.3.3|2|Dr
+Expenses|5|0|Dr
+Expenses Classified By Nature|5.1|1|Dr
+Material And Merchandise|5.1.1|2|Dr
+Employee Benefits|5.1.2|2|Dr
+Services|5.1.3|2|Dr
+Rent, Depreciation, Amortization And Depletion|5.1.4|2|Dr
+Expenses Classified By Function|5.2|1|Dr
+Cost Of Sales|5.2.1|2|Dr
+Selling, General And Administrative|5.2.2|2|Dr
+Uncollectible Accounts Expense|5.2.3|2|Dr
+Other (Non-Operating) Income          And Expenses|6|0|Dr or (Cr)
+Other Revenue And Expenses|6.1|1|Dr or (Cr)
+Other Revenue|6.1.1|2|Dr or (Cr)
+Other Expenses|6.1.2|2|(Cr)
+Gains And Losses|6.2|1|Dr
+Foreign Currency Transaction Gain (Loss)|6.2.1|2|Dr or (Cr)
+Gain (Loss) On Investments|6.2.2|2|Dr or (Cr)
+Gain (Loss) On Derivatives|6.2.3|2|Dr or (Cr)
+Gain (Loss) On Disposal Of Assets|6.2.4|2|Dr or (Cr)
+Debt Related Gain (Loss)|6.2.5|2|Dr or (Cr)
+Impairment Loss|6.2.6|2|Dr or (Cr)
+Other Gains And (Losses)|6.2.7|2|Dr
+Taxes (Other Than Income And Payroll) And Fees|6.3|1|Dr or (Cr)
+Real Estate Taxes And Insurance|6.3.1|2|Dr
+Highway (Road) Taxes And Tolls|6.3.2|2|Dr
+Direct Tax And License Fees|6.3.3|2|Dr
+Excise And Sales Taxes|6.3.4|2|Dr
+Customs Fees And Duties (Not Classified As Sales Or Excise)|6.3.5|2|Dr
+Non-Deductible VAT (GST)|6.3.6|2|Dr
+General Insurance Expense|6.3.7|2|Dr
+Administrative Fees (Revenue Stamps)|6.3.8|2|Dr
+Fines And Penalties|6.3.9|2|Dr
+Miscellaneous Taxes|6.3.10|2|Dr
+Other Taxes And Fees|6.3.11|2|Dr
+Income Tax Expense (Benefit)|6.4|1|Dr or (Cr)
+Intercompany And Related Party          Accounts|7|0|Dr
+Intercompany And Related Party Assets|7.1|1|Dr
+Intercompany Balances (Eliminated In Consolidation)|7.1.1|2|Dr
+Related Party Balances (Reported Or Disclosed)|7.1.2|2|Dr
+Intercompany Investments|7.1.3|2|Dr
+Intercompany And Related Party Liabilities|7.2|1|Dr
+Intercompany Balances (Eliminated In Consolidation)|7.2.1|2|(Cr)
+Related Party Balances (Reported Or Disclosed)|7.2.2|2|(Cr)
+Intercompany And Related Party Income And Expense|7.3|1|(Cr)
+Intercompany And Related Party Income|7.3.1|2|(Cr)
+Intercompany And Related Party Expenses|7.3.2|2|(Cr)
+Income (Loss) From Equity Method Investments|7.3.3|2|Dr

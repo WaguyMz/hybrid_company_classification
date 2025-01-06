@@ -1,0 +1,579 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+2010-2023 Financial Accounting Foundation; (c) 2007-2010 XBRL US, Inc.; (c) 2020-2023 XBRL US, Inc. All Rights Reserved.
+Notice: Authorized Uses are Set Forth at https://xbrl.fasb.org/terms/TaxonomiesTermsConditions.html
+-->
+<xs:schema targetNamespace='http://fasb.org/dqcrules-0013/2023' elementFormDefault='qualified'
+           xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:dqcrules-0013='http://fasb.org/dqcrules-0013/2023'
+           xmlns:dqcrules='http://fasb.org/dqcrules/2023' xmlns:link='http://www.xbrl.org/2003/linkbase'
+           xmlns:ref='http://www.xbrl.org/2006/ref' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+           xmlns:xbrli='http://www.xbrl.org/2003/instance' xmlns:xlink='http://www.w3.org/1999/xlink'
+           xmlns:xbrldt='http://xbrl.org/2005/xbrldt' xmlns='http://www.xbrl.org/2003/linkbase'
+           xsi:schemaLocation='http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd http://fasb.org/dqcrules/2023 dqcrules-2023.xsd'>
+    <xs:import namespace='http://www.xbrl.org/2003/instance'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2003/linkbase'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2006/ref' schemaLocation='http://www.xbrl.org/2006/ref-2006-02-27.xsd'/>
+    <xs:import namespace='http://xbrl.org/2005/xbrldt' schemaLocation='http://www.xbrl.org/2005/xbrldt-2005.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules/2023' schemaLocation='dqcrules-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/us-roles/2023' schemaLocation='../elts/us-roles-2023.xsd'/>
+    <xs:annotation>
+        <xs:appinfo>
+            <link:roleType roleURI='http://fasb.org/us-gaap/role/dqc/0013' id='dqc_0013'>
+                <link:definition>DQC.US.0013</link:definition>
+                <link:usedOn>link:definitionLink</link:usedOn>
+                <link:usedOn>link:referenceLink</link:usedOn>
+                <link:usedOn>link:labelLink</link:usedOn>
+            </link:roleType>
+            <link:linkbase id='lnk'>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/0013' xlink:type='simple'
+                              xlink:href='#dqc_0013'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/dqcNote' xlink:href='dqcrules-2023.xsd#dqcn'
+                              xlink:type='simple'/>
+                <link:arcroleRef arcroleURI='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                 xlink:href='dqcrules-2023.xsd#rule-concept' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleExclusions'
+                              xlink:href='dqcrules-2023.xsd#dqcre' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleID' xlink:href='dqcrules-2023.xsd#dqcrid'
+                              xlink:type='simple'/>
+                <link:labelLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0013'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0013_Dqc_0013'
+                              xlink:label='loc_dqcrules_Dqc_0013'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0013' xlink:to='lbl_dqcrules_Dqc_0013'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0013' xml:lang='en-US'>DQC.US.0013 [Abstract]
+                    </link:label>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0013_Dqc_0013_NegativeValuesWithDependence'
+                              xlink:label='loc_dqcrules_Dqc_0013_NegativeValuesWithDependence'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0013_NegativeValuesWithDependence'
+                                   xlink:to='lbl_dqcrules_Dqc_0013_NegativeValuesWithDependence'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0013_NegativeValuesWithDependence' xml:lang='en-US'>
+                        DQC.US.0013.Negative Values with Dependence [Abstract]
+                    </link:label>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0013_Dqc_0013_RuleDependence'
+                              xlink:label='loc_dqcrules_Dqc_0013_RuleDependence'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0013_RuleDependence'
+                                   xlink:to='lbl_dqcrules_Dqc_0013_RuleDependence'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0013_RuleDependence' xml:lang='en-US'>DQC.US.0013.Rule
+                        Dependence [Abstract]
+                    </link:label>
+                </link:labelLink>
+                <link:definitionLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0013'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0013_Dqc_0013'
+                              xlink:label='loc_dqcrules_Dqc_0013'/>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0013_Dqc_0013_NegativeValuesWithDependence'
+                              xlink:label='loc_Dqc_0013_NegativeValuesWithDependence'/>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0013_Dqc_0013_RuleDependence'
+                              xlink:label='loc_Dqc_0013_RuleDependence'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationTaxCredits'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationTaxCredits' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationDeductionsQualifiedProductionActivities'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationDeductionsQualifiedProductionActivities'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationTaxCreditsResearch'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsResearch'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationDeductionsOther'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationDeductionsOther' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseLifeInsurance'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseLifeInsurance'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationTaxCreditsOther'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsOther' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationTaxCreditsInvestment'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsInvestment'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationTaxCreditsForeign'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsForeign'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationDeductionsDividends'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationDeductionsDividends'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationRepatriationOfForeignEarnings'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationRepatriationOfForeignEarnings'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationTaxHolidays'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationTaxHolidays' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseResearchAndDevelopment'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseResearchAndDevelopment'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationDeductions'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationDeductions' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseImpairmentLosses'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseImpairmentLosses'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationDeductionsEmployeeStockOwnershipPlanDividends'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationDeductionsEmployeeStockOwnershipPlanDividends'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseMealsAndEntertainment'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseMealsAndEntertainment'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationDeductionsExtraterritorialIncomeExclusion'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationDeductionsExtraterritorialIncomeExclusion'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseCharitableContributions'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseCharitableContributions'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationRepatriationForeignEarningsJobsCreationActOf2004'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationRepatriationForeignEarningsJobsCreationActOf2004'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest'
+                            xlink:label='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments'
+                            xlink:label='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic'
+                            xlink:label='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign'
+                            xlink:label='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign'
+                            xlink:type='locator'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_dqcrules_Dqc_0013'
+                                        xlink:to='loc_Dqc_0013_NegativeValuesWithDependence' order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_dqcrules_Dqc_0013' xlink:to='loc_Dqc_0013_RuleDependence'
+                                        order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationTaxCredits' order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationDeductionsQualifiedProductionActivities'
+                                        order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsResearch'
+                                        order='3.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationDeductionsOther' order='4.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseLifeInsurance'
+                                        order='5.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsOther' order='6.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsInvestment'
+                                        order='7.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsForeign'
+                                        order='8.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationDeductionsDividends'
+                                        order='9.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationRepatriationOfForeignEarnings'
+                                        order='10.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationTaxHolidays' order='11.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseResearchAndDevelopment'
+                                        order='12.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationDeductions' order='13.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseImpairmentLosses'
+                                        order='14.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationDeductionsEmployeeStockOwnershipPlanDividends'
+                                        order='15.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseMealsAndEntertainment'
+                                        order='16.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationDeductionsExtraterritorialIncomeExclusion'
+                                        order='17.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseCharitableContributions'
+                                        order='18.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_NegativeValuesWithDependence'
+                                        xlink:to='loc_EffectiveIncomeTaxRateReconciliationRepatriationForeignEarningsJobsCreationActOf2004'
+                                        order='19.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_RuleDependence'
+                                        xlink:to='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest'
+                                        order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_RuleDependence'
+                                        xlink:to='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments'
+                                        order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_RuleDependence'
+                                        xlink:to='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic'
+                                        order='3.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0013_RuleDependence'
+                                        xlink:to='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign'
+                                        order='4.0'/>
+                </link:definitionLink>
+                <link:referenceLink xlink:role='http://fasb.org/us-gaap/role/dqc/0013' xlink:type='extended'>
+                    <link:loc xlink:href='#dqcrules-0013_Dqc_0013' xlink:label='loc_Dqc_0013' xlink:type='locator'/>
+                    <link:loc xlink:href='#dqcrules-0013_Dqc_0013_NegativeValuesWithDependence'
+                              xlink:label='loc_Dqc_0013_NegativeValuesWithDependence' xlink:type='locator'/>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0013_Dqc_0013_RuleDependence'
+                              xlink:label='loc_Dqc_0013_RuleDependence'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationTaxCredits'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationTaxCredits' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationDeductionsQualifiedProductionActivities'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationDeductionsQualifiedProductionActivities'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationTaxCreditsResearch'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsResearch'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationDeductionsOther'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationDeductionsOther' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseLifeInsurance'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseLifeInsurance'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationTaxCreditsOther'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsOther' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationTaxCreditsInvestment'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsInvestment'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationTaxCreditsForeign'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsForeign'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationDeductionsDividends'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationDeductionsDividends'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationRepatriationOfForeignEarnings'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationRepatriationOfForeignEarnings'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationTaxHolidays'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationTaxHolidays' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseResearchAndDevelopment'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseResearchAndDevelopment'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationDeductions'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationDeductions' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseImpairmentLosses'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseImpairmentLosses'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationDeductionsEmployeeStockOwnershipPlanDividends'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationDeductionsEmployeeStockOwnershipPlanDividends'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseMealsAndEntertainment'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseMealsAndEntertainment'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationDeductionsExtraterritorialIncomeExclusion'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationDeductionsExtraterritorialIncomeExclusion'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseCharitableContributions'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseCharitableContributions'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_EffectiveIncomeTaxRateReconciliationRepatriationForeignEarningsJobsCreationActOf2004'
+                            xlink:label='loc_EffectiveIncomeTaxRateReconciliationRepatriationForeignEarningsJobsCreationActOf2004'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest'
+                            xlink:label='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments'
+                            xlink:label='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic'
+                            xlink:label='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign'
+                            xlink:label='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign'
+                            xlink:type='locator'/>
+                    <link:reference xlink:label='dqc_0013' xlink:role='http://fasb.org/us-gaap/role/dqc/dqcNote'
+                                    xlink:type='resource'>
+                        <ref:Publisher>XBRL US</ref:Publisher>
+                        <dqcrules:ruleId>DQC.0013</dqcrules:ruleId>
+                        <dqcrules:ruleName>Negative Values with Dependence</dqcrules:ruleName>
+                        <dqcrules:ruleDocumentation>The US GAAP Taxonomy is designed so that the majority of elements
+                            have a positive value. This rule tests that the values for a given list of elements are
+                            negative when a precondition is met for another element.
+                        </dqcrules:ruleDocumentation>
+                        <ref:URI>https://xbrl.us/data-rule/dqc_0013/</ref:URI>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0013_NegativeValuesWithDependence' xlink:to='dqc_0013'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0013' xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0013_RuleDependence' xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationTaxCredits'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationDeductionsQualifiedProductionActivities'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsResearch'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationDeductionsOther'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseLifeInsurance'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsOther'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsInvestment'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsForeign'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationDeductionsDividends'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationRepatriationOfForeignEarnings'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationTaxHolidays'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseResearchAndDevelopment'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationDeductions'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseImpairmentLosses'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationDeductionsEmployeeStockOwnershipPlanDividends'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseMealsAndEntertainment'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationDeductionsExtraterritorialIncomeExclusion'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseCharitableContributions'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationRepatriationForeignEarningsJobsCreationActOf2004'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign'
+                                       xlink:to='dqc_0013' xlink:type='arc'/>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_2774'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.2774</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_2776'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.2776</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_2778'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.2778</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_2779'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.2779</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_2780'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.2780</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_2781'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.2781</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_2782'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.2782</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_2783'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.2783</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_2784'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.2784</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_2785'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.2785</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_2871'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.2871</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_2872'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.2872</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_2873'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.2873</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_2874'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.2874</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_3001'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.3001</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_3002'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.3002</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_3439'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.3439</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_3440'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.3440</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0013_3441'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0013.3441</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationTaxCredits'
+                                       xlink:to='DQC_US_0013_2774' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationDeductionsQualifiedProductionActivities'
+                                       xlink:to='DQC_US_0013_2776' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsResearch'
+                                       xlink:to='DQC_US_0013_2778' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationDeductionsOther'
+                                       xlink:to='DQC_US_0013_2779' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseLifeInsurance'
+                                       xlink:to='DQC_US_0013_2780' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsOther'
+                                       xlink:to='DQC_US_0013_2781' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsInvestment'
+                                       xlink:to='DQC_US_0013_2782' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationTaxCreditsForeign'
+                                       xlink:to='DQC_US_0013_2783' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationDeductionsDividends'
+                                       xlink:to='DQC_US_0013_2784' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationRepatriationOfForeignEarnings'
+                                       xlink:to='DQC_US_0013_2785' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationTaxHolidays'
+                                       xlink:to='DQC_US_0013_2871' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseResearchAndDevelopment'
+                                       xlink:to='DQC_US_0013_2872' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationDeductions'
+                                       xlink:to='DQC_US_0013_2873' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseImpairmentLosses'
+                                       xlink:to='DQC_US_0013_2874' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationDeductionsEmployeeStockOwnershipPlanDividends'
+                                       xlink:to='DQC_US_0013_3001' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseMealsAndEntertainment'
+                                       xlink:to='DQC_US_0013_3002' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationDeductionsExtraterritorialIncomeExclusion'
+                                       xlink:to='DQC_US_0013_3439' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationNondeductibleExpenseCharitableContributions'
+                                       xlink:to='DQC_US_0013_3440' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveIncomeTaxRateReconciliationRepatriationForeignEarningsJobsCreationActOf2004'
+                                       xlink:to='DQC_US_0013_3441' xlink:type='arc'/>
+                </link:referenceLink>
+            </link:linkbase>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name='Dqc_0013' id='dqcrules-0013_Dqc_0013' type='xbrli:stringItemType' substitutionGroup='xbrli:item'
+                abstract='true' nillable='true' xbrli:periodType='duration'/>
+    <xs:element name='Dqc_0013_NegativeValuesWithDependence' id='dqcrules-0013_Dqc_0013_NegativeValuesWithDependence'
+                type='xbrli:stringItemType' substitutionGroup='xbrli:item' abstract='true' nillable='true'
+                xbrli:periodType='duration'/>
+    <xs:element name='Dqc_0013_RuleDependence' id='dqcrules-0013_Dqc_0013_RuleDependence' type='xbrli:stringItemType'
+                substitutionGroup='xbrli:item' abstract='true' nillable='true' xbrli:periodType='duration'/>
+</xs:schema>

@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+2010-2023 Financial Accounting Foundation; (c) 2007-2010 XBRL US, Inc.; (c) 2020-2023 XBRL US, Inc. All Rights Reserved.
+Notice: Authorized Uses are Set Forth at https://xbrl.fasb.org/terms/TaxonomiesTermsConditions.html
+-->
+<xs:schema targetNamespace='http://fasb.org/dqcrules-0044/2023' elementFormDefault='qualified'
+           xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:dqcrules-0044='http://fasb.org/dqcrules-0044/2023'
+           xmlns:dqcrules='http://fasb.org/dqcrules/2023' xmlns:us-gaap='http://fasb.org/us-gaap/2022'
+           xmlns:link='http://www.xbrl.org/2003/linkbase' xmlns:ref='http://www.xbrl.org/2006/ref'
+           xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xbrli='http://www.xbrl.org/2003/instance'
+           xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xbrldt='http://xbrl.org/2005/xbrldt'
+           xmlns='http://www.xbrl.org/2003/linkbase'
+           xsi:schemaLocation='http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd http://fasb.org/dqcrules/2023 dqcrules-2023.xsd'>
+    <xs:import namespace='http://www.xbrl.org/2003/instance'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2003/linkbase'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2006/ref' schemaLocation='http://www.xbrl.org/2006/ref-2006-02-27.xsd'/>
+    <xs:import namespace='http://xbrl.org/2005/xbrldt' schemaLocation='http://www.xbrl.org/2005/xbrldt-2005.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules/2023' schemaLocation='dqcrules-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/us-gaap/2023' schemaLocation='../elts/us-gaap-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/us-roles/2023' schemaLocation='../elts/us-roles-2023.xsd'/>
+    <xs:annotation>
+        <xs:appinfo>
+            <link:roleType roleURI='http://fasb.org/us-gaap/role/dqc/0044' id='dqc_0044'>
+                <link:definition>DQC.US.0044</link:definition>
+                <link:usedOn>link:definitionLink</link:usedOn>
+                <link:usedOn>link:referenceLink</link:usedOn>
+                <link:usedOn>link:labelLink</link:usedOn>
+            </link:roleType>
+            <link:linkbase id='lnk'>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/0044' xlink:type='simple'
+                              xlink:href='#dqc_0044'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/dqcNote' xlink:href='dqcrules-2023.xsd#dqcn'
+                              xlink:type='simple'/>
+                <link:arcroleRef arcroleURI='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                 xlink:href='dqcrules-2023.xsd#rule-concept' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleExclusions'
+                              xlink:href='dqcrules-2023.xsd#dqcre' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleID' xlink:href='dqcrules-2023.xsd#dqcrid'
+                              xlink:type='simple'/>
+                <link:labelLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0044'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0044_Dqc_0044'
+                              xlink:label='loc_dqcrules_Dqc_0044'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0044' xlink:to='lbl_dqcrules_Dqc_0044'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0044' xml:lang='en-US'>DQC.US.0044 [Abstract]
+                    </link:label>
+                    <link:loc xlink:type='locator'
+                              xlink:href='#dqcrules-0044_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation'
+                              xlink:label='loc_dqcrules_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation'
+                                   xlink:to='lbl_dqcrules_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation'
+                                xml:lang='en-US'>DQC.US.0044.Accrual Items used in Investing or Financing Cash Flow
+                        Reconciliation [Abstract]
+                    </link:label>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0044_Dqc_0044_SummationItemDescendants'
+                              xlink:label='loc_dqcrules_Dqc_0044_SummationItemDescendants'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0044_SummationItemDescendants'
+                                   xlink:to='lbl_dqcrules_Dqc_0044_SummationItemDescendants'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0044_SummationItemDescendants' xml:lang='en-US'>
+                        DQC.US.0044.Summation-Item Descendants [Abstract]
+                    </link:label>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0044_Dqc_0044_ParentChildDescendants'
+                              xlink:label='loc_dqcrules_Dqc_0044_ParentChildDescendants'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0044_ParentChildDescendants'
+                                   xlink:to='lbl_dqcrules_Dqc_0044_ParentChildDescendants'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0044_ParentChildDescendants' xml:lang='en-US'>
+                        DQC.US.0044.Parent-Child Descendants [Abstract]
+                    </link:label>
+                </link:labelLink>
+                <link:definitionLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0044'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0044_Dqc_0044'
+                              xlink:label='loc_dqcrules_Dqc_0044'/>
+                    <link:loc xlink:type='locator'
+                              xlink:href='#dqcrules-0044_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation'
+                              xlink:label='loc_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation'/>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0044_Dqc_0044_SummationItemDescendants'
+                              xlink:label='loc_Dqc_0044_SummationItemDescendants'/>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0044_Dqc_0044_ParentChildDescendants'
+                              xlink:label='loc_Dqc_0044_ParentChildDescendants'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                            xlink:label='loc_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInFinancingActivities'
+                              xlink:label='loc_NetCashProvidedByUsedInFinancingActivities' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                            xlink:label='loc_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities'
+                              xlink:label='loc_NetCashProvidedByUsedInInvestingActivities' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_ComprehensiveIncomeNetOfTax'
+                              xlink:label='loc_ComprehensiveIncomeNetOfTax' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLoss'
+                              xlink:label='loc_NetIncomeLoss' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLossAvailableToCommonStockholdersBasic'
+                            xlink:label='loc_NetIncomeLossAvailableToCommonStockholdersBasic' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLossAvailableToCommonStockholdersDiluted'
+                            xlink:label='loc_NetIncomeLossAvailableToCommonStockholdersDiluted' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossIncludingPortionAttributableToNoncontrollingInterest'
+                            xlink:label='loc_IncomeLossIncludingPortionAttributableToNoncontrollingInterest'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossAttributableToParent'
+                              xlink:label='loc_IncomeLossAttributableToParent' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLossAllocatedToGeneralPartners'
+                              xlink:label='loc_NetIncomeLossAllocatedToGeneralPartners' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLossAllocatedToLimitedPartners'
+                              xlink:label='loc_NetIncomeLossAllocatedToLimitedPartners' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_StockholdersEquityPeriodIncreaseDecrease'
+                              xlink:label='loc_StockholdersEquityPeriodIncreaseDecrease' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_PartnersCapitalAccountPeriodIncreaseDecrease'
+                              xlink:label='loc_PartnersCapitalAccountPeriodIncreaseDecrease' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeStatementAbstract'
+                              xlink:label='loc_IncomeStatementAbstract' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_StatementOfIncomeAndComprehensiveIncomeAbstract'
+                            xlink:label='loc_StatementOfIncomeAndComprehensiveIncomeAbstract' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_StatementOfStockholdersEquityAbstract'
+                              xlink:label='loc_StatementOfStockholdersEquityAbstract' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_StatementOfPartnersCapitalAbstract'
+                              xlink:label='loc_StatementOfPartnersCapitalAbstract' xlink:type='locator'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_dqcrules_Dqc_0044'
+                                        xlink:to='loc_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation' order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_dqcrules_Dqc_0044'
+                                        xlink:to='loc_Dqc_0044_SummationItemDescendants' order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_dqcrules_Dqc_0044'
+                                        xlink:to='loc_Dqc_0044_ParentChildDescendants' order='3.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation'
+                                        xlink:to='loc_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                                        order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation'
+                                        xlink:to='loc_NetCashProvidedByUsedInFinancingActivities' order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation'
+                                        xlink:to='loc_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                                        order='3.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation'
+                                        xlink:to='loc_NetCashProvidedByUsedInInvestingActivities' order='4.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_SummationItemDescendants'
+                                        xlink:to='loc_ComprehensiveIncomeNetOfTax' order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_SummationItemDescendants' xlink:to='loc_NetIncomeLoss'
+                                        order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_SummationItemDescendants'
+                                        xlink:to='loc_NetIncomeLossAvailableToCommonStockholdersBasic' order='3.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_SummationItemDescendants'
+                                        xlink:to='loc_NetIncomeLossAvailableToCommonStockholdersDiluted' order='4.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_SummationItemDescendants'
+                                        xlink:to='loc_IncomeLossIncludingPortionAttributableToNoncontrollingInterest'
+                                        order='5.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_SummationItemDescendants'
+                                        xlink:to='loc_IncomeLossAttributableToParent' order='6.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_SummationItemDescendants'
+                                        xlink:to='loc_NetIncomeLossAllocatedToGeneralPartners' order='7.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_SummationItemDescendants'
+                                        xlink:to='loc_NetIncomeLossAllocatedToLimitedPartners' order='8.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_SummationItemDescendants'
+                                        xlink:to='loc_StockholdersEquityPeriodIncreaseDecrease' order='9.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_SummationItemDescendants'
+                                        xlink:to='loc_PartnersCapitalAccountPeriodIncreaseDecrease' order='10.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_ParentChildDescendants'
+                                        xlink:to='loc_IncomeStatementAbstract' order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_ParentChildDescendants'
+                                        xlink:to='loc_StatementOfIncomeAndComprehensiveIncomeAbstract' order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_ParentChildDescendants'
+                                        xlink:to='loc_StatementOfStockholdersEquityAbstract' order='3.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0044_ParentChildDescendants'
+                                        xlink:to='loc_StatementOfPartnersCapitalAbstract' order='4.0'/>
+                </link:definitionLink>
+                <link:referenceLink xlink:role='http://fasb.org/us-gaap/role/dqc/0044' xlink:type='extended'>
+                    <link:loc xlink:href='#dqcrules-0044_Dqc_0044' xlink:label='loc_Dqc_0044' xlink:type='locator'/>
+                    <link:loc xlink:href='#dqcrules-0044_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation'
+                              xlink:label='loc_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation' xlink:type='locator'/>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0044_Dqc_0044_SummationItemDescendants'
+                              xlink:label='loc_Dqc_0044_SummationItemDescendants'/>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0044_Dqc_0044_ParentChildDescendants'
+                              xlink:label='loc_Dqc_0044_ParentChildDescendants'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                            xlink:label='loc_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInFinancingActivities'
+                              xlink:label='loc_NetCashProvidedByUsedInFinancingActivities' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                            xlink:label='loc_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities'
+                              xlink:label='loc_NetCashProvidedByUsedInInvestingActivities' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_ComprehensiveIncomeNetOfTax'
+                              xlink:label='loc_ComprehensiveIncomeNetOfTax' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLoss'
+                              xlink:label='loc_NetIncomeLoss' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLossAvailableToCommonStockholdersBasic'
+                            xlink:label='loc_NetIncomeLossAvailableToCommonStockholdersBasic' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLossAvailableToCommonStockholdersDiluted'
+                            xlink:label='loc_NetIncomeLossAvailableToCommonStockholdersDiluted' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossIncludingPortionAttributableToNoncontrollingInterest'
+                            xlink:label='loc_IncomeLossIncludingPortionAttributableToNoncontrollingInterest'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeLossAttributableToParent'
+                              xlink:label='loc_IncomeLossAttributableToParent' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLossAllocatedToGeneralPartners'
+                              xlink:label='loc_NetIncomeLossAllocatedToGeneralPartners' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_NetIncomeLossAllocatedToLimitedPartners'
+                              xlink:label='loc_NetIncomeLossAllocatedToLimitedPartners' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_StockholdersEquityPeriodIncreaseDecrease'
+                              xlink:label='loc_StockholdersEquityPeriodIncreaseDecrease' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_PartnersCapitalAccountPeriodIncreaseDecrease'
+                              xlink:label='loc_PartnersCapitalAccountPeriodIncreaseDecrease' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_IncomeStatementAbstract'
+                              xlink:label='loc_IncomeStatementAbstract' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_StatementOfIncomeAndComprehensiveIncomeAbstract'
+                            xlink:label='loc_StatementOfIncomeAndComprehensiveIncomeAbstract' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_StatementOfStockholdersEquityAbstract'
+                              xlink:label='loc_StatementOfStockholdersEquityAbstract' xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_StatementOfPartnersCapitalAbstract'
+                              xlink:label='loc_StatementOfPartnersCapitalAbstract' xlink:type='locator'/>
+                    <link:reference xlink:label='dqc_0044' xlink:role='http://fasb.org/us-gaap/role/dqc/dqcNote'
+                                    xlink:type='resource'>
+                        <ref:Publisher>XBRL US</ref:Publisher>
+                        <dqcrules:ruleId>DQC.0044</dqcrules:ruleId>
+                        <dqcrules:ruleName>Accrual Items used in Investing or Financing Cash Flow Reconciliation
+                        </dqcrules:ruleName>
+                        <dqcrules:ruleDocumentation>Accrual-based concepts used on the income statement or the statement
+                            of stockholders’ equity should not be included in the investing and financing sections of
+                            the cash flow statement of a company’s XBRL filing.
+                            This rule tests whether a presentation child element of IncomeStatementAbstract and
+                            StatementOfStockholdersEquityAbstract from the GAAP taxonomy is used as a child of any of
+                            the elements included in this rule in the company’s calculation linkbase.
+                        </dqcrules:ruleDocumentation>
+                        <ref:URI>https://xbrl.us/data-rule/dqc_0044/</ref:URI>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0044' xlink:to='dqc_0044' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation'
+                                       xlink:to='dqc_0044' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0044_SummationItemDescendants' xlink:to='dqc_0044'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0044_ParentChildDescendants' xlink:to='dqc_0044'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                                       xlink:to='dqc_0044' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInFinancingActivities' xlink:to='dqc_0044'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                                       xlink:to='dqc_0044' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInInvestingActivities' xlink:to='dqc_0044'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ComprehensiveIncomeNetOfTax' xlink:to='dqc_0044'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetIncomeLoss' xlink:to='dqc_0044' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetIncomeLossAvailableToCommonStockholdersBasic'
+                                       xlink:to='dqc_0044' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetIncomeLossAvailableToCommonStockholdersDiluted'
+                                       xlink:to='dqc_0044' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_IncomeLossIncludingPortionAttributableToNoncontrollingInterest'
+                                       xlink:to='dqc_0044' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_IncomeLossAttributableToParent' xlink:to='dqc_0044'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetIncomeLossAllocatedToGeneralPartners' xlink:to='dqc_0044'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetIncomeLossAllocatedToLimitedPartners' xlink:to='dqc_0044'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_StockholdersEquityPeriodIncreaseDecrease' xlink:to='dqc_0044'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PartnersCapitalAccountPeriodIncreaseDecrease' xlink:to='dqc_0044'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_IncomeStatementAbstract' xlink:to='dqc_0044' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_StatementOfIncomeAndComprehensiveIncomeAbstract'
+                                       xlink:to='dqc_0044' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_StatementOfStockholdersEquityAbstract' xlink:to='dqc_0044'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_StatementOfPartnersCapitalAbstract' xlink:to='dqc_0044'
+                                       xlink:type='arc'/>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0044_6834'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0044.6834</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0044_7503'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0044.7503</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInFinancingActivitiesContinuingOperations'
+                                       xlink:to='DQC_US_0044_6834' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInFinancingActivities'
+                                       xlink:to='DQC_US_0044_6834' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInInvestingActivitiesContinuingOperations'
+                                       xlink:to='DQC_US_0044_7503' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NetCashProvidedByUsedInInvestingActivities'
+                                       xlink:to='DQC_US_0044_7503' xlink:type='arc'/>
+                </link:referenceLink>
+            </link:linkbase>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name='Dqc_0044' id='dqcrules-0044_Dqc_0044' type='xbrli:stringItemType' substitutionGroup='xbrli:item'
+                abstract='true' nillable='true' xbrli:periodType='duration'/>
+    <xs:element name='Dqc_0044_AccrualItemsUsedInCashFlowReconciliation'
+                id='dqcrules-0044_Dqc_0044_AccrualItemsUsedInCashFlowReconciliation' type='xbrli:stringItemType'
+                substitutionGroup='xbrli:item' abstract='true' nillable='true' xbrli:periodType='duration'/>
+    <xs:element name='Dqc_0044_SummationItemDescendants' id='dqcrules-0044_Dqc_0044_SummationItemDescendants'
+                type='xbrli:stringItemType' substitutionGroup='xbrli:item' abstract='true' nillable='true'
+                xbrli:periodType='duration'/>
+    <xs:element name='Dqc_0044_ParentChildDescendants' id='dqcrules-0044_Dqc_0044_ParentChildDescendants'
+                type='xbrli:stringItemType' substitutionGroup='xbrli:item' abstract='true' nillable='true'
+                xbrli:periodType='duration'/>
+</xs:schema>

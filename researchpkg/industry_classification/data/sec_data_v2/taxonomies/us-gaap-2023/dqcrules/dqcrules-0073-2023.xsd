@@ -1,0 +1,563 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+2010-2023 Financial Accounting Foundation; (c) 2007-2010 XBRL US, Inc.; (c) 2020-2023 XBRL US, Inc. All Rights Reserved.
+Notice: Authorized Uses are Set Forth at https://xbrl.fasb.org/terms/TaxonomiesTermsConditions.html
+-->
+<xs:schema targetNamespace='http://fasb.org/dqcrules-0073/2023' elementFormDefault='qualified'
+           xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:dqcrules-0073='http://fasb.org/dqcrules-0073/2023'
+           xmlns:dqcrules='http://fasb.org/dqcrules/2023' xmlns:link='http://www.xbrl.org/2003/linkbase'
+           xmlns:ref='http://www.xbrl.org/2006/ref' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+           xmlns:xbrli='http://www.xbrl.org/2003/instance' xmlns:xlink='http://www.w3.org/1999/xlink'
+           xmlns:xbrldt='http://xbrl.org/2005/xbrldt' xmlns='http://www.xbrl.org/2003/linkbase'
+           xsi:schemaLocation='http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd http://fasb.org/dqcrules/2023 dqcrules-2023.xsd'>
+    <xs:import namespace='http://www.xbrl.org/2003/instance'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2003/linkbase'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2006/ref' schemaLocation='http://www.xbrl.org/2006/ref-2006-02-27.xsd'/>
+    <xs:import namespace='http://xbrl.org/2005/xbrldt' schemaLocation='http://www.xbrl.org/2005/xbrldt-2005.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules/2023' schemaLocation='dqcrules-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/us-roles/2023' schemaLocation='../elts/us-roles-2023.xsd'/>
+    <xs:annotation>
+        <xs:appinfo>
+            <link:roleType roleURI='http://fasb.org/us-gaap/role/dqc/0073' id='dqc_0073'>
+                <link:definition>DQC.US.0073</link:definition>
+                <link:usedOn>link:definitionLink</link:usedOn>
+                <link:usedOn>link:referenceLink</link:usedOn>
+                <link:usedOn>link:labelLink</link:usedOn>
+            </link:roleType>
+            <link:linkbase id='lnk'>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/0073' xlink:type='simple'
+                              xlink:href='#dqc_0073'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/dqcNote' xlink:href='dqcrules-2023.xsd#dqcn'
+                              xlink:type='simple'/>
+                <link:arcroleRef arcroleURI='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                 xlink:href='dqcrules-2023.xsd#rule-concept' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleExclusions'
+                              xlink:href='dqcrules-2023.xsd#dqcre' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleID' xlink:href='dqcrules-2023.xsd#dqcrid'
+                              xlink:type='simple'/>
+                <link:labelLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0073'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0073_Dqc_0073'
+                              xlink:label='loc_dqcrules_Dqc_0073'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0073' xlink:to='lbl_dqcrules_Dqc_0073'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0073' xml:lang='en-US'>DQC.US.0073 [Abstract]
+                    </link:label>
+                    <link:loc xlink:type='locator'
+                              xlink:href='#dqcrules-0073_Dqc_0073_PlanAssetCategoriesPermissibleLineItems'
+                              xlink:label='loc_dqcrules_Dqc_0073_PlanAssetCategoriesPermissibleLineItems'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0073_PlanAssetCategoriesPermissibleLineItems'
+                                   xlink:to='lbl_dqcrules_Dqc_0073_PlanAssetCategoriesPermissibleLineItems'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0073_PlanAssetCategoriesPermissibleLineItems'
+                                xml:lang='en-US'>DQC.US.0073.Plan Asset Categories Permissible Line Items [Abstract]
+                    </link:label>
+                </link:labelLink>
+                <link:definitionLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0073'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0073_Dqc_0073'
+                              xlink:label='loc_dqcrules_Dqc_0073'/>
+                    <link:loc xlink:type='locator'
+                              xlink:href='#dqcrules-0073_Dqc_0073_PlanAssetCategoriesPermissibleLineItems'
+                              xlink:label='loc_Dqc_0073_PlanAssetCategoriesPermissibleLineItems'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanActualReturnOnPlanAssetsSoldDuringPeriod'
+                            xlink:label='loc_DefinedBenefitPlanActualReturnOnPlanAssetsSoldDuringPeriod'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanActualReturnOnPlanAssetsStillHeld'
+                            xlink:label='loc_DefinedBenefitPlanActualReturnOnPlanAssetsStillHeld' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanAmountOfEmployerAndRelatedPartySecuritiesIncludedInPlanAssets'
+                            xlink:label='loc_DefinedBenefitPlanAmountOfEmployerAndRelatedPartySecuritiesIncludedInPlanAssets'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanAssetsExpectedToBeReturnedToEmployerAmount'
+                            xlink:label='loc_DefinedBenefitPlanAssetsExpectedToBeReturnedToEmployerAmount'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanChangeInFairValueOfPlanAssetsLevel3ReconciliationPeriodIncreaseDecrease'
+                            xlink:label='loc_DefinedBenefitPlanChangeInFairValueOfPlanAssetsLevel3ReconciliationPeriodIncreaseDecrease'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanFairValueOfPlanAssets'
+                              xlink:label='loc_DefinedBenefitPlanFairValueOfPlanAssets' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanInvestmentPoliciesAndStrategiesNarrativeDescription'
+                            xlink:label='loc_DefinedBenefitPlanInvestmentPoliciesAndStrategiesNarrativeDescription'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanNarrativeDescriptionOfBasisUsedToDetermineOverallExpectedLongTermRateOfReturnOnAssetsAssumption'
+                            xlink:label='loc_DefinedBenefitPlanNarrativeDescriptionOfBasisUsedToDetermineOverallExpectedLongTermRateOfReturnOnAssetsAssumption'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanNumberOfSharesOfEquitySecuritiesIssuedByEmployerAndRelatedPartiesIncludedInPlanAssets'
+                            xlink:label='loc_DefinedBenefitPlanNumberOfSharesOfEquitySecuritiesIssuedByEmployerAndRelatedPartiesIncludedInPlanAssets'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsAtFairValueValuationTechniquesAndInputsChanges'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsAtFairValueValuationTechniquesAndInputsChanges'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsEmployerRelatedPartyTransactionTypeExtensibleList'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsEmployerRelatedPartyTransactionTypeExtensibleList'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsEmployerRelatedPartyTypeExtensibleList'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsEmployerRelatedPartyTypeExtensibleList'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsFairValueByHierarchyAndNavExtensibleList'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsFairValueByHierarchyAndNavExtensibleList'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsInvestmentWithinPlanAssetCategoryAmount'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsInvestmentWithinPlanAssetCategoryAmount'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsInvestmentWithinPlanAssetCategoryPercentage'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsInvestmentWithinPlanAssetCategoryPercentage'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsLevel3ReconciliationDecreaseForSale'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsLevel3ReconciliationDecreaseForSale'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsLevel3ReconciliationDecreaseForSettlement'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsLevel3ReconciliationDecreaseForSettlement'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsLevel3ReconciliationIncreaseForPurchase'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsLevel3ReconciliationIncreaseForPurchase'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsMeasurementInputExtensibleList'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsMeasurementInputExtensibleList'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsTargetAllocationPercentage'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsTargetAllocationPercentage'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsValuationTechniqueExtensibleList'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsValuationTechniqueExtensibleList'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanAssumptionsUsedCalculatingNetPeriodicBenefitCostExpectedLongTermReturnOnAssets'
+                            xlink:label='loc_DefinedBenefitPlanAssumptionsUsedCalculatingNetPeriodicBenefitCostExpectedLongTermReturnOnAssets'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPurchasesSalesAndSettlements'
+                            xlink:label='loc_DefinedBenefitPlanPurchasesSalesAndSettlements' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanTransfersBetweenMeasurementLevels'
+                            xlink:label='loc_DefinedBenefitPlanTransfersBetweenMeasurementLevels' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsForeignCurrencyTranslationGainLoss'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsForeignCurrencyTranslationGainLoss'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanWeightedAverageAssetAllocations'
+                            xlink:label='loc_DefinedBenefitPlanWeightedAverageAssetAllocations' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareUnfundedCommittments'
+                            xlink:label='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareUnfundedCommittments'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionNoticePeriod1'
+                            xlink:label='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionNoticePeriod1'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionFrequency'
+                            xlink:label='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionFrequency'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionDescription'
+                            xlink:label='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionDescription'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareRedemptionRestrictionPeriodInEffect1'
+                            xlink:label='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareRedemptionRestrictionPeriodInEffect1'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                              xlink:label='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis' xlink:type='locator'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_dqcrules_Dqc_0073'
+                                        xlink:to='loc_Dqc_0073_PlanAssetCategoriesPermissibleLineItems' order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0073_PlanAssetCategoriesPermissibleLineItems'
+                                        xlink:to='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis' order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanActualReturnOnPlanAssetsSoldDuringPeriod'
+                                        order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanActualReturnOnPlanAssetsStillHeld' order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanAmountOfEmployerAndRelatedPartySecuritiesIncludedInPlanAssets'
+                                        order='3.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanAssetsExpectedToBeReturnedToEmployerAmount'
+                                        order='4.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanChangeInFairValueOfPlanAssetsLevel3ReconciliationPeriodIncreaseDecrease'
+                                        order='5.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanFairValueOfPlanAssets' order='6.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanInvestmentPoliciesAndStrategiesNarrativeDescription'
+                                        order='7.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanNarrativeDescriptionOfBasisUsedToDetermineOverallExpectedLongTermRateOfReturnOnAssetsAssumption'
+                                        order='8.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanNumberOfSharesOfEquitySecuritiesIssuedByEmployerAndRelatedPartiesIncludedInPlanAssets'
+                                        order='9.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanPlanAssetsAtFairValueValuationTechniquesAndInputsChanges'
+                                        order='10.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanPlanAssetsEmployerRelatedPartyTransactionTypeExtensibleList'
+                                        order='11.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanPlanAssetsEmployerRelatedPartyTypeExtensibleList'
+                                        order='12.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanPlanAssetsFairValueByHierarchyAndNavExtensibleList'
+                                        order='13.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanPlanAssetsInvestmentWithinPlanAssetCategoryAmount'
+                                        order='14.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanPlanAssetsInvestmentWithinPlanAssetCategoryPercentage'
+                                        order='15.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanPlanAssetsLevel3ReconciliationDecreaseForSale'
+                                        order='16.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanPlanAssetsLevel3ReconciliationDecreaseForSettlement'
+                                        order='17.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanPlanAssetsLevel3ReconciliationIncreaseForPurchase'
+                                        order='18.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanPlanAssetsMeasurementInputExtensibleList'
+                                        order='19.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanPlanAssetsTargetAllocationPercentage'
+                                        order='20.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanPlanAssetsValuationTechniqueExtensibleList'
+                                        order='21.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanAssumptionsUsedCalculatingNetPeriodicBenefitCostExpectedLongTermReturnOnAssets'
+                                        order='22.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanPurchasesSalesAndSettlements' order='23.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanTransfersBetweenMeasurementLevels'
+                                        order='24.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanPlanAssetsForeignCurrencyTranslationGainLoss'
+                                        order='25.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_DefinedBenefitPlanWeightedAverageAssetAllocations' order='26.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareUnfundedCommittments'
+                                        order='27.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionNoticePeriod1'
+                                        order='28.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionFrequency'
+                                        order='29.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionDescription'
+                                        order='30.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                        xlink:to='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareRedemptionRestrictionPeriodInEffect1'
+                                        order='31.0'/>
+                </link:definitionLink>
+                <link:referenceLink xlink:role='http://fasb.org/us-gaap/role/dqc/0073' xlink:type='extended'>
+                    <link:loc xlink:href='#dqcrules-0073_Dqc_0073' xlink:label='loc_Dqc_0073' xlink:type='locator'/>
+                    <link:loc xlink:href='#dqcrules-0073_Dqc_0073_PlanAssetCategoriesPermissibleLineItems'
+                              xlink:label='loc_Dqc_0073_PlanAssetCategoriesPermissibleLineItems' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanActualReturnOnPlanAssetsSoldDuringPeriod'
+                            xlink:label='loc_DefinedBenefitPlanActualReturnOnPlanAssetsSoldDuringPeriod'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanActualReturnOnPlanAssetsStillHeld'
+                            xlink:label='loc_DefinedBenefitPlanActualReturnOnPlanAssetsStillHeld' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanAmountOfEmployerAndRelatedPartySecuritiesIncludedInPlanAssets'
+                            xlink:label='loc_DefinedBenefitPlanAmountOfEmployerAndRelatedPartySecuritiesIncludedInPlanAssets'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanAssetsExpectedToBeReturnedToEmployerAmount'
+                            xlink:label='loc_DefinedBenefitPlanAssetsExpectedToBeReturnedToEmployerAmount'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanChangeInFairValueOfPlanAssetsLevel3ReconciliationPeriodIncreaseDecrease'
+                            xlink:label='loc_DefinedBenefitPlanChangeInFairValueOfPlanAssetsLevel3ReconciliationPeriodIncreaseDecrease'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanFairValueOfPlanAssets'
+                              xlink:label='loc_DefinedBenefitPlanFairValueOfPlanAssets' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanInvestmentPoliciesAndStrategiesNarrativeDescription'
+                            xlink:label='loc_DefinedBenefitPlanInvestmentPoliciesAndStrategiesNarrativeDescription'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanNarrativeDescriptionOfBasisUsedToDetermineOverallExpectedLongTermRateOfReturnOnAssetsAssumption'
+                            xlink:label='loc_DefinedBenefitPlanNarrativeDescriptionOfBasisUsedToDetermineOverallExpectedLongTermRateOfReturnOnAssetsAssumption'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanNumberOfSharesOfEquitySecuritiesIssuedByEmployerAndRelatedPartiesIncludedInPlanAssets'
+                            xlink:label='loc_DefinedBenefitPlanNumberOfSharesOfEquitySecuritiesIssuedByEmployerAndRelatedPartiesIncludedInPlanAssets'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsAtFairValueValuationTechniquesAndInputsChanges'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsAtFairValueValuationTechniquesAndInputsChanges'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsEmployerRelatedPartyTransactionTypeExtensibleList'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsEmployerRelatedPartyTransactionTypeExtensibleList'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsEmployerRelatedPartyTypeExtensibleList'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsEmployerRelatedPartyTypeExtensibleList'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsFairValueByHierarchyAndNavExtensibleList'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsFairValueByHierarchyAndNavExtensibleList'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsInvestmentWithinPlanAssetCategoryAmount'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsInvestmentWithinPlanAssetCategoryAmount'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsInvestmentWithinPlanAssetCategoryPercentage'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsInvestmentWithinPlanAssetCategoryPercentage'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsLevel3ReconciliationDecreaseForSale'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsLevel3ReconciliationDecreaseForSale'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsLevel3ReconciliationDecreaseForSettlement'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsLevel3ReconciliationDecreaseForSettlement'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsLevel3ReconciliationIncreaseForPurchase'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsLevel3ReconciliationIncreaseForPurchase'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsMeasurementInputExtensibleList'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsMeasurementInputExtensibleList'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsTargetAllocationPercentage'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsTargetAllocationPercentage'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsValuationTechniqueExtensibleList'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsValuationTechniqueExtensibleList'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanAssumptionsUsedCalculatingNetPeriodicBenefitCostExpectedLongTermReturnOnAssets'
+                            xlink:label='loc_DefinedBenefitPlanAssumptionsUsedCalculatingNetPeriodicBenefitCostExpectedLongTermReturnOnAssets'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPurchasesSalesAndSettlements'
+                            xlink:label='loc_DefinedBenefitPlanPurchasesSalesAndSettlements' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanTransfersBetweenMeasurementLevels'
+                            xlink:label='loc_DefinedBenefitPlanTransfersBetweenMeasurementLevels' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanPlanAssetsForeignCurrencyTranslationGainLoss'
+                            xlink:label='loc_DefinedBenefitPlanPlanAssetsForeignCurrencyTranslationGainLoss'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanWeightedAverageAssetAllocations'
+                            xlink:label='loc_DefinedBenefitPlanWeightedAverageAssetAllocations' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareUnfundedCommittments'
+                            xlink:label='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareUnfundedCommittments'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionNoticePeriod1'
+                            xlink:label='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionNoticePeriod1'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionFrequency'
+                            xlink:label='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionFrequency'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionDescription'
+                            xlink:label='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionDescription'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='../elts/us-gaap-2023.xsd#us-gaap_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareRedemptionRestrictionPeriodInEffect1'
+                            xlink:label='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareRedemptionRestrictionPeriodInEffect1'
+                            xlink:type='locator'/>
+                    <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                              xlink:label='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis' xlink:type='locator'/>
+                    <link:reference xlink:label='dqc_0073' xlink:role='http://fasb.org/us-gaap/role/dqc/dqcNote'
+                                    xlink:type='resource'>
+                        <ref:Publisher>XBRL US</ref:Publisher>
+                        <dqcrules:ruleId>DQC.0073</dqcrules:ruleId>
+                        <dqcrules:ruleName>Plan Asset Categories Permissible Line Items</dqcrules:ruleName>
+                        <dqcrules:ruleDocumentation>This rule identifies when inappropriate line items are used with
+                            DefinedBenefitPlanByPlanAssetCategoriesAxis.
+                        </dqcrules:ruleDocumentation>
+                        <ref:URI>https://xbrl.us/data-rule/dqc_0073/</ref:URI>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0073_PlanAssetCategoriesPermissibleLineItems'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0073' xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanActualReturnOnPlanAssetsSoldDuringPeriod'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanActualReturnOnPlanAssetsStillHeld'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanAmountOfEmployerAndRelatedPartySecuritiesIncludedInPlanAssets'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanAssetsExpectedToBeReturnedToEmployerAmount'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanChangeInFairValueOfPlanAssetsLevel3ReconciliationPeriodIncreaseDecrease'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanFairValueOfPlanAssets' xlink:to='dqc_0073'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanInvestmentPoliciesAndStrategiesNarrativeDescription'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanNarrativeDescriptionOfBasisUsedToDetermineOverallExpectedLongTermRateOfReturnOnAssetsAssumption'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanNumberOfSharesOfEquitySecuritiesIssuedByEmployerAndRelatedPartiesIncludedInPlanAssets'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanPlanAssetsAtFairValueValuationTechniquesAndInputsChanges'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanPlanAssetsEmployerRelatedPartyTransactionTypeExtensibleList'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanPlanAssetsEmployerRelatedPartyTypeExtensibleList'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanPlanAssetsFairValueByHierarchyAndNavExtensibleList'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanPlanAssetsInvestmentWithinPlanAssetCategoryAmount'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanPlanAssetsInvestmentWithinPlanAssetCategoryPercentage'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanPlanAssetsLevel3ReconciliationDecreaseForSale'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanPlanAssetsLevel3ReconciliationDecreaseForSettlement'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanPlanAssetsLevel3ReconciliationIncreaseForPurchase'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanPlanAssetsMeasurementInputExtensibleList'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanPlanAssetsTargetAllocationPercentage'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanPlanAssetsValuationTechniqueExtensibleList'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanAssumptionsUsedCalculatingNetPeriodicBenefitCostExpectedLongTermReturnOnAssets'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanPurchasesSalesAndSettlements'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanTransfersBetweenMeasurementLevels'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanPlanAssetsForeignCurrencyTranslationGainLoss'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanWeightedAverageAssetAllocations'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareUnfundedCommittments'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionNoticePeriod1'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionFrequency'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareInvestmentRedemptionDescription'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_FairValueInvestmentsEntitiesThatCalculateNetAssetValuePerShareRedemptionRestrictionPeriodInEffect1'
+                                       xlink:to='dqc_0073' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis' xlink:to='dqc_0073'
+                                       xlink:type='arc'/>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0073_7648'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0073.7648</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DefinedBenefitPlanByPlanAssetCategoriesAxis'
+                                       xlink:to='DQC_US_0073_7648' xlink:type='arc'/>
+                </link:referenceLink>
+            </link:linkbase>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name='Dqc_0073' id='dqcrules-0073_Dqc_0073' type='xbrli:stringItemType' substitutionGroup='xbrli:item'
+                abstract='true' nillable='true' xbrli:periodType='duration'/>
+    <xs:element name='Dqc_0073_PlanAssetCategoriesPermissibleLineItems'
+                id='dqcrules-0073_Dqc_0073_PlanAssetCategoriesPermissibleLineItems' type='xbrli:stringItemType'
+                substitutionGroup='xbrli:item' abstract='true' nillable='true' xbrli:periodType='duration'/>
+</xs:schema>

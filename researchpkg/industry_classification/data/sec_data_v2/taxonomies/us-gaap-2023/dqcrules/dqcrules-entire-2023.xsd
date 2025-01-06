@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+2010-2023 Financial Accounting Foundation; (c) 2007-2010 XBRL US, Inc.; (c) 2020-2023 XBRL US, Inc. All Rights Reserved.
+Notice: Authorized Uses are Set Forth at https://xbrl.fasb.org/terms/TaxonomiesTermsConditions.html
+-->
+<xs:schema targetNamespace='http://fasb.org/dqcrules-entire/2023' elementFormDefault='qualified'
+           xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:dqcrules='http://fasb.org/dqcrules-entire/2023'
+           xmlns:link='http://www.xbrl.org/2003/linkbase' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+           xmlns:xbrli='http://www.xbrl.org/2003/instance' xmlns:xlink='http://www.w3.org/1999/xlink'
+           xmlns='http://www.xbrl.org/2003/linkbase'>
+    <xs:import namespace='http://www.xbrl.org/2003/instance'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2003/linkbase'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2006/ref' schemaLocation='http://www.xbrl.org/2006/ref-2006-02-27.xsd'/>
+    <xs:import namespace='http://xbrl.org/2005/xbrldt' schemaLocation='http://www.xbrl.org/2005/xbrldt-2005.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules/2023' schemaLocation='dqcrules-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0001/2023' schemaLocation='dqcrules-0001-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0004/2023' schemaLocation='dqcrules-0004-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0005/2023' schemaLocation='dqcrules-0005-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0006/2023' schemaLocation='dqcrules-0006-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0008/2023' schemaLocation='dqcrules-0008-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0009/2023' schemaLocation='dqcrules-0009-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0013/2023' schemaLocation='dqcrules-0013-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0015/2023' schemaLocation='dqcrules-0015-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0033/2023' schemaLocation='dqcrules-0033-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0036/2023' schemaLocation='dqcrules-0036-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0041/2023' schemaLocation='dqcrules-0041-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0043/2023' schemaLocation='dqcrules-0043-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0044/2023' schemaLocation='dqcrules-0044-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0047/2023' schemaLocation='dqcrules-0047-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0048/2023' schemaLocation='dqcrules-0048-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0053/2023' schemaLocation='dqcrules-0053-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0057/2023' schemaLocation='dqcrules-0057-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0060/2023' schemaLocation='dqcrules-0060-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0071/2023' schemaLocation='dqcrules-0071-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0073/2023' schemaLocation='dqcrules-0073-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0079/2023' schemaLocation='dqcrules-0079-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules-0084/2023' schemaLocation='dqcrules-0084-2023.xsd'/>
+</xs:schema>

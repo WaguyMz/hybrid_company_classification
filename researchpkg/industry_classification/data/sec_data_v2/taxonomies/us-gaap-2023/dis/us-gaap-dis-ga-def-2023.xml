@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+(c) 2010-2023 Financial Accounting Foundation; (c) 2007-2010 XBRL US, Inc.  All Rights Reserved.
+Notice: Authorized Uses are Set Forth at https://xbrl.fasb.org/terms/TaxonomiesTermsConditions.html
+  -->
+<link:linkbase xmlns:link='http://www.xbrl.org/2003/linkbase' xmlns:xbrldt='http://xbrl.org/2005/xbrldt'
+               xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+               xsi:schemaLocation='http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'>
+    <link:roleRef roleURI='http://fasb.org/us-gaap/role/disclosure/GovernmentAssistance'
+                  xlink:href='../elts/us-roles-2023.xsd#ga' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/all'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#all' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/dimension-domain'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/dimension-default'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default' xlink:type='simple'/>
+    <link:arcroleRef arcroleURI='http://xbrl.org/int/dim/arcrole/domain-member'
+                     xlink:href='http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member' xlink:type='simple'/>
+    <link:definitionLink xlink:role='http://fasb.org/us-gaap/role/disclosure/GovernmentAssistance'
+                         xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceTable'
+                  xlink:label='loc_GovernmentAssistanceTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceLineItems'
+                  xlink:label='loc_GovernmentAssistanceLineItems' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xbrldt:closed='true' xbrldt:contextElement='segment'
+                            xlink:arcrole='http://xbrl.org/int/dim/arcrole/all'
+                            xlink:from='loc_GovernmentAssistanceLineItems' xlink:to='loc_GovernmentAssistanceTable'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink xlink:role='http://fasb.org/us-gaap/role/disclosure/GovernmentAssistance'
+                         xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceTable'
+                  xlink:label='loc_GovernmentAssistanceTable' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceTypeAxis'
+                  xlink:label='loc_GovernmentAssistanceTypeAxis' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/hypercube-dimension'
+                            xlink:from='loc_GovernmentAssistanceTable' xlink:to='loc_GovernmentAssistanceTypeAxis'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink xlink:role='http://fasb.org/us-gaap/role/disclosure/GovernmentAssistance'
+                         xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceTypeAxis'
+                  xlink:label='loc_GovernmentAssistanceTypeAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceTypeDomain'
+                  xlink:label='loc_GovernmentAssistanceTypeDomain' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-domain'
+                            xlink:from='loc_GovernmentAssistanceTypeAxis' xlink:to='loc_GovernmentAssistanceTypeDomain'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink xlink:role='http://fasb.org/us-gaap/role/disclosure/GovernmentAssistance'
+                         xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceTypeAxis'
+                  xlink:label='loc_GovernmentAssistanceTypeAxis' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceTypeDomain'
+                  xlink:label='loc_GovernmentAssistanceTypeDomain' xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/dimension-default'
+                            xlink:from='loc_GovernmentAssistanceTypeAxis' xlink:to='loc_GovernmentAssistanceTypeDomain'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+    <link:definitionLink xlink:role='http://fasb.org/us-gaap/role/disclosure/GovernmentAssistance'
+                         xlink:type='extended'>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceLineItems'
+                  xlink:label='loc_GovernmentAssistanceLineItems' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceContractuallyProhibitedDisclosure'
+                  xlink:label='loc_GovernmentAssistanceContractuallyProhibitedDisclosure' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceTransactionDuration'
+                  xlink:label='loc_GovernmentAssistanceTransactionDuration' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceAmount'
+                  xlink:label='loc_GovernmentAssistanceAmount' xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceStatementOfIncomeOrComprehensiveIncomeExtensibleEnumeration'
+                xlink:label='loc_GovernmentAssistanceStatementOfIncomeOrComprehensiveIncomeExtensibleEnumeration'
+                xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceAmountCumulativeAbstract'
+                  xlink:label='loc_GovernmentAssistanceAmountCumulativeAbstract' xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceAmountCumulativeCurrent'
+                  xlink:label='loc_GovernmentAssistanceAmountCumulativeCurrent' xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceCurrentStatementOfFinancialPositionExtensibleEnumeration'
+                xlink:label='loc_GovernmentAssistanceCurrentStatementOfFinancialPositionExtensibleEnumeration'
+                xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceAmountCumulativeNoncurrent'
+                  xlink:label='loc_GovernmentAssistanceAmountCumulativeNoncurrent' xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceNoncurrentStatementOfFinancialPositionExtensibleEnumeration'
+                xlink:label='loc_GovernmentAssistanceNoncurrentStatementOfFinancialPositionExtensibleEnumeration'
+                xlink:type='locator'/>
+        <link:loc xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceAmountCumulative'
+                  xlink:label='loc_GovernmentAssistanceAmountCumulative' xlink:type='locator'/>
+        <link:loc
+                xlink:href='../elts/us-gaap-2023.xsd#us-gaap_GovernmentAssistanceStatementOfFinancialPositionExtensibleEnumeration'
+                xlink:label='loc_GovernmentAssistanceStatementOfFinancialPositionExtensibleEnumeration'
+                xlink:type='locator'/>
+        <link:definitionArc order='1.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_GovernmentAssistanceLineItems'
+                            xlink:to='loc_GovernmentAssistanceContractuallyProhibitedDisclosure' xlink:type='arc'/>
+        <link:definitionArc order='2.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_GovernmentAssistanceLineItems'
+                            xlink:to='loc_GovernmentAssistanceTransactionDuration' xlink:type='arc'/>
+        <link:definitionArc order='3.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_GovernmentAssistanceLineItems' xlink:to='loc_GovernmentAssistanceAmount'
+                            xlink:type='arc'/>
+        <link:definitionArc order='4.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_GovernmentAssistanceAmount'
+                            xlink:to='loc_GovernmentAssistanceStatementOfIncomeOrComprehensiveIncomeExtensibleEnumeration'
+                            xlink:type='arc'/>
+        <link:definitionArc order='5.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_GovernmentAssistanceLineItems'
+                            xlink:to='loc_GovernmentAssistanceAmountCumulativeAbstract' xlink:type='arc'/>
+        <link:definitionArc order='6.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_GovernmentAssistanceAmountCumulativeAbstract'
+                            xlink:to='loc_GovernmentAssistanceAmountCumulativeCurrent' xlink:type='arc'/>
+        <link:definitionArc order='7.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_GovernmentAssistanceAmountCumulativeCurrent'
+                            xlink:to='loc_GovernmentAssistanceCurrentStatementOfFinancialPositionExtensibleEnumeration'
+                            xlink:type='arc'/>
+        <link:definitionArc order='8.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_GovernmentAssistanceAmountCumulativeAbstract'
+                            xlink:to='loc_GovernmentAssistanceAmountCumulativeNoncurrent' xlink:type='arc'/>
+        <link:definitionArc order='9.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_GovernmentAssistanceAmountCumulativeNoncurrent'
+                            xlink:to='loc_GovernmentAssistanceNoncurrentStatementOfFinancialPositionExtensibleEnumeration'
+                            xlink:type='arc'/>
+        <link:definitionArc order='10.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_GovernmentAssistanceAmountCumulativeAbstract'
+                            xlink:to='loc_GovernmentAssistanceAmountCumulative' xlink:type='arc'/>
+        <link:definitionArc order='11.0' xlink:arcrole='http://xbrl.org/int/dim/arcrole/domain-member'
+                            xlink:from='loc_GovernmentAssistanceAmountCumulative'
+                            xlink:to='loc_GovernmentAssistanceStatementOfFinancialPositionExtensibleEnumeration'
+                            xlink:type='arc'/>
+    </link:definitionLink>
+</link:linkbase>

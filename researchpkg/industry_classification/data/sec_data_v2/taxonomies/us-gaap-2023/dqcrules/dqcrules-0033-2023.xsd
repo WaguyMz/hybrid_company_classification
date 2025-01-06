@@ -1,0 +1,1742 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+2010-2023 Financial Accounting Foundation; (c) 2007-2010 XBRL US, Inc.; (c) 2020-2023 XBRL US, Inc. All Rights Reserved.
+Notice: Authorized Uses are Set Forth at https://xbrl.fasb.org/terms/TaxonomiesTermsConditions.html
+-->
+<xs:schema targetNamespace='http://fasb.org/dqcrules-0033/2023' elementFormDefault='qualified'
+           xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:dqcrules-0033='http://fasb.org/dqcrules-0033/2023'
+           xmlns:dqcrules='http://fasb.org/dqcrules/2023' xmlns:dei='http://xbrl.sec.gov/dei/2023'
+           xmlns:link='http://www.xbrl.org/2003/linkbase' xmlns:ref='http://www.xbrl.org/2006/ref'
+           xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xbrli='http://www.xbrl.org/2003/instance'
+           xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xbrldt='http://xbrl.org/2005/xbrldt'
+           xmlns='http://www.xbrl.org/2003/linkbase'
+           xsi:schemaLocation='http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd http://fasb.org/dqcrules/2023 dqcrules-2023.xsd'>
+    <xs:import namespace='http://www.xbrl.org/2003/instance'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2003/linkbase'
+               schemaLocation='http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd'/>
+    <xs:import namespace='http://www.xbrl.org/2006/ref' schemaLocation='http://www.xbrl.org/2006/ref-2006-02-27.xsd'/>
+    <xs:import namespace='http://xbrl.org/2005/xbrldt' schemaLocation='http://www.xbrl.org/2005/xbrldt-2005.xsd'/>
+    <xs:import namespace='http://fasb.org/dqcrules/2023' schemaLocation='dqcrules-2023.xsd'/>
+    <xs:import namespace='http://xbrl.sec.gov/dei/2023' schemaLocation='https://xbrl.sec.gov/dei/2023/dei-2023.xsd'/>
+    <xs:import namespace='http://fasb.org/us-roles/2023' schemaLocation='../elts/us-roles-2023.xsd'/>
+    <xs:annotation>
+        <xs:appinfo>
+            <link:roleType roleURI='http://fasb.org/us-gaap/role/dqc/0033' id='dqc_0033'>
+                <link:definition>DQC.US.0033</link:definition>
+                <link:usedOn>link:definitionLink</link:usedOn>
+                <link:usedOn>link:referenceLink</link:usedOn>
+                <link:usedOn>link:labelLink</link:usedOn>
+            </link:roleType>
+            <link:linkbase id='lnk'>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/0033' xlink:type='simple'
+                              xlink:href='#dqc_0033'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/dqcNote' xlink:href='dqcrules-2023.xsd#dqcn'
+                              xlink:type='simple'/>
+                <link:arcroleRef arcroleURI='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                 xlink:href='dqcrules-2023.xsd#rule-concept' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleExclusions'
+                              xlink:href='dqcrules-2023.xsd#dqcre' xlink:type='simple'/>
+                <link:roleRef roleURI='http://fasb.org/us-gaap/role/dqc/ruleID' xlink:href='dqcrules-2023.xsd#dqcrid'
+                              xlink:type='simple'/>
+                <link:labelLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0033'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0033_Dqc_0033'
+                              xlink:label='loc_dqcrules_Dqc_0033'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0033' xlink:to='lbl_dqcrules_Dqc_0033'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0033' xml:lang='en-US'>DQC.US.0033 [Abstract]
+                    </link:label>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0033_Dqc_0033_DocumentPeriodEndDateContext'
+                              xlink:label='loc_dqcrules_Dqc_0033_DocumentPeriodEndDateContext'/>
+                    <link:labelArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-label'
+                                   xlink:from='loc_dqcrules_Dqc_0033_DocumentPeriodEndDateContext'
+                                   xlink:to='lbl_dqcrules_Dqc_0033_DocumentPeriodEndDateContext'/>
+                    <link:label xlink:type='resource' xlink:role='http://www.xbrl.org/2003/role/label'
+                                xlink:label='lbl_dqcrules_Dqc_0033_DocumentPeriodEndDateContext' xml:lang='en-US'>
+                        DQC.US.0033.Document Period End Date Context [Abstract]
+                    </link:label>
+                </link:labelLink>
+                <link:definitionLink xlink:type='extended' xlink:role='http://fasb.org/us-gaap/role/dqc/0033'>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0033_Dqc_0033'
+                              xlink:label='loc_dqcrules_Dqc_0033'/>
+                    <link:loc xlink:type='locator' xlink:href='#dqcrules-0033_Dqc_0033_DocumentPeriodEndDateContext'
+                              xlink:label='loc_Dqc_0033_DocumentPeriodEndDateContext'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AdditionalSecurities462b'
+                              xlink:label='loc_AdditionalSecurities462b' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AdditionalSecurities462bFileNumber'
+                            xlink:label='loc_AdditionalSecurities462bFileNumber' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AdditionalSecuritiesEffective413b'
+                            xlink:label='loc_AdditionalSecuritiesEffective413b' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AmendmentDescription'
+                              xlink:label='loc_AmendmentDescription' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AmendmentFlag'
+                              xlink:label='loc_AmendmentFlag' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AnnualInformationForm'
+                              xlink:label='loc_AnnualInformationForm' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ApproximateDateOfCommencementOfProposedSaleToThePublic'
+                            xlink:label='loc_ApproximateDateOfCommencementOfProposedSaleToThePublic'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AuditedAnnualFinancialStatements'
+                            xlink:label='loc_AuditedAnnualFinancialStatements' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AuditorFirmId'
+                              xlink:label='loc_AuditorFirmId' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AuditorLocation'
+                              xlink:label='loc_AuditorLocation' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AuditorName'
+                              xlink:label='loc_AuditorName' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_CityAreaCode'
+                              xlink:label='loc_CityAreaCode' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContactPersonnelEmailAddress'
+                              xlink:label='loc_ContactPersonnelEmailAddress' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContactPersonnelFaxNumber'
+                              xlink:label='loc_ContactPersonnelFaxNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContactPersonnelName'
+                              xlink:label='loc_ContactPersonnelName' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContactPersonnelUniformResourceLocatorURL'
+                            xlink:label='loc_ContactPersonnelUniformResourceLocatorURL' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContainedFileInformationFileDescription'
+                            xlink:label='loc_ContainedFileInformationFileDescription' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContainedFileInformationFileName'
+                            xlink:label='loc_ContainedFileInformationFileName' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContainedFileInformationFileNumber'
+                            xlink:label='loc_ContainedFileInformationFileNumber' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContainedFileInformationFileType'
+                            xlink:label='loc_ContainedFileInformationFileType' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_CountryRegion'
+                              xlink:label='loc_CountryRegion' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_CurrentFiscalYearEndDate'
+                              xlink:label='loc_CurrentFiscalYearEndDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DelayedOrContinuousOffering'
+                              xlink:label='loc_DelayedOrContinuousOffering' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DividendOrInterestReinvestmentPlanOnly'
+                            xlink:label='loc_DividendOrInterestReinvestmentPlanOnly' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentAccountingStandard'
+                              xlink:label='loc_DocumentAccountingStandard' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentAnnualReport'
+                              xlink:label='loc_DocumentAnnualReport' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentCopyrightInformation'
+                              xlink:label='loc_DocumentCopyrightInformation' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentCreationDate'
+                              xlink:label='loc_DocumentCreationDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentDescription'
+                              xlink:label='loc_DocumentDescription' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentEffectiveDate'
+                              xlink:label='loc_DocumentEffectiveDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentFiscalPeriodFocus'
+                              xlink:label='loc_DocumentFiscalPeriodFocus' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentFiscalYearFocus'
+                              xlink:label='loc_DocumentFiscalYearFocus' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentInformationTextBlock'
+                              xlink:label='loc_DocumentInformationTextBlock' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentName'
+                              xlink:label='loc_DocumentName' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentPeriodStartDate'
+                              xlink:label='loc_DocumentPeriodStartDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentQuarterlyReport'
+                              xlink:label='loc_DocumentQuarterlyReport' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentRegistrationStatement'
+                              xlink:label='loc_DocumentRegistrationStatement' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentShellCompanyEventDate'
+                              xlink:label='loc_DocumentShellCompanyEventDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentShellCompanyReport'
+                              xlink:label='loc_DocumentShellCompanyReport' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentsIncorporatedByReferenceTextBlock'
+                            xlink:label='loc_DocumentsIncorporatedByReferenceTextBlock' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentSubtitle'
+                              xlink:label='loc_DocumentSubtitle' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentSynopsis'
+                              xlink:label='loc_DocumentSynopsis' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentTitle'
+                              xlink:label='loc_DocumentTitle' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentTransitionReport'
+                              xlink:label='loc_DocumentTransitionReport' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentType'
+                              xlink:label='loc_DocumentType' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentVersion'
+                              xlink:label='loc_DocumentVersion' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveAfter60Days486a'
+                              xlink:label='loc_EffectiveAfter60Days486a' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveOnDate486a'
+                              xlink:label='loc_EffectiveOnDate486a' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveOnDate486b'
+                              xlink:label='loc_EffectiveOnDate486b' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveOnSetDate486a'
+                              xlink:label='loc_EffectiveOnSetDate486a' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveOnSetDate486b'
+                              xlink:label='loc_EffectiveOnSetDate486b' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveUponFiling462e'
+                              xlink:label='loc_EffectiveUponFiling462e' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveUponFiling486b'
+                              xlink:label='loc_EffectiveUponFiling486b' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveWhenDeclaredSection8c'
+                              xlink:label='loc_EffectiveWhenDeclaredSection8c' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAccountingStandard'
+                              xlink:label='loc_EntityAccountingStandard' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressAddressDescription'
+                            xlink:label='loc_EntityAddressAddressDescription' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressAddressLine1'
+                              xlink:label='loc_EntityAddressAddressLine1' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressAddressLine2'
+                              xlink:label='loc_EntityAddressAddressLine2' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressAddressLine3'
+                              xlink:label='loc_EntityAddressAddressLine3' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressCityOrTown'
+                              xlink:label='loc_EntityAddressCityOrTown' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressCountry'
+                              xlink:label='loc_EntityAddressCountry' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressPostalZipCode'
+                              xlink:label='loc_EntityAddressPostalZipCode' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressRegion'
+                              xlink:label='loc_EntityAddressRegion' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressStateOrProvince'
+                              xlink:label='loc_EntityAddressStateOrProvince' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityBankruptcyProceedingsReportingCurrent'
+                            xlink:label='loc_EntityBankruptcyProceedingsReportingCurrent' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityCentralIndexKey'
+                              xlink:label='loc_EntityCentralIndexKey' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityCurrentReportingStatus'
+                              xlink:label='loc_EntityCurrentReportingStatus' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityDataUniversalNumberingSystemNumber'
+                            xlink:label='loc_EntityDataUniversalNumberingSystemNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityEmergingGrowthCompany'
+                              xlink:label='loc_EntityEmergingGrowthCompany' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityExTransitionPeriod'
+                              xlink:label='loc_EntityExTransitionPeriod' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityFileNumber'
+                              xlink:label='loc_EntityFileNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityFilerCategory'
+                              xlink:label='loc_EntityFilerCategory' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityHomeCountryISOCode'
+                              xlink:label='loc_EntityHomeCountryISOCode' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityIncorporationDateOfIncorporation'
+                            xlink:label='loc_EntityIncorporationDateOfIncorporation' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityIncorporationStateCountryCode'
+                            xlink:label='loc_EntityIncorporationStateCountryCode' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityInformationDateToChangeFormerLegalOrRegisteredName'
+                            xlink:label='loc_EntityInformationDateToChangeFormerLegalOrRegisteredName'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityInformationFormerLegalOrRegisteredName'
+                            xlink:label='loc_EntityInformationFormerLegalOrRegisteredName' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityInteractiveDataCurrent'
+                              xlink:label='loc_EntityInteractiveDataCurrent' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityInvCompanyType'
+                              xlink:label='loc_EntityInvCompanyType' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityLegalForm'
+                              xlink:label='loc_EntityLegalForm' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityListingDescription'
+                              xlink:label='loc_EntityListingDescription' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityListingForeign'
+                              xlink:label='loc_EntityListingForeign' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityListingParValuePerShare'
+                              xlink:label='loc_EntityListingParValuePerShare' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityListingPrimary'
+                              xlink:label='loc_EntityListingPrimary' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityListingSecurityTradingCurrency'
+                            xlink:label='loc_EntityListingSecurityTradingCurrency' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityLocationPrimary'
+                              xlink:label='loc_EntityLocationPrimary' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityNorthAmericanIndustryClassificationPrimary'
+                            xlink:label='loc_EntityNorthAmericanIndustryClassificationPrimary' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityOtherIdentificationType'
+                              xlink:label='loc_EntityOtherIdentificationType' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityOtherIdentificationValue'
+                              xlink:label='loc_EntityOtherIdentificationValue' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityPrimarySicNumber'
+                              xlink:label='loc_EntityPrimarySicNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityRegistrantName'
+                              xlink:label='loc_EntityRegistrantName' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityReportingCurrencyISOCode'
+                              xlink:label='loc_EntityReportingCurrencyISOCode' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntitySectorIndustryClassificationPrimary'
+                            xlink:label='loc_EntitySectorIndustryClassificationPrimary' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityShellCompany'
+                              xlink:label='loc_EntityShellCompany' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntitySmallBusiness'
+                              xlink:label='loc_EntitySmallBusiness' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityTaxIdentificationNumber'
+                              xlink:label='loc_EntityTaxIdentificationNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityTextBlock'
+                              xlink:label='loc_EntityTextBlock' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityVoluntaryFilers'
+                              xlink:label='loc_EntityVoluntaryFilers' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityWellKnownSeasonedIssuer'
+                              xlink:label='loc_EntityWellKnownSeasonedIssuer' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ExhibitsOnly462d'
+                              xlink:label='loc_ExhibitsOnly462d' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ExhibitsOnly462dFileNumber'
+                              xlink:label='loc_ExhibitsOnly462dFileNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_Extension'
+                              xlink:label='loc_Extension' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_FormerFiscalYearEndDate'
+                              xlink:label='loc_FormerFiscalYearEndDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_IcfrAuditorAttestationFlag'
+                              xlink:label='loc_IcfrAuditorAttestationFlag' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_InvestmentCompanyActFileNumber'
+                              xlink:label='loc_InvestmentCompanyActFileNumber' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_InvestmentCompanyActRegistration'
+                            xlink:label='loc_InvestmentCompanyActRegistration' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_InvestmentCompanyRegistrationAmendmentNumber'
+                            xlink:label='loc_InvestmentCompanyRegistrationAmendmentNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_LegalEntityIdentifier'
+                              xlink:label='loc_LegalEntityIdentifier' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_LocalPhoneNumber'
+                              xlink:label='loc_LocalPhoneNumber' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_NewEffectiveDateForPreviousFiling'
+                            xlink:label='loc_NewEffectiveDateForPreviousFiling' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_NoSubstantiveChanges462c'
+                              xlink:label='loc_NoSubstantiveChanges462c' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_NoSubstantiveChanges462cFileNumber'
+                            xlink:label='loc_NoSubstantiveChanges462cFileNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_NoTradingSymbolFlag'
+                              xlink:label='loc_NoTradingSymbolFlag' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_OtherReportingStandardItemNumber'
+                            xlink:label='loc_OtherReportingStandardItemNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ParentEntityLegalName'
+                              xlink:label='loc_ParentEntityLegalName' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_PhoneFaxNumberDescription'
+                              xlink:label='loc_PhoneFaxNumberDescription' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_PostEffectiveAmendment'
+                              xlink:label='loc_PostEffectiveAmendment' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_PostEffectiveAmendmentNumber'
+                              xlink:label='loc_PostEffectiveAmendmentNumber' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_PreCommencementIssuerTenderOffer'
+                            xlink:label='loc_PreCommencementIssuerTenderOffer' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_PreCommencementTenderOffer'
+                              xlink:label='loc_PreCommencementTenderOffer' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_PreEffectiveAmendment'
+                              xlink:label='loc_PreEffectiveAmendment' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_PreEffectiveAmendmentNumber'
+                              xlink:label='loc_PreEffectiveAmendmentNumber' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_RegistrationStatementAmendmentNumber'
+                            xlink:label='loc_RegistrationStatementAmendmentNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_Security12bTitle'
+                              xlink:label='loc_Security12bTitle' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_Security12gTitle'
+                              xlink:label='loc_Security12gTitle' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_SecurityExchangeName'
+                              xlink:label='loc_SecurityExchangeName' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_SecurityReportingObligation'
+                              xlink:label='loc_SecurityReportingObligation' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_SolicitingMaterial'
+                              xlink:label='loc_SolicitingMaterial' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_TradingSymbol'
+                              xlink:label='loc_TradingSymbol' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_WrittenCommunications'
+                              xlink:label='loc_WrittenCommunications' xlink:type='locator'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_dqcrules_Dqc_0033'
+                                        xlink:to='loc_Dqc_0033_DocumentPeriodEndDateContext' order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_AdditionalSecurities462b' order='1.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_AdditionalSecurities462bFileNumber' order='2.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_AdditionalSecuritiesEffective413b' order='3.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_AmendmentDescription' order='4.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_AmendmentFlag' order='5.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_AnnualInformationForm' order='6.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_ApproximateDateOfCommencementOfProposedSaleToThePublic'
+                                        order='7.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_AuditedAnnualFinancialStatements' order='8.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_AuditorFirmId' order='9.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_AuditorLocation' order='10.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_AuditorName' order='11.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_CityAreaCode' order='12.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_ContactPersonnelEmailAddress' order='13.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_ContactPersonnelFaxNumber' order='14.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_ContactPersonnelName' order='15.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_ContactPersonnelUniformResourceLocatorURL' order='16.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_ContainedFileInformationFileDescription' order='17.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_ContainedFileInformationFileName' order='18.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_ContainedFileInformationFileNumber' order='19.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_ContainedFileInformationFileType' order='20.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_CountryRegion' order='21.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_CurrentFiscalYearEndDate' order='22.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DelayedOrContinuousOffering' order='23.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DividendOrInterestReinvestmentPlanOnly' order='24.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentAccountingStandard' order='25.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentAnnualReport' order='26.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentCopyrightInformation' order='27.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentCreationDate' order='28.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentDescription' order='29.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentEffectiveDate' order='30.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentFiscalPeriodFocus' order='31.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentFiscalYearFocus' order='32.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentInformationTextBlock' order='33.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentName' order='34.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentPeriodStartDate' order='35.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentQuarterlyReport' order='36.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentRegistrationStatement' order='37.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentShellCompanyEventDate' order='38.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentShellCompanyReport' order='39.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentsIncorporatedByReferenceTextBlock' order='40.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentSubtitle' order='41.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentSynopsis' order='42.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentTitle' order='43.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentTransitionReport' order='44.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentType' order='45.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_DocumentVersion' order='46.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EffectiveAfter60Days486a' order='47.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EffectiveOnDate486a' order='48.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EffectiveOnDate486b' order='49.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EffectiveOnSetDate486a' order='50.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EffectiveOnSetDate486b' order='51.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EffectiveUponFiling462e' order='52.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EffectiveUponFiling486b' order='53.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EffectiveWhenDeclaredSection8c' order='54.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityAccountingStandard' order='55.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityAddressAddressDescription' order='56.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityAddressAddressLine1' order='57.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityAddressAddressLine2' order='58.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityAddressAddressLine3' order='59.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityAddressCityOrTown' order='60.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityAddressCountry' order='61.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityAddressPostalZipCode' order='62.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityAddressRegion' order='63.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityAddressStateOrProvince' order='64.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityBankruptcyProceedingsReportingCurrent' order='65.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityCentralIndexKey' order='66.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityCurrentReportingStatus' order='67.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityDataUniversalNumberingSystemNumber' order='68.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityEmergingGrowthCompany' order='69.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityExTransitionPeriod' order='70.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityFileNumber' order='71.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityFilerCategory' order='72.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityHomeCountryISOCode' order='73.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityIncorporationDateOfIncorporation' order='74.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityIncorporationStateCountryCode' order='75.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityInformationDateToChangeFormerLegalOrRegisteredName'
+                                        order='76.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityInformationFormerLegalOrRegisteredName' order='77.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityInteractiveDataCurrent' order='78.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityInvCompanyType' order='79.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityLegalForm' order='80.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityListingDescription' order='81.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityListingForeign' order='82.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityListingParValuePerShare' order='83.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityListingPrimary' order='84.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityListingSecurityTradingCurrency' order='85.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityLocationPrimary' order='86.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityNorthAmericanIndustryClassificationPrimary' order='87.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityOtherIdentificationType' order='88.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityOtherIdentificationValue' order='89.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityPrimarySicNumber' order='90.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityRegistrantName' order='91.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityReportingCurrencyISOCode' order='92.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntitySectorIndustryClassificationPrimary' order='93.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityShellCompany' order='94.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntitySmallBusiness' order='95.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityTaxIdentificationNumber' order='96.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityTextBlock' order='97.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityVoluntaryFilers' order='98.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_EntityWellKnownSeasonedIssuer' order='99.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_ExhibitsOnly462d' order='100.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_ExhibitsOnly462dFileNumber' order='101.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext' xlink:to='loc_Extension'
+                                        order='102.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_FormerFiscalYearEndDate' order='103.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_IcfrAuditorAttestationFlag' order='104.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_InvestmentCompanyActFileNumber' order='105.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_InvestmentCompanyActRegistration' order='106.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_InvestmentCompanyRegistrationAmendmentNumber' order='107.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_LegalEntityIdentifier' order='108.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_LocalPhoneNumber' order='109.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_NewEffectiveDateForPreviousFiling' order='110.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_NoSubstantiveChanges462c' order='111.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_NoSubstantiveChanges462cFileNumber' order='112.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_NoTradingSymbolFlag' order='113.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_OtherReportingStandardItemNumber' order='114.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_ParentEntityLegalName' order='115.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_PhoneFaxNumberDescription' order='116.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_PostEffectiveAmendment' order='117.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_PostEffectiveAmendmentNumber' order='118.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_PreCommencementIssuerTenderOffer' order='119.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_PreCommencementTenderOffer' order='120.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_PreEffectiveAmendment' order='121.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_PreEffectiveAmendmentNumber' order='122.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_RegistrationStatementAmendmentNumber' order='123.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_Security12bTitle' order='124.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_Security12gTitle' order='125.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_SecurityExchangeName' order='126.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_SecurityReportingObligation' order='127.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_SolicitingMaterial' order='128.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_TradingSymbol' order='129.0'/>
+                    <link:definitionArc xlink:type='arc' xlink:arcrole='http://fasb.org/dqcrules/arcrole/rule-concept'
+                                        xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext'
+                                        xlink:to='loc_WrittenCommunications' order='130.0'/>
+                </link:definitionLink>
+                <link:referenceLink xlink:role='http://fasb.org/us-gaap/role/dqc/0033' xlink:type='extended'>
+                    <link:loc xlink:href='#dqcrules-0033_Dqc_0033' xlink:label='loc_Dqc_0033' xlink:type='locator'/>
+                    <link:loc xlink:href='#dqcrules-0033_Dqc_0033_DocumentPeriodEndDateContext'
+                              xlink:label='loc_Dqc_0033_DocumentPeriodEndDateContext' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AdditionalSecurities462b'
+                              xlink:label='loc_AdditionalSecurities462b' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AdditionalSecurities462bFileNumber'
+                            xlink:label='loc_AdditionalSecurities462bFileNumber' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AdditionalSecuritiesEffective413b'
+                            xlink:label='loc_AdditionalSecuritiesEffective413b' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AmendmentDescription'
+                              xlink:label='loc_AmendmentDescription' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AmendmentFlag'
+                              xlink:label='loc_AmendmentFlag' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AnnualInformationForm'
+                              xlink:label='loc_AnnualInformationForm' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ApproximateDateOfCommencementOfProposedSaleToThePublic'
+                            xlink:label='loc_ApproximateDateOfCommencementOfProposedSaleToThePublic'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AuditedAnnualFinancialStatements'
+                            xlink:label='loc_AuditedAnnualFinancialStatements' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AuditorFirmId'
+                              xlink:label='loc_AuditorFirmId' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AuditorLocation'
+                              xlink:label='loc_AuditorLocation' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_AuditorName'
+                              xlink:label='loc_AuditorName' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_CityAreaCode'
+                              xlink:label='loc_CityAreaCode' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContactPersonnelEmailAddress'
+                              xlink:label='loc_ContactPersonnelEmailAddress' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContactPersonnelFaxNumber'
+                              xlink:label='loc_ContactPersonnelFaxNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContactPersonnelName'
+                              xlink:label='loc_ContactPersonnelName' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContactPersonnelUniformResourceLocatorURL'
+                            xlink:label='loc_ContactPersonnelUniformResourceLocatorURL' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContainedFileInformationFileDescription'
+                            xlink:label='loc_ContainedFileInformationFileDescription' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContainedFileInformationFileName'
+                            xlink:label='loc_ContainedFileInformationFileName' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContainedFileInformationFileNumber'
+                            xlink:label='loc_ContainedFileInformationFileNumber' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ContainedFileInformationFileType'
+                            xlink:label='loc_ContainedFileInformationFileType' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_CountryRegion'
+                              xlink:label='loc_CountryRegion' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_CurrentFiscalYearEndDate'
+                              xlink:label='loc_CurrentFiscalYearEndDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DelayedOrContinuousOffering'
+                              xlink:label='loc_DelayedOrContinuousOffering' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DividendOrInterestReinvestmentPlanOnly'
+                            xlink:label='loc_DividendOrInterestReinvestmentPlanOnly' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentAccountingStandard'
+                              xlink:label='loc_DocumentAccountingStandard' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentAnnualReport'
+                              xlink:label='loc_DocumentAnnualReport' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentCopyrightInformation'
+                              xlink:label='loc_DocumentCopyrightInformation' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentCreationDate'
+                              xlink:label='loc_DocumentCreationDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentDescription'
+                              xlink:label='loc_DocumentDescription' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentEffectiveDate'
+                              xlink:label='loc_DocumentEffectiveDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentFiscalPeriodFocus'
+                              xlink:label='loc_DocumentFiscalPeriodFocus' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentFiscalYearFocus'
+                              xlink:label='loc_DocumentFiscalYearFocus' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentInformationTextBlock'
+                              xlink:label='loc_DocumentInformationTextBlock' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentName'
+                              xlink:label='loc_DocumentName' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentPeriodStartDate'
+                              xlink:label='loc_DocumentPeriodStartDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentQuarterlyReport'
+                              xlink:label='loc_DocumentQuarterlyReport' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentRegistrationStatement'
+                              xlink:label='loc_DocumentRegistrationStatement' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentShellCompanyEventDate'
+                              xlink:label='loc_DocumentShellCompanyEventDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentShellCompanyReport'
+                              xlink:label='loc_DocumentShellCompanyReport' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentsIncorporatedByReferenceTextBlock'
+                            xlink:label='loc_DocumentsIncorporatedByReferenceTextBlock' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentSubtitle'
+                              xlink:label='loc_DocumentSubtitle' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentSynopsis'
+                              xlink:label='loc_DocumentSynopsis' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentTitle'
+                              xlink:label='loc_DocumentTitle' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentTransitionReport'
+                              xlink:label='loc_DocumentTransitionReport' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentType'
+                              xlink:label='loc_DocumentType' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_DocumentVersion'
+                              xlink:label='loc_DocumentVersion' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveAfter60Days486a'
+                              xlink:label='loc_EffectiveAfter60Days486a' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveOnDate486a'
+                              xlink:label='loc_EffectiveOnDate486a' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveOnDate486b'
+                              xlink:label='loc_EffectiveOnDate486b' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveOnSetDate486a'
+                              xlink:label='loc_EffectiveOnSetDate486a' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveOnSetDate486b'
+                              xlink:label='loc_EffectiveOnSetDate486b' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveUponFiling462e'
+                              xlink:label='loc_EffectiveUponFiling462e' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveUponFiling486b'
+                              xlink:label='loc_EffectiveUponFiling486b' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EffectiveWhenDeclaredSection8c'
+                              xlink:label='loc_EffectiveWhenDeclaredSection8c' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAccountingStandard'
+                              xlink:label='loc_EntityAccountingStandard' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressAddressDescription'
+                            xlink:label='loc_EntityAddressAddressDescription' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressAddressLine1'
+                              xlink:label='loc_EntityAddressAddressLine1' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressAddressLine2'
+                              xlink:label='loc_EntityAddressAddressLine2' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressAddressLine3'
+                              xlink:label='loc_EntityAddressAddressLine3' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressCityOrTown'
+                              xlink:label='loc_EntityAddressCityOrTown' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressCountry'
+                              xlink:label='loc_EntityAddressCountry' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressPostalZipCode'
+                              xlink:label='loc_EntityAddressPostalZipCode' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressRegion'
+                              xlink:label='loc_EntityAddressRegion' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityAddressStateOrProvince'
+                              xlink:label='loc_EntityAddressStateOrProvince' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityBankruptcyProceedingsReportingCurrent'
+                            xlink:label='loc_EntityBankruptcyProceedingsReportingCurrent' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityCentralIndexKey'
+                              xlink:label='loc_EntityCentralIndexKey' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityCurrentReportingStatus'
+                              xlink:label='loc_EntityCurrentReportingStatus' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityDataUniversalNumberingSystemNumber'
+                            xlink:label='loc_EntityDataUniversalNumberingSystemNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityEmergingGrowthCompany'
+                              xlink:label='loc_EntityEmergingGrowthCompany' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityExTransitionPeriod'
+                              xlink:label='loc_EntityExTransitionPeriod' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityFileNumber'
+                              xlink:label='loc_EntityFileNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityFilerCategory'
+                              xlink:label='loc_EntityFilerCategory' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityHomeCountryISOCode'
+                              xlink:label='loc_EntityHomeCountryISOCode' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityIncorporationDateOfIncorporation'
+                            xlink:label='loc_EntityIncorporationDateOfIncorporation' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityIncorporationStateCountryCode'
+                            xlink:label='loc_EntityIncorporationStateCountryCode' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityInformationDateToChangeFormerLegalOrRegisteredName'
+                            xlink:label='loc_EntityInformationDateToChangeFormerLegalOrRegisteredName'
+                            xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityInformationFormerLegalOrRegisteredName'
+                            xlink:label='loc_EntityInformationFormerLegalOrRegisteredName' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityInteractiveDataCurrent'
+                              xlink:label='loc_EntityInteractiveDataCurrent' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityInvCompanyType'
+                              xlink:label='loc_EntityInvCompanyType' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityLegalForm'
+                              xlink:label='loc_EntityLegalForm' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityListingDescription'
+                              xlink:label='loc_EntityListingDescription' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityListingForeign'
+                              xlink:label='loc_EntityListingForeign' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityListingParValuePerShare'
+                              xlink:label='loc_EntityListingParValuePerShare' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityListingPrimary'
+                              xlink:label='loc_EntityListingPrimary' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityListingSecurityTradingCurrency'
+                            xlink:label='loc_EntityListingSecurityTradingCurrency' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityLocationPrimary'
+                              xlink:label='loc_EntityLocationPrimary' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityNorthAmericanIndustryClassificationPrimary'
+                            xlink:label='loc_EntityNorthAmericanIndustryClassificationPrimary' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityOtherIdentificationType'
+                              xlink:label='loc_EntityOtherIdentificationType' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityOtherIdentificationValue'
+                              xlink:label='loc_EntityOtherIdentificationValue' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityPrimarySicNumber'
+                              xlink:label='loc_EntityPrimarySicNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityRegistrantName'
+                              xlink:label='loc_EntityRegistrantName' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityReportingCurrencyISOCode'
+                              xlink:label='loc_EntityReportingCurrencyISOCode' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntitySectorIndustryClassificationPrimary'
+                            xlink:label='loc_EntitySectorIndustryClassificationPrimary' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityShellCompany'
+                              xlink:label='loc_EntityShellCompany' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntitySmallBusiness'
+                              xlink:label='loc_EntitySmallBusiness' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityTaxIdentificationNumber'
+                              xlink:label='loc_EntityTaxIdentificationNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityTextBlock'
+                              xlink:label='loc_EntityTextBlock' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityVoluntaryFilers'
+                              xlink:label='loc_EntityVoluntaryFilers' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_EntityWellKnownSeasonedIssuer'
+                              xlink:label='loc_EntityWellKnownSeasonedIssuer' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ExhibitsOnly462d'
+                              xlink:label='loc_ExhibitsOnly462d' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ExhibitsOnly462dFileNumber'
+                              xlink:label='loc_ExhibitsOnly462dFileNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_Extension'
+                              xlink:label='loc_Extension' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_FormerFiscalYearEndDate'
+                              xlink:label='loc_FormerFiscalYearEndDate' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_IcfrAuditorAttestationFlag'
+                              xlink:label='loc_IcfrAuditorAttestationFlag' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_InvestmentCompanyActFileNumber'
+                              xlink:label='loc_InvestmentCompanyActFileNumber' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_InvestmentCompanyActRegistration'
+                            xlink:label='loc_InvestmentCompanyActRegistration' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_InvestmentCompanyRegistrationAmendmentNumber'
+                            xlink:label='loc_InvestmentCompanyRegistrationAmendmentNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_LegalEntityIdentifier'
+                              xlink:label='loc_LegalEntityIdentifier' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_LocalPhoneNumber'
+                              xlink:label='loc_LocalPhoneNumber' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_NewEffectiveDateForPreviousFiling'
+                            xlink:label='loc_NewEffectiveDateForPreviousFiling' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_NoSubstantiveChanges462c'
+                              xlink:label='loc_NoSubstantiveChanges462c' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_NoSubstantiveChanges462cFileNumber'
+                            xlink:label='loc_NoSubstantiveChanges462cFileNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_NoTradingSymbolFlag'
+                              xlink:label='loc_NoTradingSymbolFlag' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_OtherReportingStandardItemNumber'
+                            xlink:label='loc_OtherReportingStandardItemNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_ParentEntityLegalName'
+                              xlink:label='loc_ParentEntityLegalName' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_PhoneFaxNumberDescription'
+                              xlink:label='loc_PhoneFaxNumberDescription' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_PostEffectiveAmendment'
+                              xlink:label='loc_PostEffectiveAmendment' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_PostEffectiveAmendmentNumber'
+                              xlink:label='loc_PostEffectiveAmendmentNumber' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_PreCommencementIssuerTenderOffer'
+                            xlink:label='loc_PreCommencementIssuerTenderOffer' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_PreCommencementTenderOffer'
+                              xlink:label='loc_PreCommencementTenderOffer' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_PreEffectiveAmendment'
+                              xlink:label='loc_PreEffectiveAmendment' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_PreEffectiveAmendmentNumber'
+                              xlink:label='loc_PreEffectiveAmendmentNumber' xlink:type='locator'/>
+                    <link:loc
+                            xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_RegistrationStatementAmendmentNumber'
+                            xlink:label='loc_RegistrationStatementAmendmentNumber' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_Security12bTitle'
+                              xlink:label='loc_Security12bTitle' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_Security12gTitle'
+                              xlink:label='loc_Security12gTitle' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_SecurityExchangeName'
+                              xlink:label='loc_SecurityExchangeName' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_SecurityReportingObligation'
+                              xlink:label='loc_SecurityReportingObligation' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_SolicitingMaterial'
+                              xlink:label='loc_SolicitingMaterial' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_TradingSymbol'
+                              xlink:label='loc_TradingSymbol' xlink:type='locator'/>
+                    <link:loc xlink:href='https://xbrl.sec.gov/dei/2023/dei-2023.xsd#dei_WrittenCommunications'
+                              xlink:label='loc_WrittenCommunications' xlink:type='locator'/>
+                    <link:reference xlink:label='dqc_0033' xlink:role='http://fasb.org/us-gaap/role/dqc/dqcNote'
+                                    xlink:type='resource'>
+                        <ref:Publisher>XBRL US</ref:Publisher>
+                        <dqcrules:ruleId>DQC.0033</dqcrules:ruleId>
+                        <dqcrules:ruleName>Document Period End Date Context</dqcrules:ruleName>
+                        <dqcrules:ruleDocumentation>This rule tests that the ending date used with Document and Entity
+                            Information elements (except the elements Entity Common Stock, Shares Outstanding and Entity
+                            Public Float) matches the ending context date for the value of the Document and Entity
+                            Information element Document Period End Date. This rule will not run if the context date for
+                            the Document Period End Date is different from the value of that element. The rule will not
+                            run if the element DocumentType equals '8-K' and the element AmendmentFlag is equal to true.
+                        </dqcrules:ruleDocumentation>
+                        <ref:URI>https://xbrl.us/data-rule/dqc_0033/</ref:URI>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0033_DocumentPeriodEndDateContext' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Dqc_0033' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AdditionalSecurities462b' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AdditionalSecurities462bFileNumber' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AdditionalSecuritiesEffective413b' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AmendmentDescription' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AmendmentFlag' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AnnualInformationForm' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ApproximateDateOfCommencementOfProposedSaleToThePublic'
+                                       xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AuditedAnnualFinancialStatements' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AuditorFirmId' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AuditorLocation' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AuditorName' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_CityAreaCode' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContactPersonnelEmailAddress' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContactPersonnelFaxNumber' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContactPersonnelName' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContactPersonnelUniformResourceLocatorURL' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContainedFileInformationFileDescription' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContainedFileInformationFileName' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContainedFileInformationFileNumber' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContainedFileInformationFileType' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_CountryRegion' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_CurrentFiscalYearEndDate' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DelayedOrContinuousOffering' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DividendOrInterestReinvestmentPlanOnly' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentAccountingStandard' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentAnnualReport' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentCopyrightInformation' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentCreationDate' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentDescription' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentEffectiveDate' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentFiscalPeriodFocus' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentFiscalYearFocus' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentInformationTextBlock' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentName' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentPeriodStartDate' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentQuarterlyReport' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentRegistrationStatement' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentShellCompanyEventDate' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentShellCompanyReport' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentsIncorporatedByReferenceTextBlock' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentSubtitle' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentSynopsis' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentTitle' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentTransitionReport' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentType' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentVersion' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveAfter60Days486a' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveOnDate486a' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveOnDate486b' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveOnSetDate486a' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveOnSetDate486b' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveUponFiling462e' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveUponFiling486b' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveWhenDeclaredSection8c' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAccountingStandard' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressAddressDescription' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressAddressLine1' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressAddressLine2' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressAddressLine3' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressCityOrTown' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressCountry' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressPostalZipCode' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressRegion' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressStateOrProvince' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityBankruptcyProceedingsReportingCurrent' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityCentralIndexKey' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityCurrentReportingStatus' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityDataUniversalNumberingSystemNumber' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityEmergingGrowthCompany' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityExTransitionPeriod' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityFileNumber' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityFilerCategory' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityHomeCountryISOCode' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityIncorporationDateOfIncorporation' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityIncorporationStateCountryCode' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityInformationDateToChangeFormerLegalOrRegisteredName'
+                                       xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityInformationFormerLegalOrRegisteredName' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityInteractiveDataCurrent' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityInvCompanyType' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityLegalForm' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityListingDescription' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityListingForeign' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityListingParValuePerShare' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityListingPrimary' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityListingSecurityTradingCurrency' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityLocationPrimary' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityNorthAmericanIndustryClassificationPrimary'
+                                       xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityOtherIdentificationType' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityOtherIdentificationValue' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityPrimarySicNumber' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityRegistrantName' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityReportingCurrencyISOCode' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntitySectorIndustryClassificationPrimary' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityShellCompany' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntitySmallBusiness' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityTaxIdentificationNumber' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityTextBlock' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityVoluntaryFilers' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityWellKnownSeasonedIssuer' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ExhibitsOnly462d' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ExhibitsOnly462dFileNumber' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Extension' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_FormerFiscalYearEndDate' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_IcfrAuditorAttestationFlag' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_InvestmentCompanyActFileNumber' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_InvestmentCompanyActRegistration' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_InvestmentCompanyRegistrationAmendmentNumber' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_LegalEntityIdentifier' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_LocalPhoneNumber' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NewEffectiveDateForPreviousFiling' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NoSubstantiveChanges462c' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NoSubstantiveChanges462cFileNumber' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NoTradingSymbolFlag' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_OtherReportingStandardItemNumber' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ParentEntityLegalName' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PhoneFaxNumberDescription' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PostEffectiveAmendment' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PostEffectiveAmendmentNumber' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PreCommencementIssuerTenderOffer' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PreCommencementTenderOffer' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PreEffectiveAmendment' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PreEffectiveAmendmentNumber' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_RegistrationStatementAmendmentNumber' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Security12bTitle' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Security12gTitle' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_SecurityExchangeName' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_SecurityReportingObligation' xlink:to='dqc_0033'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_SolicitingMaterial' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_TradingSymbol' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_WrittenCommunications' xlink:to='dqc_0033' xlink:type='arc'/>
+                    <link:reference xlink:type='resource' xlink:label='DQC_US_0033_0'
+                                    xlink:role='http://fasb.org/us-gaap/role/dqc/ruleID'>
+                        <dqcrules:ruleElementId>DQC.US.0033.0</dqcrules:ruleElementId>
+                    </link:reference>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AdditionalSecurities462b' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AdditionalSecurities462bFileNumber' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AdditionalSecuritiesEffective413b' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AmendmentDescription' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AmendmentFlag' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AnnualInformationForm' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ApproximateDateOfCommencementOfProposedSaleToThePublic'
+                                       xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AuditedAnnualFinancialStatements' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AuditorFirmId' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AuditorLocation' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_AuditorName' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_CityAreaCode' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContactPersonnelEmailAddress' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContactPersonnelFaxNumber' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContactPersonnelName' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContactPersonnelUniformResourceLocatorURL'
+                                       xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContainedFileInformationFileDescription' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContainedFileInformationFileName' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContainedFileInformationFileNumber' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ContainedFileInformationFileType' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_CountryRegion' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_CurrentFiscalYearEndDate' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DelayedOrContinuousOffering' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DividendOrInterestReinvestmentPlanOnly' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentAccountingStandard' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentAnnualReport' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentCopyrightInformation' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentCreationDate' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentDescription' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentEffectiveDate' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentFiscalPeriodFocus' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentFiscalYearFocus' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentInformationTextBlock' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentName' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentPeriodStartDate' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentQuarterlyReport' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentRegistrationStatement' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentShellCompanyEventDate' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentShellCompanyReport' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentsIncorporatedByReferenceTextBlock'
+                                       xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentSubtitle' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentSynopsis' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentTitle' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentTransitionReport' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentType' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_DocumentVersion' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveAfter60Days486a' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveOnDate486a' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveOnDate486b' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveOnSetDate486a' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveOnSetDate486b' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveUponFiling462e' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveUponFiling486b' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EffectiveWhenDeclaredSection8c' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAccountingStandard' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressAddressDescription' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressAddressLine1' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressAddressLine2' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressAddressLine3' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressCityOrTown' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressCountry' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressPostalZipCode' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressRegion' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityAddressStateOrProvince' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityBankruptcyProceedingsReportingCurrent'
+                                       xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityCentralIndexKey' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityCurrentReportingStatus' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityDataUniversalNumberingSystemNumber'
+                                       xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityEmergingGrowthCompany' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityExTransitionPeriod' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityFileNumber' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityFilerCategory' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityHomeCountryISOCode' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityIncorporationDateOfIncorporation' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityIncorporationStateCountryCode' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityInformationDateToChangeFormerLegalOrRegisteredName'
+                                       xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityInformationFormerLegalOrRegisteredName'
+                                       xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityInteractiveDataCurrent' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityInvCompanyType' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityLegalForm' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityListingDescription' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityListingForeign' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityListingParValuePerShare' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityListingPrimary' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityListingSecurityTradingCurrency' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityLocationPrimary' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityNorthAmericanIndustryClassificationPrimary'
+                                       xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityOtherIdentificationType' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityOtherIdentificationValue' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityPrimarySicNumber' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityRegistrantName' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityReportingCurrencyISOCode' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntitySectorIndustryClassificationPrimary'
+                                       xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityShellCompany' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntitySmallBusiness' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityTaxIdentificationNumber' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityTextBlock' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityVoluntaryFilers' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_EntityWellKnownSeasonedIssuer' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ExhibitsOnly462d' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ExhibitsOnly462dFileNumber' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Extension' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_FormerFiscalYearEndDate' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_IcfrAuditorAttestationFlag' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_InvestmentCompanyActFileNumber' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_InvestmentCompanyActRegistration' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_InvestmentCompanyRegistrationAmendmentNumber'
+                                       xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_LegalEntityIdentifier' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_LocalPhoneNumber' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NewEffectiveDateForPreviousFiling' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NoSubstantiveChanges462c' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NoSubstantiveChanges462cFileNumber' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_NoTradingSymbolFlag' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_OtherReportingStandardItemNumber' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_ParentEntityLegalName' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PhoneFaxNumberDescription' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PostEffectiveAmendment' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PostEffectiveAmendmentNumber' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PreCommencementIssuerTenderOffer' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PreCommencementTenderOffer' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PreEffectiveAmendment' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_PreEffectiveAmendmentNumber' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_RegistrationStatementAmendmentNumber' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Security12bTitle' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_Security12gTitle' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_SecurityExchangeName' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_SecurityReportingObligation' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_SolicitingMaterial' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_TradingSymbol' xlink:to='DQC_US_0033_0' xlink:type='arc'/>
+                    <link:referenceArc order='1.0' xlink:arcrole='http://www.xbrl.org/2003/arcrole/concept-reference'
+                                       xlink:from='loc_WrittenCommunications' xlink:to='DQC_US_0033_0'
+                                       xlink:type='arc'/>
+                </link:referenceLink>
+            </link:linkbase>
+        </xs:appinfo>
+    </xs:annotation>
+    <xs:element name='Dqc_0033' id='dqcrules-0033_Dqc_0033' type='xbrli:stringItemType' substitutionGroup='xbrli:item'
+                abstract='true' nillable='true' xbrli:periodType='duration'/>
+    <xs:element name='Dqc_0033_DocumentPeriodEndDateContext' id='dqcrules-0033_Dqc_0033_DocumentPeriodEndDateContext'
+                type='xbrli:stringItemType' substitutionGroup='xbrli:item' abstract='true' nillable='true'
+                xbrli:periodType='duration'/>
+</xs:schema>
